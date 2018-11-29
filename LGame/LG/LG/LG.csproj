@@ -1,0 +1,812 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9A7CDF4A-DB13-45AC-A8D8-3A28BDEBECA3}</ProjectGuid>
+    <OutputType>AppContainerExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LG</RootNamespace>
+    <AssemblyName>LG</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{BC8A1FFA-BEE3-4634-8014-F334798102B3};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <PackageCertificateKeyFile>LG_StoreKey.pfx</PackageCertificateKeyFile>
+    <PackageCertificateThumbprint>76B9798D5A080339B318418654241C363E149A51</PackageCertificateThumbprint>
+    <AppxAutoIncrementPackageRevision>True</AppxAutoIncrementPackageRevision>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
+    <OutputPath>bin\ARM\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="Package.appxmanifest">
+      <SubType>Designer</SubType>
+    </AppxManifest>
+    <Content Include="Assets\MainLogo.scale-100.png" />
+    <Content Include="Assets\MainLogo.scale-140.png" />
+    <Content Include="Assets\MainLogo.scale-180.png" />
+    <Content Include="Assets\MainLogo.scale-80.png" />
+    <Content Include="Assets\SmallLogos.scale-100.png" />
+    <Content Include="Assets\SmallLogos.scale-140.png" />
+    <Content Include="Assets\SmallLogos.scale-180.png" />
+    <Content Include="Assets\SplScreen.scale-100.png" />
+    <Content Include="Assets\SplScreen.scale-140.png" />
+    <Content Include="Assets\SplScreen.scale-180.png" />
+    <Content Include="Assets\StoreLogo.scale-100.png" />
+    <Content Include="Assets\StoreLogo.scale-140.png" />
+    <Content Include="Assets\StoreLogo.scale-180.png" />
+    <Content Include="data\Hierarchy.xml" />
+    <Content Include="data\Languages.xml" />
+    <Content Include="data\Licenses.xml" />
+    <Content Include="data\Profiles.xml" />
+    <Content Include="data\ProfilesThemesEnglish.xml" />
+    <Content Include="data\ProfilesThemesGerman.xml" />
+    <Content Include="data\ThemeLanguages.xml" />
+    <Content Include="data\Themes.xml" />
+    <Content Include="data\ThemesEnglish.xml" />
+    <Content Include="data\ThemesGerman.xml" />
+    <Content Include="data\ThemesLicences.xml" />
+    <Content Include="data\Words.xml" />
+    <Content Include="data\WordsEnglish.xml" />
+    <Content Include="data\WordsGerman.xml" />
+    <Content Include="Fonts\digital7mono.ttf" />
+    <None Include="LG_StoreKey.pfx" />
+    <None Include="LG_TemporaryKey.pfx" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\ammoBlock1.png" />
+    <Content Include="Images\ammoBlock2.png" />
+    <Content Include="Images\ammoIndicator.png" />
+    <Content Include="Images\arrow.png" />
+    <Content Include="Images\ArrowDown.png" />
+    <Content Include="Images\ArrUp.png" />
+    <Content Include="Images\Asteroids\rockm0001.png" />
+    <Content Include="Images\Asteroids\rockm00010.png" />
+    <Content Include="Images\Asteroids\rockm00011.png" />
+    <Content Include="Images\Asteroids\rockm00012.png" />
+    <Content Include="Images\Asteroids\rockm00013.png" />
+    <Content Include="Images\Asteroids\rockm00014.png" />
+    <Content Include="Images\Asteroids\rockm00015.png" />
+    <Content Include="Images\Asteroids\rockm0002.png" />
+    <Content Include="Images\Asteroids\rockm0003.png" />
+    <Content Include="Images\Asteroids\rockm0004.png" />
+    <Content Include="Images\Asteroids\rockm0005.png" />
+    <Content Include="Images\Asteroids\rockm0006.png" />
+    <Content Include="Images\Asteroids\rockm0007.png" />
+    <Content Include="Images\Asteroids\rockm0008.png" />
+    <Content Include="Images\Asteroids\rockm0009.png" />
+    <Content Include="Images\backspace\bigstars\s9.png" />
+    <Content Include="Images\backspace\bigstars\s9r.png" />
+    <Content Include="Images\backspace\bigstars\s9y.png" />
+    <Content Include="Images\backspace\blinkstars\s1.png" />
+    <Content Include="Images\backspace\blinkstars\s1g.png" />
+    <Content Include="Images\backspace\blinkstars\s1y.png" />
+    <Content Include="Images\backspace\nebulas\butterfly.png" />
+    <Content Include="Images\backspace\nebulas\crab.png" />
+    <Content Include="Images\backspace\nebulas\devi.png" />
+    <Content Include="Images\backspace\nebulas\horse.png" />
+    <Content Include="Images\backspace\nebulas\NGC3.png" />
+    <Content Include="Images\backspace\nebulas\NGC35.png" />
+    <Content Include="Images\backspace\nebulas\sh2.png" />
+    <Content Include="Images\backspace\nebulas\sombr.png" />
+    <Content Include="Images\backspace\nebulas\Supernova.png" />
+    <Content Include="Images\backspace\nebulas\V838.png" />
+    <Content Include="Images\backspace\smallstars\s1.png" />
+    <Content Include="Images\backspace\smallstars\s1r.png" />
+    <Content Include="Images\backspace\smallstars\s2.png" />
+    <Content Include="Images\backspace\smallstars\s2g.png" />
+    <Content Include="Images\backspace\smallstars\s3.png" />
+    <Content Include="Images\backspace\smallstars\s3b.png" />
+    <Content Include="Images\BlueGrad.png" />
+    <Content Include="Images\ButtonsImages\Hierarchy.png" />
+    <Content Include="Images\ButtonsImages\HierarchyOver.png" />
+    <Content Include="Images\ButtonsImages\Play.png" />
+    <Content Include="Images\ButtonsImages\PlayOver.png" />
+    <Content Include="Images\ButtonsImages\PlayPressed.png" />
+    <Content Include="Images\ButtonsImages\SelectTheme.png" />
+    <Content Include="Images\ButtonsImages\SelectThemeOver.png" />
+    <Content Include="Images\ButtonsImages\SelectThemePressed.png" />
+    <Content Include="Images\ChargerEmpty.wav" />
+    <Content Include="Images\crosshair1.png" />
+    <Content Include="Images\crosshair2.png" />
+    <Content Include="Images\Deep_Space_256.jpg" />
+    <Content Include="Images\DNK.png" />
+    <Content Include="Images\Explosion\Explosion1.png" />
+    <Content Include="Images\Explosion\Explosion10.png" />
+    <Content Include="Images\Explosion\Explosion11.png" />
+    <Content Include="Images\Explosion\Explosion12.png" />
+    <Content Include="Images\Explosion\Explosion2.png" />
+    <Content Include="Images\Explosion\Explosion3.png" />
+    <Content Include="Images\Explosion\Explosion4.png" />
+    <Content Include="Images\Explosion\Explosion5.png" />
+    <Content Include="Images\Explosion\Explosion6.png" />
+    <Content Include="Images\Explosion\Explosion7.png" />
+    <Content Include="Images\Explosion\Explosion8.png" />
+    <Content Include="Images\Explosion\Explosion9.png" />
+    <Content Include="Images\flame\flame1.png" />
+    <Content Include="Images\flame\flame2.png" />
+    <Content Include="Images\flame\flame3.png" />
+    <Content Include="Images\flame\flame4.png" />
+    <Content Include="Images\GreenGrad.png" />
+    <Content Include="Images\hierarchy\dominant.png" />
+    <Content Include="Images\hierarchy\eye.png" />
+    <Content Include="Images\hierarchy\khazar.png" />
+    <Content Include="Images\hierarchy\krafter.png" />
+    <Content Include="Images\hierarchy\kshatri.png" />
+    <Content Include="Images\hierarchy\metatron.png" />
+    <Content Include="Images\hierarchy\neogoyer.png" />
+    <Content Include="Images\hierarchy\pahan.png" />
+    <Content Include="Images\hierarchy\reptilian_shinobi.png" />
+    <Content Include="Images\hierarchy\shiva.png" />
+    <Content Include="Images\hierarchy\shudra.png" />
+    <Content Include="Images\hierarchy\slave.png" />
+    <Content Include="Images\hierarchy\vaishia.png" />
+    <Content Include="Images\images\animal1\bear.jpg" />
+    <Content Include="Images\images\animal1\bull.jpg" />
+    <Content Include="Images\images\animal1\calf.jpg" />
+    <Content Include="Images\images\animal1\camel.jpg" />
+    <Content Include="Images\images\animal1\cat.jpg" />
+    <Content Include="Images\images\animal1\cow.jpg" />
+    <Content Include="Images\images\animal1\dog.jpg" />
+    <Content Include="Images\images\animal1\donkey.jpg" />
+    <Content Include="Images\images\animal1\elephant.jpg" />
+    <Content Include="Images\images\animal1\foal.jpg" />
+    <Content Include="Images\images\animal1\fox.jpg" />
+    <Content Include="Images\images\animal1\goat.jpg" />
+    <Content Include="Images\images\animal1\hare.jpg" />
+    <Content Include="Images\images\animal1\horse.jpg" />
+    <Content Include="Images\images\animal1\lion.jpg" />
+    <Content Include="Images\images\animal1\monkey.jpg" />
+    <Content Include="Images\images\animal1\pig.jpg" />
+    <Content Include="Images\images\animal1\rat.jpg" />
+    <Content Include="Images\images\animal1\tiger.jpg" />
+    <Content Include="Images\images\animal1\wolf.jpg" />
+    <Content Include="Images\images\body\back.jpg" />
+    <Content Include="Images\images\body\belly.jpg" />
+    <Content Include="Images\images\body\body.jpg" />
+    <Content Include="Images\images\body\breast.jpg" />
+    <Content Include="Images\images\body\chin.jpg" />
+    <Content Include="Images\images\body\ear.jpg" />
+    <Content Include="Images\images\body\eye.jpg" />
+    <Content Include="Images\images\body\finger.jpg" />
+    <Content Include="Images\images\body\foot.jpg" />
+    <Content Include="Images\images\body\hair.jpg" />
+    <Content Include="Images\images\body\hand.jpg" />
+    <Content Include="Images\images\body\head.jpg" />
+    <Content Include="Images\images\body\knee.jpg" />
+    <Content Include="Images\images\body\legs.jpg" />
+    <Content Include="Images\images\body\lips.jpg" />
+    <Content Include="Images\images\body\neck.jpg" />
+    <Content Include="Images\images\body\nose.jpg" />
+    <Content Include="Images\images\body\teeth.jpg" />
+    <Content Include="Images\images\body\toes.jpg" />
+    <Content Include="Images\images\body\tongue.jpg" />
+    <Content Include="Images\images\city\bench.jpg" />
+    <Content Include="Images\images\city\bridge.jpg" />
+    <Content Include="Images\images\city\bus.jpg" />
+    <Content Include="Images\images\city\car.jpg" />
+    <Content Include="Images\images\city\church.jpg" />
+    <Content Include="Images\images\city\cinema.jpg" />
+    <Content Include="Images\images\city\city.jpg" />
+    <Content Include="Images\images\city\fillingstation.jpg" />
+    <Content Include="Images\images\city\gate.jpg" />
+    <Content Include="Images\images\city\hospital.jpg" />
+    <Content Include="Images\images\city\intersection.jpg" />
+    <Content Include="Images\images\city\library.jpg" />
+    <Content Include="Images\images\city\lorry.jpg" />
+    <Content Include="Images\images\city\monument.jpg" />
+    <Content Include="Images\images\city\pavement.jpg" />
+    <Content Include="Images\images\city\road.jpg" />
+    <Content Include="Images\images\city\shop.jpg" />
+    <Content Include="Images\images\city\snackbar.jpg" />
+    <Content Include="Images\images\city\trafficlights.jpg" />
+    <Content Include="Images\images\city\zebracrossing.jpg" />
+    <Content Include="Images\images\house1\armchair.jpg" />
+    <Content Include="Images\images\house1\cabinet.jpg" />
+    <Content Include="Images\images\house1\carpet.jpg" />
+    <Content Include="Images\images\house1\ceiling.jpg" />
+    <Content Include="Images\images\house1\chair.jpg" />
+    <Content Include="Images\images\house1\chandelier.jpg" />
+    <Content Include="Images\images\house1\clock.jpg" />
+    <Content Include="Images\images\house1\curtains.jpg" />
+    <Content Include="Images\images\house1\door.jpg" />
+    <Content Include="Images\images\house1\floor.jpg" />
+    <Content Include="Images\images\house1\flowerpot.jpg" />
+    <Content Include="Images\images\house1\house.jpg" />
+    <Content Include="Images\images\house1\lamp.jpg" />
+    <Content Include="Images\images\house1\radiator.jpg" />
+    <Content Include="Images\images\house1\room.jpg" />
+    <Content Include="Images\images\house1\sofa.jpg" />
+    <Content Include="Images\images\house1\table.jpg" />
+    <Content Include="Images\images\house1\tvset.jpg" />
+    <Content Include="Images\images\house1\vacuumcleaner.jpg" />
+    <Content Include="Images\images\house1\window.jpg" />
+    <Content Include="Images\images\kitchen\bowl.jpg" />
+    <Content Include="Images\images\kitchen\cup.jpg" />
+    <Content Include="Images\images\kitchen\dishwasher.jpg" />
+    <Content Include="Images\images\kitchen\fork.jpg" />
+    <Content Include="Images\images\kitchen\fridge.jpg" />
+    <Content Include="Images\images\kitchen\glass.jpg" />
+    <Content Include="Images\images\kitchen\jar.jpg" />
+    <Content Include="Images\images\kitchen\jug.jpg" />
+    <Content Include="Images\images\kitchen\kettle.jpg" />
+    <Content Include="Images\images\kitchen\kitchen.jpg" />
+    <Content Include="Images\images\kitchen\knife.jpg" />
+    <Content Include="Images\images\kitchen\ladle.jpg" />
+    <Content Include="Images\images\kitchen\pan.jpg" />
+    <Content Include="Images\images\kitchen\plate.jpg" />
+    <Content Include="Images\images\kitchen\saucepan.jpg" />
+    <Content Include="Images\images\kitchen\sink.jpg" />
+    <Content Include="Images\images\kitchen\stove.jpg" />
+    <Content Include="Images\images\kitchen\tablespoon.jpg" />
+    <Content Include="Images\images\kitchen\tap.jpg" />
+    <Content Include="Images\images\kitchen\teaspoon.jpg" />
+    <Content Include="Images\images\nature1\beach.jpg" />
+    <Content Include="Images\images\nature1\brook.jpg" />
+    <Content Include="Images\images\nature1\desert.jpg" />
+    <Content Include="Images\images\nature1\earth.jpg" />
+    <Content Include="Images\images\nature1\field.jpg" />
+    <Content Include="Images\images\nature1\fire.jpg" />
+    <Content Include="Images\images\nature1\forest.jpg" />
+    <Content Include="Images\images\nature1\hill.jpg" />
+    <Content Include="Images\images\nature1\island.jpg" />
+    <Content Include="Images\images\nature1\lake.jpg" />
+    <Content Include="Images\images\nature1\meadow.jpg" />
+    <Content Include="Images\images\nature1\moon.jpg" />
+    <Content Include="Images\images\nature1\mountain.jpg" />
+    <Content Include="Images\images\nature1\river.jpg" />
+    <Content Include="Images\images\nature1\sand.jpg" />
+    <Content Include="Images\images\nature1\sea.jpg" />
+    <Content Include="Images\images\nature1\snowdrift.jpg" />
+    <Content Include="Images\images\nature1\soil.jpg" />
+    <Content Include="Images\images\nature1\star.jpg" />
+    <Content Include="Images\images\nature1\water.jpg" />
+    <Content Include="Images\images\nature2\animal.jpg" />
+    <Content Include="Images\images\nature2\autumn.jpg" />
+    <Content Include="Images\images\nature2\bird.jpg" />
+    <Content Include="Images\images\nature2\drop.jpg" />
+    <Content Include="Images\images\nature2\fish.jpg" />
+    <Content Include="Images\images\nature2\flood.jpg" />
+    <Content Include="Images\images\nature2\insect.jpg" />
+    <Content Include="Images\images\nature2\lizard.jpg" />
+    <Content Include="Images\images\nature2\nestling.jpg" />
+    <Content Include="Images\images\nature2\petal.jpg" />
+    <Content Include="Images\images\nature2\plant.jpg" />
+    <Content Include="Images\images\nature2\snake.jpg" />
+    <Content Include="Images\images\nature2\spring.jpg" />
+    <Content Include="Images\images\nature2\stone.jpg" />
+    <Content Include="Images\images\nature2\summer.jpg" />
+    <Content Include="Images\images\nature2\valley.jpg" />
+    <Content Include="Images\images\nature2\volcano.jpg" />
+    <Content Include="Images\images\nature2\waterfall.jpg" />
+    <Content Include="Images\images\nature2\wave.jpg" />
+    <Content Include="Images\images\nature2\winter.jpg" />
+    <Content Include="Images\images\plant1\acorn.jpg" />
+    <Content Include="Images\images\plant1\apple.jpg" />
+    <Content Include="Images\images\plant1\bark.jpg" />
+    <Content Include="Images\images\plant1\branch.jpg" />
+    <Content Include="Images\images\plant1\bud.jpg" />
+    <Content Include="Images\images\plant1\bush.jpg" />
+    <Content Include="Images\images\plant1\cherry.jpg" />
+    <Content Include="Images\images\plant1\flower.jpg" />
+    <Content Include="Images\images\plant1\grape.jpg" />
+    <Content Include="Images\images\plant1\hollow.jpg" />
+    <Content Include="Images\images\plant1\nut.jpg" />
+    <Content Include="Images\images\plant1\peach.jpg" />
+    <Content Include="Images\images\plant1\pear.jpg" />
+    <Content Include="Images\images\plant1\pineapple.jpg" />
+    <Content Include="Images\images\plant1\plum.jpg" />
+    <Content Include="Images\images\plant1\raspberry.jpg" />
+    <Content Include="Images\images\plant1\root.jpg" />
+    <Content Include="Images\images\plant1\strawberry.jpg" />
+    <Content Include="Images\images\plant1\stub.jpg" />
+    <Content Include="Images\images\plant1\tree.jpg" />
+    <Content Include="Images\images\plant2\beet.jpg" />
+    <Content Include="Images\images\plant2\birch.jpg" />
+    <Content Include="Images\images\plant2\buckwheat.jpg" />
+    <Content Include="Images\images\plant2\cabbage.jpg" />
+    <Content Include="Images\images\plant2\carrot.jpg" />
+    <Content Include="Images\images\plant2\cone.jpg" />
+    <Content Include="Images\images\plant2\cucumber.jpg" />
+    <Content Include="Images\images\plant2\dandelion.jpg" />
+    <Content Include="Images\images\plant2\garlic.jpg" />
+    <Content Include="Images\images\plant2\grass.jpg" />
+    <Content Include="Images\images\plant2\hay.jpg" />
+    <Content Include="Images\images\plant2\melon.jpg" />
+    <Content Include="Images\images\plant2\onion.jpg" />
+    <Content Include="Images\images\plant2\pea.jpg" />
+    <Content Include="Images\images\plant2\pine.jpg" />
+    <Content Include="Images\images\plant2\potato.jpg" />
+    <Content Include="Images\images\plant2\sunflower.jpg" />
+    <Content Include="Images\images\plant2\tomato.jpg" />
+    <Content Include="Images\images\plant2\watermelon.jpg" />
+    <Content Include="Images\images\plant2\wheat.jpg" />
+    <Content Include="Images\images\weather\cloud.jpg" />
+    <Content Include="Images\images\weather\cold.jpg" />
+    <Content Include="Images\images\weather\dew.jpg" />
+    <Content Include="Images\images\weather\fog.jpg" />
+    <Content Include="Images\images\weather\frost.jpg" />
+    <Content Include="Images\images\weather\hail.jpg" />
+    <Content Include="Images\images\weather\hot.jpg" />
+    <Content Include="Images\images\weather\hurricane.jpg" />
+    <Content Include="Images\images\weather\ice.jpg" />
+    <Content Include="Images\images\weather\icicle.jpg" />
+    <Content Include="Images\images\weather\lightning.jpg" />
+    <Content Include="Images\images\weather\muddy.jpg" />
+    <Content Include="Images\images\weather\overcast.jpg" />
+    <Content Include="Images\images\weather\puddle.jpg" />
+    <Content Include="Images\images\weather\rain.jpg" />
+    <Content Include="Images\images\weather\rainbow.jpg" />
+    <Content Include="Images\images\weather\snow.jpg" />
+    <Content Include="Images\images\weather\sunny.jpg" />
+    <Content Include="Images\images\weather\tornado.jpg" />
+    <Content Include="Images\images\weather\windy.jpg" />
+    <Content Include="Images\Laser.png" />
+    <Content Include="Images\LaserBeam.png" />
+    <Content Include="Images\maxim.jpg" />
+    <Content Include="Images\NoPhoto.png" />
+    <Content Include="Images\odometer.2560.png" />
+    <Content Include="Images\Recharge2.mp3" />
+    <Content Include="Images\Salutes\Salute1\Sal1_1.png" />
+    <Content Include="Images\Salutes\Salute1\Sal1_10.png" />
+    <Content Include="Images\Salutes\Salute1\Sal1_11.png" />
+    <Content Include="Images\Salutes\Salute1\Sal1_12.png" />
+    <Content Include="Images\Salutes\Salute1\Sal1_13.png" />
+    <Content Include="Images\Salutes\Salute1\Sal1_14.png" />
+    <Content Include="Images\Salutes\Salute1\Sal1_15.png" />
+    <Content Include="Images\Salutes\Salute1\Sal1_16.png" />
+    <Content Include="Images\Salutes\Salute1\Sal1_17.png" />
+    <Content Include="Images\Salutes\Salute1\Sal1_18.png" />
+    <Content Include="Images\Salutes\Salute1\Sal1_19.png" />
+    <Content Include="Images\Salutes\Salute1\Sal1_2.png" />
+    <Content Include="Images\Salutes\Salute1\Sal1_20.png" />
+    <Content Include="Images\Salutes\Salute1\Sal1_21.png" />
+    <Content Include="Images\Salutes\Salute1\Sal1_22.png" />
+    <Content Include="Images\Salutes\Salute1\Sal1_23.png" />
+    <Content Include="Images\Salutes\Salute1\Sal1_24.png" />
+    <Content Include="Images\Salutes\Salute1\Sal1_25.png" />
+    <Content Include="Images\Salutes\Salute1\Sal1_26.png" />
+    <Content Include="Images\Salutes\Salute1\Sal1_27.png" />
+    <Content Include="Images\Salutes\Salute1\Sal1_28.png" />
+    <Content Include="Images\Salutes\Salute1\Sal1_29.png" />
+    <Content Include="Images\Salutes\Salute1\Sal1_3.png" />
+    <Content Include="Images\Salutes\Salute1\Sal1_30.png" />
+    <Content Include="Images\Salutes\Salute1\Sal1_4.png" />
+    <Content Include="Images\Salutes\Salute1\Sal1_5.png" />
+    <Content Include="Images\Salutes\Salute1\Sal1_6.png" />
+    <Content Include="Images\Salutes\Salute1\Sal1_7.png" />
+    <Content Include="Images\Salutes\Salute1\Sal1_8.png" />
+    <Content Include="Images\Salutes\Salute1\Sal1_9.png" />
+    <Content Include="Images\Salutes\Salute2\Sal2_1.png" />
+    <Content Include="Images\Salutes\Salute2\Sal2_10.png" />
+    <Content Include="Images\Salutes\Salute2\Sal2_11.png" />
+    <Content Include="Images\Salutes\Salute2\Sal2_12.png" />
+    <Content Include="Images\Salutes\Salute2\Sal2_13.png" />
+    <Content Include="Images\Salutes\Salute2\Sal2_14.png" />
+    <Content Include="Images\Salutes\Salute2\Sal2_15.png" />
+    <Content Include="Images\Salutes\Salute2\Sal2_16.png" />
+    <Content Include="Images\Salutes\Salute2\Sal2_17.png" />
+    <Content Include="Images\Salutes\Salute2\Sal2_18.png" />
+    <Content Include="Images\Salutes\Salute2\Sal2_19.png" />
+    <Content Include="Images\Salutes\Salute2\Sal2_2.png" />
+    <Content Include="Images\Salutes\Salute2\Sal2_3.png" />
+    <Content Include="Images\Salutes\Salute2\Sal2_4.png" />
+    <Content Include="Images\Salutes\Salute2\Sal2_5.png" />
+    <Content Include="Images\Salutes\Salute2\Sal2_6.png" />
+    <Content Include="Images\Salutes\Salute2\Sal2_7.png" />
+    <Content Include="Images\Salutes\Salute2\Sal2_8.png" />
+    <Content Include="Images\Salutes\Salute2\Sal2_9.png" />
+    <Content Include="Images\Salutes\Salute3\Sal3_1.png" />
+    <Content Include="Images\Salutes\Salute3\Sal3_10.png" />
+    <Content Include="Images\Salutes\Salute3\Sal3_11.png" />
+    <Content Include="Images\Salutes\Salute3\Sal3_12.png" />
+    <Content Include="Images\Salutes\Salute3\Sal3_13.png" />
+    <Content Include="Images\Salutes\Salute3\Sal3_14.png" />
+    <Content Include="Images\Salutes\Salute3\Sal3_15.png" />
+    <Content Include="Images\Salutes\Salute3\Sal3_16.png" />
+    <Content Include="Images\Salutes\Salute3\Sal3_17.png" />
+    <Content Include="Images\Salutes\Salute3\Sal3_18.png" />
+    <Content Include="Images\Salutes\Salute3\Sal3_19.png" />
+    <Content Include="Images\Salutes\Salute3\Sal3_2.png" />
+    <Content Include="Images\Salutes\Salute3\Sal3_20.png" />
+    <Content Include="Images\Salutes\Salute3\Sal3_21.png" />
+    <Content Include="Images\Salutes\Salute3\Sal3_22.png" />
+    <Content Include="Images\Salutes\Salute3\Sal3_23.png" />
+    <Content Include="Images\Salutes\Salute3\Sal3_24.png" />
+    <Content Include="Images\Salutes\Salute3\Sal3_25.png" />
+    <Content Include="Images\Salutes\Salute3\Sal3_3.png" />
+    <Content Include="Images\Salutes\Salute3\Sal3_4.png" />
+    <Content Include="Images\Salutes\Salute3\Sal3_5.png" />
+    <Content Include="Images\Salutes\Salute3\Sal3_6.png" />
+    <Content Include="Images\Salutes\Salute3\Sal3_7.png" />
+    <Content Include="Images\Salutes\Salute3\Sal3_8.png" />
+    <Content Include="Images\Salutes\Salute3\Sal3_9.png" />
+    <Content Include="Images\ship.png" />
+    <Content Include="Images\sounds\English\animal1\bear.mp3" />
+    <Content Include="Images\sounds\English\animal1\bull.mp3" />
+    <Content Include="Images\sounds\English\animal1\calf.mp3" />
+    <Content Include="Images\sounds\English\animal1\camel.mp3" />
+    <Content Include="Images\sounds\English\animal1\cat.mp3" />
+    <Content Include="Images\sounds\English\animal1\cow.mp3" />
+    <Content Include="Images\sounds\English\animal1\dog.mp3" />
+    <Content Include="Images\sounds\English\animal1\donkey.mp3" />
+    <Content Include="Images\sounds\English\animal1\elephant.mp3" />
+    <Content Include="Images\sounds\English\animal1\foal.mp3" />
+    <Content Include="Images\sounds\English\animal1\fox.mp3" />
+    <Content Include="Images\sounds\English\animal1\goat.mp3" />
+    <Content Include="Images\sounds\English\animal1\hare.mp3" />
+    <Content Include="Images\sounds\English\animal1\horse.mp3" />
+    <Content Include="Images\sounds\English\animal1\lion.mp3" />
+    <Content Include="Images\sounds\English\animal1\monkey.mp3" />
+    <Content Include="Images\sounds\English\animal1\pig.mp3" />
+    <Content Include="Images\sounds\English\animal1\rat.mp3" />
+    <Content Include="Images\sounds\English\animal1\tiger.mp3" />
+    <Content Include="Images\sounds\English\animal1\wolf.mp3" />
+    <Content Include="Images\sounds\English\body\back.mp3" />
+    <Content Include="Images\sounds\English\body\belly.mp3" />
+    <Content Include="Images\sounds\English\body\body.mp3" />
+    <Content Include="Images\sounds\English\body\breast.mp3" />
+    <Content Include="Images\sounds\English\body\chin.mp3" />
+    <Content Include="Images\sounds\English\body\ear.mp3" />
+    <Content Include="Images\sounds\English\body\eye.mp3" />
+    <Content Include="Images\sounds\English\body\finger.mp3" />
+    <Content Include="Images\sounds\English\body\foot.mp3" />
+    <Content Include="Images\sounds\English\body\hair.mp3" />
+    <Content Include="Images\sounds\English\body\hand.mp3" />
+    <Content Include="Images\sounds\English\body\head.mp3" />
+    <Content Include="Images\sounds\English\body\knee.mp3" />
+    <Content Include="Images\sounds\English\body\legs.mp3" />
+    <Content Include="Images\sounds\English\body\lips.mp3" />
+    <Content Include="Images\sounds\English\body\neck.mp3" />
+    <Content Include="Images\sounds\English\body\nose.mp3" />
+    <Content Include="Images\sounds\English\body\teeth.mp3" />
+    <Content Include="Images\sounds\English\body\toes.mp3" />
+    <Content Include="Images\sounds\English\body\tongue.mp3" />
+    <Content Include="Images\sounds\English\city\bench.mp3" />
+    <Content Include="Images\sounds\English\city\bridge.mp3" />
+    <Content Include="Images\sounds\English\city\bus.mp3" />
+    <Content Include="Images\sounds\English\city\car.mp3" />
+    <Content Include="Images\sounds\English\city\church.mp3" />
+    <Content Include="Images\sounds\English\city\cinema.mp3" />
+    <Content Include="Images\sounds\English\city\city.mp3" />
+    <Content Include="Images\sounds\English\city\fillingstation.mp3" />
+    <Content Include="Images\sounds\English\city\gate.mp3" />
+    <Content Include="Images\sounds\English\city\hospital.mp3" />
+    <Content Include="Images\sounds\English\city\intersection.mp3" />
+    <Content Include="Images\sounds\English\city\library.mp3" />
+    <Content Include="Images\sounds\English\city\lorry.mp3" />
+    <Content Include="Images\sounds\English\city\monument.mp3" />
+    <Content Include="Images\sounds\English\city\pavement.mp3" />
+    <Content Include="Images\sounds\English\city\road.mp3" />
+    <Content Include="Images\sounds\English\city\shop.mp3" />
+    <Content Include="Images\sounds\English\city\snackbar.mp3" />
+    <Content Include="Images\sounds\English\city\trafficlights.mp3" />
+    <Content Include="Images\sounds\English\city\zebracrossing.mp3" />
+    <Content Include="Images\sounds\English\house1\armchair.mp3" />
+    <Content Include="Images\sounds\English\house1\cabinet.mp3" />
+    <Content Include="Images\sounds\English\house1\carpet.mp3" />
+    <Content Include="Images\sounds\English\house1\ceiling.mp3" />
+    <Content Include="Images\sounds\English\house1\chair.mp3" />
+    <Content Include="Images\sounds\English\house1\chandelier.mp3" />
+    <Content Include="Images\sounds\English\house1\clock.mp3" />
+    <Content Include="Images\sounds\English\house1\curtain.mp3" />
+    <Content Include="Images\sounds\English\house1\door.mp3" />
+    <Content Include="Images\sounds\English\house1\floor.mp3" />
+    <Content Include="Images\sounds\English\house1\flowerpot.mp3" />
+    <Content Include="Images\sounds\English\house1\house.mp3" />
+    <Content Include="Images\sounds\English\house1\lamp.mp3" />
+    <Content Include="Images\sounds\English\house1\radiator.mp3" />
+    <Content Include="Images\sounds\English\house1\room.mp3" />
+    <Content Include="Images\sounds\English\house1\sofa.mp3" />
+    <Content Include="Images\sounds\English\house1\table.mp3" />
+    <Content Include="Images\sounds\English\house1\tvset.mp3" />
+    <Content Include="Images\sounds\English\house1\vacuumcleaner.mp3" />
+    <Content Include="Images\sounds\English\house1\window.mp3" />
+    <Content Include="Images\sounds\English\kitchen\bowl.mp3" />
+    <Content Include="Images\sounds\English\kitchen\cup.mp3" />
+    <Content Include="Images\sounds\English\kitchen\dishwasher.mp3" />
+    <Content Include="Images\sounds\English\kitchen\fork.mp3" />
+    <Content Include="Images\sounds\English\kitchen\fridge.mp3" />
+    <Content Include="Images\sounds\English\kitchen\glass.mp3" />
+    <Content Include="Images\sounds\English\kitchen\jar.mp3" />
+    <Content Include="Images\sounds\English\kitchen\jug.mp3" />
+    <Content Include="Images\sounds\English\kitchen\kettle.mp3" />
+    <Content Include="Images\sounds\English\kitchen\kitchen.mp3" />
+    <Content Include="Images\sounds\English\kitchen\knife.mp3" />
+    <Content Include="Images\sounds\English\kitchen\ladle.mp3" />
+    <Content Include="Images\sounds\English\kitchen\pan.mp3" />
+    <Content Include="Images\sounds\English\kitchen\plate.mp3" />
+    <Content Include="Images\sounds\English\kitchen\saucepan.mp3" />
+    <Content Include="Images\sounds\English\kitchen\sink.mp3" />
+    <Content Include="Images\sounds\English\kitchen\stove.mp3" />
+    <Content Include="Images\sounds\English\kitchen\tablespoon.mp3" />
+    <Content Include="Images\sounds\English\kitchen\tap.mp3" />
+    <Content Include="Images\sounds\English\kitchen\teaspoon.mp3" />
+    <Content Include="Images\sounds\English\nature1\beach.mp3" />
+    <Content Include="Images\sounds\English\nature1\brook.mp3" />
+    <Content Include="Images\sounds\English\nature1\desert.mp3" />
+    <Content Include="Images\sounds\English\nature1\earth.mp3" />
+    <Content Include="Images\sounds\English\nature1\field.mp3" />
+    <Content Include="Images\sounds\English\nature1\fire.mp3" />
+    <Content Include="Images\sounds\English\nature1\forest.mp3" />
+    <Content Include="Images\sounds\English\nature1\hill.mp3" />
+    <Content Include="Images\sounds\English\nature1\island.mp3" />
+    <Content Include="Images\sounds\English\nature1\lake.mp3" />
+    <Content Include="Images\sounds\English\nature1\meadow.mp3" />
+    <Content Include="Images\sounds\English\nature1\moon.mp3" />
+    <Content Include="Images\sounds\English\nature1\mountain.mp3" />
+    <Content Include="Images\sounds\English\nature1\river.mp3" />
+    <Content Include="Images\sounds\English\nature1\sand.mp3" />
+    <Content Include="Images\sounds\English\nature1\sea.mp3" />
+    <Content Include="Images\sounds\English\nature1\snowdrift.mp3" />
+    <Content Include="Images\sounds\English\nature1\soil.mp3" />
+    <Content Include="Images\sounds\English\nature1\star.mp3" />
+    <Content Include="Images\sounds\English\nature1\water.mp3" />
+    <Content Include="Images\sounds\English\nature2\animal.mp3" />
+    <Content Include="Images\sounds\English\nature2\autumn.mp3" />
+    <Content Include="Images\sounds\English\nature2\bird.mp3" />
+    <Content Include="Images\sounds\English\nature2\drop.mp3" />
+    <Content Include="Images\sounds\English\nature2\fish.mp3" />
+    <Content Include="Images\sounds\English\nature2\flood.mp3" />
+    <Content Include="Images\sounds\English\nature2\insect.mp3" />
+    <Content Include="Images\sounds\English\nature2\lizard.mp3" />
+    <Content Include="Images\sounds\English\nature2\nestling.mp3" />
+    <Content Include="Images\sounds\English\nature2\petal.mp3" />
+    <Content Include="Images\sounds\English\nature2\plant.mp3" />
+    <Content Include="Images\sounds\English\nature2\snake.mp3" />
+    <Content Include="Images\sounds\English\nature2\spring.mp3" />
+    <Content Include="Images\sounds\English\nature2\stone.mp3" />
+    <Content Include="Images\sounds\English\nature2\summer.mp3" />
+    <Content Include="Images\sounds\English\nature2\valley.mp3" />
+    <Content Include="Images\sounds\English\nature2\volcano.mp3" />
+    <Content Include="Images\sounds\English\nature2\waterfall.mp3" />
+    <Content Include="Images\sounds\English\nature2\wave.mp3" />
+    <Content Include="Images\sounds\English\nature2\winter.mp3" />
+    <Content Include="Images\sounds\English\plant1\acorn.mp3" />
+    <Content Include="Images\sounds\English\plant1\apple.mp3" />
+    <Content Include="Images\sounds\English\plant1\bark.mp3" />
+    <Content Include="Images\sounds\English\plant1\branch.mp3" />
+    <Content Include="Images\sounds\English\plant1\bud.mp3" />
+    <Content Include="Images\sounds\English\plant1\bush.mp3" />
+    <Content Include="Images\sounds\English\plant1\cherry.mp3" />
+    <Content Include="Images\sounds\English\plant1\flower.mp3" />
+    <Content Include="Images\sounds\English\plant1\grape.mp3" />
+    <Content Include="Images\sounds\English\plant1\hollow.mp3" />
+    <Content Include="Images\sounds\English\plant1\nut.mp3" />
+    <Content Include="Images\sounds\English\plant1\peach.mp3" />
+    <Content Include="Images\sounds\English\plant1\pear.mp3" />
+    <Content Include="Images\sounds\English\plant1\pineapple.mp3" />
+    <Content Include="Images\sounds\English\plant1\plum.mp3" />
+    <Content Include="Images\sounds\English\plant1\raspberry.mp3" />
+    <Content Include="Images\sounds\English\plant1\root.mp3" />
+    <Content Include="Images\sounds\English\plant1\strawberry.mp3" />
+    <Content Include="Images\sounds\English\plant1\stub.mp3" />
+    <Content Include="Images\sounds\English\plant1\tree.mp3" />
+    <Content Include="Images\sounds\English\plant2\beet.mp3" />
+    <Content Include="Images\sounds\English\plant2\birch.mp3" />
+    <Content Include="Images\sounds\English\plant2\buckwheat.mp3" />
+    <Content Include="Images\sounds\English\plant2\cabbage.mp3" />
+    <Content Include="Images\sounds\English\plant2\carrot.mp3" />
+    <Content Include="Images\sounds\English\plant2\cone.mp3" />
+    <Content Include="Images\sounds\English\plant2\cucumber.mp3" />
+    <Content Include="Images\sounds\English\plant2\dandelion.mp3" />
+    <Content Include="Images\sounds\English\plant2\garlic.mp3" />
+    <Content Include="Images\sounds\English\plant2\grass.mp3" />
+    <Content Include="Images\sounds\English\plant2\hay.mp3" />
+    <Content Include="Images\sounds\English\plant2\melon.mp3" />
+    <Content Include="Images\sounds\English\plant2\onion.mp3" />
+    <Content Include="Images\sounds\English\plant2\pea.mp3" />
+    <Content Include="Images\sounds\English\plant2\pine.mp3" />
+    <Content Include="Images\sounds\English\plant2\potato.mp3" />
+    <Content Include="Images\sounds\English\plant2\sunflower.mp3" />
+    <Content Include="Images\sounds\English\plant2\tomato.mp3" />
+    <Content Include="Images\sounds\English\plant2\watermelon.mp3" />
+    <Content Include="Images\sounds\English\plant2\wheat.mp3" />
+    <Content Include="Images\sounds\English\weather\cloud.mp3" />
+    <Content Include="Images\sounds\English\weather\cold.mp3" />
+    <Content Include="Images\sounds\English\weather\dew.mp3" />
+    <Content Include="Images\sounds\English\weather\fog.mp3" />
+    <Content Include="Images\sounds\English\weather\frost.mp3" />
+    <Content Include="Images\sounds\English\weather\hail.mp3" />
+    <Content Include="Images\sounds\English\weather\hot.mp3" />
+    <Content Include="Images\sounds\English\weather\hurricane.mp3" />
+    <Content Include="Images\sounds\English\weather\ice.mp3" />
+    <Content Include="Images\sounds\English\weather\icicle.mp3" />
+    <Content Include="Images\sounds\English\weather\lightning.mp3" />
+    <Content Include="Images\sounds\English\weather\muddy.mp3" />
+    <Content Include="Images\sounds\English\weather\overcast.mp3" />
+    <Content Include="Images\sounds\English\weather\puddle.mp3" />
+    <Content Include="Images\sounds\English\weather\rain.mp3" />
+    <Content Include="Images\sounds\English\weather\rainbow.mp3" />
+    <Content Include="Images\sounds\English\weather\snow.mp3" />
+    <Content Include="Images\sounds\English\weather\sunny.mp3" />
+    <Content Include="Images\sounds\English\weather\tornado.mp3" />
+    <Content Include="Images\sounds\English\weather\windy.mp3" />
+    <Content Include="Images\sounds\German\city\bench.mp3" />
+    <Content Include="Images\sounds\German\city\bridge.mp3" />
+    <Content Include="Images\sounds\German\city\bus.mp3" />
+    <Content Include="Images\sounds\German\city\car.mp3" />
+    <Content Include="Images\sounds\German\city\church.mp3" />
+    <Content Include="Images\sounds\German\city\cinema.mp3" />
+    <Content Include="Images\sounds\German\city\city.mp3" />
+    <Content Include="Images\sounds\German\city\fillingstation.mp3" />
+    <Content Include="Images\sounds\German\city\gate.mp3" />
+    <Content Include="Images\sounds\German\city\hospital.mp3" />
+    <Content Include="Images\sounds\German\city\intersection.mp3" />
+    <Content Include="Images\sounds\German\city\library.mp3" />
+    <Content Include="Images\sounds\German\city\lorry.mp3" />
+    <Content Include="Images\sounds\German\city\monument.mp3" />
+    <Content Include="Images\sounds\German\city\pavement.mp3" />
+    <Content Include="Images\sounds\German\city\road.mp3" />
+    <Content Include="Images\sounds\German\city\shop.mp3" />
+    <Content Include="Images\sounds\German\city\snackbar.mp3" />
+    <Content Include="Images\sounds\German\city\trafficlights.mp3" />
+    <Content Include="Images\sounds\German\city\zebracrossing.mp3" />
+    <Content Include="Licence\LicInfo.xml" />
+    <None Include="Package.StoreAssociation.xml" />
+    <Content Include="Settings.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Sounds\AcceleratingLong.mp3" />
+    <Content Include="Sounds\AcceleratingShort.mp3" />
+    <Content Include="Sounds\back1.mp3" />
+    <Content Include="Sounds\back2.mp3" />
+    <Content Include="Sounds\Bang.mp3" />
+    <Content Include="Sounds\BangDramatic.mp3" />
+    <Content Include="Sounds\BreakingLong.mp3" />
+    <Content Include="Sounds\BreakingShort.mp3" />
+    <Content Include="Sounds\BreakingShortShort.mp3" />
+    <Content Include="Sounds\click.mp3" />
+    <Content Include="Sounds\Dramatic.mp3" />
+    <Content Include="Sounds\engines.wav" />
+    <Content Include="Sounds\expl1.wav" />
+    <Content Include="Sounds\HeartBeat.mp3" />
+    <Content Include="Sounds\pulse.wav" />
+    <Content Include="Sounds\Salute.mp3" />
+    <Content Include="Sounds\Shuh.mp3" />
+    <Content Include="Sounds\smeh.mp3" />
+    <Content Include="Sounds\starsng.wav" />
+    <Content Include="Sounds\Vibro.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="Common\StandardStyles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MainPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Views\LG_GameApplicationV\LG_GameApplicationV.csproj">
+      <Project>{d0f70125-60f1-491c-87ce-8320acbad861}</Project>
+      <Name>LG_GameApplicationV</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Reactive.Core">
+      <HintPath>..\packages\Rx-Core.2.1.30214.0\lib\NetCore45\System.Reactive.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reactive.Interfaces">
+      <HintPath>..\packages\Rx-Interfaces.2.1.30214.0\lib\NetCore45\System.Reactive.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reactive.Linq">
+      <HintPath>..\packages\Rx-Linq.2.1.30214.0\lib\NetCore45\System.Reactive.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reactive.PlatformServices">
+      <HintPath>..\packages\Rx-PlatformServices.2.1.30214.0\lib\NetCore45\System.Reactive.PlatformServices.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '11.0' ">
+    <VisualStudioVersion>11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

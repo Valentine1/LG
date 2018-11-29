@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <MinimumVisualStudioVersion>10.0</MinimumVisualStudioVersion>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{47D6A138-8490-462D-BBB4-BA4AD3CCAB4E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LG.GameModule</RootNamespace>
+    <AssemblyName>LG.GameModule</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Profile4</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- A reference to the entire .NET Framework is automatically included -->
+    <ProjectReference Include="..\..\LG.Common\LG.Common.csproj">
+      <Project>{717772ea-1f7f-4fed-a85f-e5e245b0acd9}</Project>
+      <Name>LG.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\LG.DALFactory\LG.DALFactory.csproj">
+      <Project>{ba430d95-5067-47d6-b657-63fab260b5dc}</Project>
+      <Name>LG.DALFactory</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\LG.DAL\LG.DAL.csproj">
+      <Project>{1d011834-d4bb-4df4-ab56-c76c902fdff1}</Project>
+      <Name>LG.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\LG.XmlDAL\LG.XmlDAL.csproj">
+      <Project>{86e872ca-8f9f-4f98-82c5-2abffdbb5cef}</Project>
+      <Name>LG.XmlDAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LG.ModuleBase\LG.ModuleBase.csproj">
+      <Project>{bb18ffcf-9f9c-4b43-a2a6-da44e766b0c8}</Project>
+      <Name>LG.ModuleBase</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assets\AmmoGrid.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Assets\AmmoM.cs" />
+    <Compile Include="Assets\AssetColumnsGrid.cs" />
+    <Compile Include="Assets\AssetGrid.cs" />
+    <Compile Include="Assets\AsteroidGrid.cs" />
+    <Compile Include="Assets\ExplosionGrid.cs" />
+    <Compile Include="Assets\ExplosionM.cs" />
+    <Compile Include="Assets\SaluteGrid.cs" />
+    <Compile Include="Assets\SaluteM.cs" />
+    <Compile Include="Bullet\BulletControls.cs" />
+    <Compile Include="Bullet\BulletM.cs" />
+    <Compile Include="Bullet\LaserControls.cs" />
+    <Compile Include="Bullet\LaserGrid.cs" />
+    <Compile Include="Bullet\LaserM.cs" />
+    <Compile Include="Game.cs" />
+    <Compile Include="GameController.cs" />
+    <Compile Include="Indicator\Indicator.cs" />
+    <Compile Include="Indicator\IndicatorMoving.cs" />
+    <Compile Include="Indicator\IndicatorOrdinary.cs" />
+    <Compile Include="Indicator\Stripe.cs" />
+    <Compile Include="InfoBoard\InfoBoard.cs" />
+    <Compile Include="InfoBoard\InfoBoardIntro.cs" />
+    <Compile Include="InfoBoard\InfoBoardMeasures.cs" />
+    <Compile Include="InfoBoard\SpaceMap.cs" />
+    <Compile Include="InfoBoard\SpaceMapAdvancer.cs" />
+    <Compile Include="InfoBoard\SpaceMapAdvancerControls.cs" />
+    <Compile Include="PictureBox\PictureBoxControls.cs" />
+    <Compile Include="PictureBox\PictureBoxGrid.cs" />
+    <Compile Include="PictureBox\PictureBoxInitializer.cs" />
+    <Compile Include="PictureBox\PictureBoxInitializer.partial.cs" />
+    <Compile Include="PictureBox\PictureBoxM.partial.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Ship\CrossHair.cs" />
+    <Compile Include="Ship\ExhaustFireInitializer.cs" />
+    <Compile Include="Ship\ExhaustFireM.cs" />
+    <Compile Include="Ship\ShipControls.cs" />
+    <Compile Include="Ship\StarShipM.cs" />
+    <Compile Include="Space\Space.cs" />
+    <Compile Include="Space\SpaceControllerBase.cs" />
+    <Compile Include="Space\SpaceControllerIntro.cs" />
+    <Compile Include="Space\SpaceControllerBasic.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Message1.sequencediagram" />
+    <None Include="Ship\Graph1.dgml">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Message1.sequencediagram.layout">
+      <DependentUpon>Message1.sequencediagram</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

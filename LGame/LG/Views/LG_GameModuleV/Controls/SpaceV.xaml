@@ -1,0 +1,30 @@
+﻿<UserControl
+    x:Class="LG.Views.SpaceV"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:LG.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" Width="{Binding Path=SpaceWidth}" Height="{Binding  Path=SpaceHeight}" >
+    <Grid x:Name="mainGridSpace"   Margin="{Binding TopMargin}" >
+        <Canvas x:Name="playArea"   VerticalAlignment="Top" >
+            <Canvas x:Name="moveArea"     VerticalAlignment="Top" >
+                <Canvas.RenderTransform>
+                    <!--<TranslateTransform  Y="{Binding Path=AssetsMovingArea.Y}" x:Name="paTrans" />-->
+                    <TranslateTransform  x:Name="paTrans" />
+                </Canvas.RenderTransform>
+            </Canvas>
+            <!--<local:TargetCrossHairV  x:Name="tCrossHairView" />
+            <Image x:Name="imLaserBeam" Source="ms-appx:///Images/LaserBeam.png" Height="{Binding BlockSize.Height}"
+                   Canvas.Left="{Binding StartPosition.X}" Canvas.Top="{Binding StartPosition.Y}" Width="3" Stretch="UniformToFill">
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <TranslateTransform X="{Binding X}" Y="{Binding Y}" />
+                        <ScaleTransform  ScaleY="{Binding ScaleY}" CenterY="{Binding CenterScaleY}" />
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>-->
+            <local:StarShip  x:Name="SShip"  Canvas.ZIndex="100000" />
+        </Canvas>
+    </Grid>
+</UserControl>

@@ -1,0 +1,39 @@
+﻿<UserControl
+    x:Class="LG.Views.TopicV"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:LG.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"   Canvas.Left="{Binding  Path=StartPosition.X}"  Canvas.Top="{Binding  Path=StartPosition.Y}">
+    <Canvas x:Name="canvTopic"  >
+        <Path x:Name="pathTopic" Data="{Binding  Path=PathData}" VerticalAlignment="Top" HorizontalAlignment="Left"  Width="{Binding Path=BlockSize.Width}" Height="{Binding Path=BlockSize.Height}"
+              Fill="{Binding Path=LevelAvaVM.LegendColor}"  
+		          StrokeEndLineCap="Round" StrokeLineJoin="Round"  Stretch="Fill" StrokeThickness="4" UseLayoutRounding="True" >
+            <Path.Stroke>
+                <ImageBrush  Opacity="0.8" ImageSource="ms-appx:///Images/GreenGrad.png" />
+            </Path.Stroke>
+            <Path.RenderTransform>
+                <ScaleTransform x:Name="st1"  />
+            </Path.RenderTransform>
+        </Path>
+    
+        <!--<Image Source="{Binding  Path=Pictures[0].PictureSource}"  Stretch="Uniform"  Canvas.Left="{Binding  Path=Pictures[0].StartPosition.X}"  Canvas.Top="{Binding  Path=Pictures[0].StartPosition.Y}" Width="16" Height="12" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto"  >
+            <Image.RenderTransform>
+                <CompositeTransform Rotation="-46"/>
+            </Image.RenderTransform>
+        </Image>
+        <Image Source="{Binding  Path=Pictures[1].PictureSource}"  Stretch="Uniform"  Canvas.Left="{Binding  Path=Pictures[1].StartPosition.X}"  Canvas.Top="{Binding  Path=Pictures[1].StartPosition.Y}" Width="16" Height="12" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto" >
+            <Image.RenderTransform>
+                <CompositeTransform Rotation="17"/>
+            </Image.RenderTransform>
+
+        </Image>
+        <Image Source="{Binding  Path=Pictures[2].PictureSource}"  Stretch="Uniform"   Canvas.Left="{Binding  Path=Pictures[2].StartPosition.X}"  Canvas.Top="{Binding  Path=Pictures[2].StartPosition.Y}"  Width="16" Height="12" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto"  >
+            <Image.RenderTransform>
+                <CompositeTransform Rotation="-23"/>
+            </Image.RenderTransform>
+        </Image>-->
+
+    </Canvas>
+</UserControl>

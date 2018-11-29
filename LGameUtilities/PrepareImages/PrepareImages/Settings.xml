@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root>
+  <settings>
+    <PathImages value="images\" />
+    <PathSounds value="sounds\" />
+    <PathData  value="data\" />
+  </settings>
+</root>

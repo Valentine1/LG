@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Themes>
+  <Theme Id="1" Name="weather" LevNo="1" bTime="35562" Width="78" Height="78" Left="513" Top="324" Data="M293,248 C301,219 322,197 322,197 L372,193 L397,210 L463,181 L507,125 L521,81 L581,87 L590,157 L579,204 L519,252 L496,278 L464,312 C464,312 400,331 394,331 C388,331 330,310 330,310 L300,276 z">
+    <Letter Val="W" Left="13" Top="40" Rot="4" />
+    <Letter Val="E" Left="27" Top="41" Rot="-11" />
+    <Letter Val="A" Left="35" Top="38" Rot="-27" />
+    <Letter Val="T" Left="43" Top="33" Rot="-46" />
+    <Letter Val="H" Left="49" Top="25" Rot="-53" />
+    <Letter Val="E" Left="55" Top="16" Rot="-58" />
+    <Letter Val="R" Left="59" Top="9" Rot="-58" />
+    <Pic WId="1" Left="49" Top="39" Rot="-46" />
+    <Pic WId="2" Left="11" Top="50" Rot="17" />
+    <Pic WId="3" Left="31" Top="53" Rot="-23" />
+  </Theme>
+  <Theme Id="2" Name="body" LevNo="1" bTime="0" Width="94" Height="74" Left="558" Top="354" Data="M467,312 L520,251 L574,210 L651,175 L775,187 L789,222 L807,236 L821,276 L812,369 L753,409 L572,384 L496,348 L471,327 z"></Theme>
+  <Theme Id="3" Name="plant1" />
+  <Theme Id="4" Name="plant2" />
+  <Theme Id="5" Name="nature1" />
+  <Theme Id="6" Name="city" />
+ <Theme Id="7" Name="house1" />
+</Themes>

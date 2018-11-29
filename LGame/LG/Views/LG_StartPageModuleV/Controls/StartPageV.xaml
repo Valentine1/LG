@@ -1,0 +1,27 @@
+﻿<UserControl
+    x:Class="LG.Views.StartPageV"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:LG.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid>
+        <local:Profiles x:Name="ProfilesC"  HorizontalAlignment="Right" VerticalAlignment="Top" />
+
+        <Viewbox VerticalAlignment="Center" HorizontalAlignment="Center"  Stretch="Uniform"  Width="{Binding Path=MainMenuPanelVM.BlockSize.Width}"  Height="{Binding Path=MainMenuPanelVM.BlockSize.Height}"  >
+            <StackPanel VerticalAlignment="Center"  HorizontalAlignment="Center" Margin="-120,-50,0,0">
+                <Border x:Name="brdPlay">
+                    <local:ImageButton x:Name="imSelectTheme" OnClick="imSelectTheme_OnClick" />
+                </Border>
+                <Border x:Name="brd" Margin="80,0,0,0" >
+                    <local:ImageButton x:Name="imPlay" OnClick="imPlay_OnClick" />
+                </Border>
+                <Border x:Name="brdHierarchy" Margin="180,0,0,0" >
+                    <local:ImageButton x:Name="imHierarchy"  OnClick="imHierarchy_OnClick"/>
+                </Border>
+            </StackPanel>
+        </Viewbox>
+    </Grid>
+</UserControl>

@@ -1,0 +1,704 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="db_lgameModel.Store" Alias="Self" Provider="Devart.Data.PostgreSql" ProviderManifestToken="PostgreSQL" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="db_lgameModelStoreContainer">
+          <EntitySet Name="profiles" EntityType="db_lgameModel.Store.profiles" store:Type="Tables" Schema="public" />
+          <EntitySet Name="profiles_english_animal1" EntityType="db_lgameModel.Store.profiles_english_animal1" store:Type="Tables" Schema="public" />
+          <EntitySet Name="profiles_english_body" EntityType="db_lgameModel.Store.profiles_english_body" store:Type="Tables" Schema="public" />
+          <EntitySet Name="profiles_english_city" EntityType="db_lgameModel.Store.profiles_english_city" store:Type="Tables" Schema="public" />
+          <EntitySet Name="profiles_english_house1" EntityType="db_lgameModel.Store.profiles_english_house1" store:Type="Tables" Schema="public" />
+          <EntitySet Name="profiles_english_kitchen" EntityType="db_lgameModel.Store.profiles_english_kitchen" store:Type="Tables" Schema="public" />
+          <EntitySet Name="profiles_english_nature1" EntityType="db_lgameModel.Store.profiles_english_nature1" store:Type="Tables" Schema="public" />
+          <EntitySet Name="profiles_english_nature2" EntityType="db_lgameModel.Store.profiles_english_nature2" store:Type="Tables" Schema="public" />
+          <EntitySet Name="profiles_english_plant1" EntityType="db_lgameModel.Store.profiles_english_plant1" store:Type="Tables" Schema="public" />
+          <EntitySet Name="profiles_english_plant2" EntityType="db_lgameModel.Store.profiles_english_plant2" store:Type="Tables" Schema="public" />
+          <EntitySet Name="profiles_english_weather" EntityType="db_lgameModel.Store.profiles_english_weather" store:Type="Tables" Schema="public" />
+          <EntitySet Name="themes" EntityType="db_lgameModel.Store.themes" store:Type="Tables" Schema="public" />
+          <EntitySet Name="themes_english_letters" EntityType="db_lgameModel.Store.themes_english_letters" store:Type="Tables" Schema="public" />
+          <EntitySet Name="themes_english_pictures" EntityType="db_lgameModel.Store.themes_english_pictures" store:Type="Tables" Schema="public" />
+          <EntitySet Name="words" EntityType="db_lgameModel.Store.words" store:Type="Tables" Schema="public" />
+          <EntitySet Name="words_english" EntityType="db_lgameModel.Store.words_english" store:Type="Tables" Schema="public" />
+          <AssociationSet Name="themes_english_letters_tid_fk" Association="db_lgameModel.Store.themes_english_letters_tid_fk">
+            <End Role="themes" EntitySet="themes" />
+            <End Role="themes_english_letters" EntitySet="themes_english_letters" />
+          </AssociationSet>
+          <AssociationSet Name="themes_english_pictures_tid_fk" Association="db_lgameModel.Store.themes_english_pictures_tid_fk">
+            <End Role="themes" EntitySet="themes" />
+            <End Role="themes_english_pictures" EntitySet="themes_english_pictures" />
+          </AssociationSet>
+          <AssociationSet Name="words_tid_fk" Association="db_lgameModel.Store.words_tid_fk">
+            <End Role="themes" EntitySet="themes" />
+            <End Role="words" EntitySet="words" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="profiles">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="text" Nullable="false" />
+          <Property Name="pic_url" Type="varchar" />
+          <Property Name="pass" Type="varchar" />
+          <Property Name="time" Type="int" Nullable="false" />
+          <Property Name="is_photo" Type="boolean" Nullable="false" />
+          <Property Name="contact_info" Type="varchar" />
+        </EntityType>
+        <EntityType Name="profiles_english_animal1">
+          <Key>
+            <PropertyRef Name="fake_id" />
+          </Key>
+          <Property Name="pid" Type="int" Nullable="false" />
+          <Property Name="lev_no" Type="int" Nullable="false" />
+          <Property Name="best_time" Type="int" Nullable="false" />
+          <Property Name="fake_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="profiles_english_body">
+          <Key>
+            <PropertyRef Name="fake_id" />
+          </Key>
+          <Property Name="pid" Type="int" Nullable="false" />
+          <Property Name="lev_no" Type="int" Nullable="false" />
+          <Property Name="best_time" Type="int" Nullable="false" />
+          <Property Name="fake_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="profiles_english_city">
+          <Key>
+            <PropertyRef Name="fake_id" />
+          </Key>
+          <Property Name="pid" Type="int" Nullable="false" />
+          <Property Name="lev_no" Type="int" Nullable="false" />
+          <Property Name="best_time" Type="int" Nullable="false" />
+          <Property Name="fake_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="profiles_english_house1">
+          <Key>
+            <PropertyRef Name="fake_id" />
+          </Key>
+          <Property Name="pid" Type="int" Nullable="false" />
+          <Property Name="lev_no" Type="int" Nullable="false" />
+          <Property Name="best_time" Type="int" Nullable="false" />
+          <Property Name="fake_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="profiles_english_kitchen">
+          <Key>
+            <PropertyRef Name="fake_id" />
+          </Key>
+          <Property Name="pid" Type="int" Nullable="false" />
+          <Property Name="lev_no" Type="int" Nullable="false" />
+          <Property Name="best_time" Type="int" Nullable="false" />
+          <Property Name="fake_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="profiles_english_nature1">
+          <Key>
+            <PropertyRef Name="fake_id" />
+          </Key>
+          <Property Name="pid" Type="int" Nullable="false" />
+          <Property Name="lev_no" Type="int" Nullable="false" />
+          <Property Name="best_time" Type="int" Nullable="false" />
+          <Property Name="fake_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="profiles_english_nature2">
+          <Key>
+            <PropertyRef Name="fake_id" />
+          </Key>
+          <Property Name="pid" Type="int" Nullable="false" />
+          <Property Name="lev_no" Type="int" Nullable="false" />
+          <Property Name="best_time" Type="int" Nullable="false" />
+          <Property Name="fake_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="profiles_english_plant1">
+          <Key>
+            <PropertyRef Name="fake_id" />
+          </Key>
+          <Property Name="pid" Type="int" Nullable="false" />
+          <Property Name="lev_no" Type="int" Nullable="false" />
+          <Property Name="best_time" Type="int" Nullable="false" />
+          <Property Name="fake_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="profiles_english_plant2">
+          <Key>
+            <PropertyRef Name="fake_id" />
+          </Key>
+          <Property Name="pid" Type="int" Nullable="false" />
+          <Property Name="lev_no" Type="int" Nullable="false" />
+          <Property Name="best_time" Type="int" Nullable="false" />
+          <Property Name="fake_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="profiles_english_weather">
+          <Key>
+            <PropertyRef Name="fake_id" />
+          </Key>
+          <Property Name="pid" Type="int" Nullable="false" />
+          <Property Name="lev_no" Type="int" Nullable="false" />
+          <Property Name="best_time" Type="int" Nullable="false" />
+          <Property Name="fake_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="themes">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="varchar" />
+          <Property Name="Width" Type="int" />
+          <Property Name="Height" Type="int" />
+          <Property Name="Left" Type="int" />
+          <Property Name="Top" Type="int" />
+          <Property Name="Data" Type="varchar" />
+        </EntityType>
+        <EntityType Name="themes_english_letters">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="tid" Type="int" />
+          <Property Name="letter" Type="char" />
+          <Property Name="left" Type="int" />
+          <Property Name="top" Type="int" />
+          <Property Name="rotation" Type="int" />
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="themes_english_pictures">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="tid" Type="int" />
+          <Property Name="wid" Type="int" />
+          <Property Name="left" Type="int" />
+          <Property Name="top" Type="int" />
+          <Property Name="rotation" Type="int" />
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="words">
+          <Key>
+            <PropertyRef Name="fakeid" />
+          </Key>
+          <Property Name="id" Type="int" />
+          <Property Name="tid" Type="int" />
+          <Property Name="pic_url" Type="varchar" />
+          <Property Name="back_clr" Type="char" MaxLength="6" />
+          <Property Name="border_clr" Type="char" MaxLength="6" />
+          <Property Name="left_clr" Type="char" MaxLength="6" />
+          <Property Name="top_clr" Type="char" MaxLength="6" />
+          <Property Name="left_top_clr" Type="char" MaxLength="6" />
+          <Property Name="fakeid" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="words_english">
+          <Key>
+            <PropertyRef Name="fakeid" />
+          </Key>
+          <Property Name="wid" Type="int" Nullable="false" />
+          <Property Name="value" Type="varchar" />
+          <Property Name="audio_url" Type="varchar" />
+          <Property Name="fakeid" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <Association Name="themes_english_letters_tid_fk">
+          <End Role="themes" Type="db_lgameModel.Store.themes" Multiplicity="0..1" />
+          <End Role="themes_english_letters" Type="db_lgameModel.Store.themes_english_letters" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="themes">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="themes_english_letters">
+              <PropertyRef Name="tid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="themes_english_pictures_tid_fk">
+          <End Role="themes" Type="db_lgameModel.Store.themes" Multiplicity="0..1" />
+          <End Role="themes_english_pictures" Type="db_lgameModel.Store.themes_english_pictures" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="themes">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="themes_english_pictures">
+              <PropertyRef Name="tid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="words_tid_fk">
+          <End Role="themes" Type="db_lgameModel.Store.themes" Multiplicity="0..1" />
+          <End Role="words" Type="db_lgameModel.Store.words" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="themes">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="words">
+              <PropertyRef Name="tid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="db_lgameModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="db_lgameEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="themes" EntityType="db_lgameModel.theme" />
+          <EntitySet Name="themes_english_letters" EntityType="db_lgameModel.themes_english_letters" />
+          <EntitySet Name="themes_english_pictures" EntityType="db_lgameModel.themes_english_pictures" />
+          <EntitySet Name="words" EntityType="db_lgameModel.word" />
+          <AssociationSet Name="themes_english_letters_tid_fk" Association="db_lgameModel.themes_english_letters_tid_fk">
+            <End Role="theme" EntitySet="themes" />
+            <End Role="themes_english_letters" EntitySet="themes_english_letters" />
+          </AssociationSet>
+          <AssociationSet Name="themes_english_pictures_tid_fk" Association="db_lgameModel.themes_english_pictures_tid_fk">
+            <End Role="theme" EntitySet="themes" />
+            <End Role="themes_english_pictures" EntitySet="themes_english_pictures" />
+          </AssociationSet>
+          <AssociationSet Name="words_tid_fk" Association="db_lgameModel.words_tid_fk">
+            <End Role="theme" EntitySet="themes" />
+            <End Role="word" EntitySet="words" />
+          </AssociationSet>
+          <EntitySet Name="words_english" EntityType="db_lgameModel.words_english" />
+          <EntitySet Name="profiles" EntityType="db_lgameModel.profile" />
+          <EntitySet Name="profiles_english_weather" EntityType="db_lgameModel.profiles_english_weather" />
+          <EntitySet Name="profiles_english_animal1" EntityType="db_lgameModel.profiles_english_animal1" />
+          <EntitySet Name="profiles_english_body" EntityType="db_lgameModel.profiles_english_body" />
+          <EntitySet Name="profiles_english_city" EntityType="db_lgameModel.profiles_english_city" />
+          <EntitySet Name="profiles_english_house1" EntityType="db_lgameModel.profiles_english_house1" />
+          <EntitySet Name="profiles_english_kitchen" EntityType="db_lgameModel.profiles_english_kitchen" />
+          <EntitySet Name="profiles_english_nature1" EntityType="db_lgameModel.profiles_english_nature1" />
+          <EntitySet Name="profiles_english_nature2" EntityType="db_lgameModel.profiles_english_nature2" />
+          <EntitySet Name="profiles_english_plant1" EntityType="db_lgameModel.profiles_english_plant1" />
+          <EntitySet Name="profiles_english_plant2" EntityType="db_lgameModel.profiles_english_plant2" />
+        </EntityContainer>
+        <EntityType Name="theme">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="65535" Unicode="true" FixedLength="false" />
+          <Property Name="Width" Type="Int32" />
+          <Property Name="Height" Type="Int32" />
+          <Property Name="Left" Type="Int32" />
+          <Property Name="Top" Type="Int32" />
+          <Property Name="Data" Type="String" MaxLength="65535" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="themes_english_letters" Relationship="db_lgameModel.themes_english_letters_tid_fk" FromRole="theme" ToRole="themes_english_letters" />
+          <NavigationProperty Name="themes_english_pictures" Relationship="db_lgameModel.themes_english_pictures_tid_fk" FromRole="theme" ToRole="themes_english_pictures" />
+          <NavigationProperty Name="words" Relationship="db_lgameModel.words_tid_fk" FromRole="theme" ToRole="word" />
+        </EntityType>
+        <EntityType Name="themes_english_letters">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="Int32" Name="tid" />
+          <Property Type="String" Name="letter" MaxLength="254" FixedLength="true" Unicode="false" />
+          <Property Type="Int32" Name="left" />
+          <Property Type="Int32" Name="top" />
+          <Property Type="Int32" Name="rotation" />
+          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="theme" Relationship="db_lgameModel.themes_english_letters_tid_fk" FromRole="themes_english_letters" ToRole="theme" />
+        </EntityType>
+        <EntityType Name="themes_english_pictures">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="Int32" Name="tid" />
+          <Property Type="Int32" Name="wid" />
+          <Property Type="Int32" Name="left" />
+          <Property Type="Int32" Name="top" />
+          <Property Type="Int32" Name="rotation" />
+          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="theme" Relationship="db_lgameModel.themes_english_pictures_tid_fk" FromRole="themes_english_pictures" ToRole="theme" />
+        </EntityType>
+        <EntityType Name="word">
+          <Key>
+            <PropertyRef Name="fakeid" />
+          </Key>
+          <Property Type="Int32" Name="id" />
+          <Property Type="Int32" Name="tid" />
+          <Property Type="String" Name="pic_url" MaxLength="65535" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="back_clr" MaxLength="6" FixedLength="true" Unicode="false" />
+          <Property Type="String" Name="border_clr" MaxLength="6" FixedLength="true" Unicode="false" />
+          <Property Type="String" Name="left_clr" MaxLength="6" FixedLength="true" Unicode="false" />
+          <Property Type="String" Name="top_clr" MaxLength="6" FixedLength="true" Unicode="false" />
+          <Property Type="String" Name="left_top_clr" MaxLength="6" FixedLength="true" Unicode="false" />
+          <Property Type="Int32" Name="fakeid" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="theme" Relationship="db_lgameModel.words_tid_fk" FromRole="word" ToRole="theme" />
+        </EntityType>
+        <Association Name="themes_english_letters_tid_fk">
+          <End Type="db_lgameModel.theme" Role="theme" Multiplicity="0..1" />
+          <End Type="db_lgameModel.themes_english_letters" Role="themes_english_letters" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="theme">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="themes_english_letters">
+              <PropertyRef Name="tid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="themes_english_pictures_tid_fk">
+          <End Type="db_lgameModel.theme" Role="theme" Multiplicity="0..1" />
+          <End Type="db_lgameModel.themes_english_pictures" Role="themes_english_pictures" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="theme">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="themes_english_pictures">
+              <PropertyRef Name="tid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="words_tid_fk">
+          <End Type="db_lgameModel.theme" Role="theme" Multiplicity="0..1" />
+          <End Type="db_lgameModel.word" Role="word" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="theme">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="word">
+              <PropertyRef Name="tid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="words_english">
+          <Key>
+            <PropertyRef Name="fakeid" />
+          </Key>
+          <Property Type="Int32" Name="wid" Nullable="false" />
+          <Property Type="String" Name="value" MaxLength="65535" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="audio_url" MaxLength="65535" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="fakeid" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="profile">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="name" Nullable="false" MaxLength="65535" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="pic_url" MaxLength="65535" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="pass" Nullable="false" MaxLength="65535" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="time" Nullable="false" />
+          <Property Type="Boolean" Name="is_photo" Nullable="false" />
+          <Property Type="String" Name="contact_info" MaxLength="65535" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="profiles_english_weather">
+          <Key>
+            <PropertyRef Name="fake_id" />
+          </Key>
+          <Property Type="Int32" Name="pid" Nullable="false" />
+          <Property Type="Int32" Name="lev_no" Nullable="false" />
+          <Property Type="Int32" Name="best_time" Nullable="false" />
+          <Property Type="Int32" Name="fake_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="profiles_english_animal1">
+          <Key>
+            <PropertyRef Name="fake_id" />
+          </Key>
+          <Property Type="Int32" Name="pid" Nullable="false" />
+          <Property Type="Int32" Name="lev_no" Nullable="false" />
+          <Property Type="Int32" Name="best_time" Nullable="false" />
+          <Property Type="Int32" Name="fake_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="profiles_english_body">
+          <Key>
+            <PropertyRef Name="fake_id" />
+          </Key>
+          <Property Type="Int32" Name="pid" Nullable="false" />
+          <Property Type="Int32" Name="lev_no" Nullable="false" />
+          <Property Type="Int32" Name="best_time" Nullable="false" />
+          <Property Type="Int32" Name="fake_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="profiles_english_city">
+          <Key>
+            <PropertyRef Name="fake_id" />
+          </Key>
+          <Property Type="Int32" Name="pid" Nullable="false" />
+          <Property Type="Int32" Name="lev_no" Nullable="false" />
+          <Property Type="Int32" Name="best_time" Nullable="false" />
+          <Property Type="Int32" Name="fake_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="profiles_english_house1">
+          <Key>
+            <PropertyRef Name="fake_id" />
+          </Key>
+          <Property Type="Int32" Name="pid" Nullable="false" />
+          <Property Type="Int32" Name="lev_no" Nullable="false" />
+          <Property Type="Int32" Name="best_time" Nullable="false" />
+          <Property Type="Int32" Name="fake_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="profiles_english_kitchen">
+          <Key>
+            <PropertyRef Name="fake_id" />
+          </Key>
+          <Property Type="Int32" Name="pid" Nullable="false" />
+          <Property Type="Int32" Name="lev_no" Nullable="false" />
+          <Property Type="Int32" Name="best_time" Nullable="false" />
+          <Property Type="Int32" Name="fake_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="profiles_english_nature1">
+          <Key>
+            <PropertyRef Name="fake_id" />
+          </Key>
+          <Property Type="Int32" Name="pid" Nullable="false" />
+          <Property Type="Int32" Name="lev_no" Nullable="false" />
+          <Property Type="Int32" Name="best_time" Nullable="false" />
+          <Property Type="Int32" Name="fake_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="profiles_english_nature2">
+          <Key>
+            <PropertyRef Name="fake_id" />
+          </Key>
+          <Property Type="Int32" Name="pid" Nullable="false" />
+          <Property Type="Int32" Name="lev_no" Nullable="false" />
+          <Property Type="Int32" Name="best_time" Nullable="false" />
+          <Property Type="Int32" Name="fake_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="profiles_english_plant1">
+          <Key>
+            <PropertyRef Name="fake_id" />
+          </Key>
+          <Property Type="Int32" Name="pid" Nullable="false" />
+          <Property Type="Int32" Name="lev_no" Nullable="false" />
+          <Property Type="Int32" Name="best_time" Nullable="false" />
+          <Property Type="Int32" Name="fake_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="profiles_english_plant2">
+          <Key>
+            <PropertyRef Name="fake_id" />
+          </Key>
+          <Property Type="Int32" Name="pid" Nullable="false" />
+          <Property Type="Int32" Name="lev_no" Nullable="false" />
+          <Property Type="Int32" Name="best_time" Nullable="false" />
+          <Property Type="Int32" Name="fake_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="db_lgameModelStoreContainer" CdmEntityContainer="db_lgameEntities">
+          <EntitySetMapping Name="themes">
+            <EntityTypeMapping TypeName="db_lgameModel.theme">
+              <MappingFragment StoreEntitySet="themes">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Width" ColumnName="Width" />
+                <ScalarProperty Name="Height" ColumnName="Height" />
+                <ScalarProperty Name="Left" ColumnName="Left" />
+                <ScalarProperty Name="Top" ColumnName="Top" />
+                <ScalarProperty Name="Data" ColumnName="Data" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="themes_english_letters">
+            <EntityTypeMapping TypeName="db_lgameModel.themes_english_letters">
+              <MappingFragment StoreEntitySet="themes_english_letters">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="rotation" ColumnName="rotation" />
+                <ScalarProperty Name="top" ColumnName="top" />
+                <ScalarProperty Name="left" ColumnName="left" />
+                <ScalarProperty Name="letter" ColumnName="letter" />
+                <ScalarProperty Name="tid" ColumnName="tid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="themes_english_pictures">
+            <EntityTypeMapping TypeName="db_lgameModel.themes_english_pictures">
+              <MappingFragment StoreEntitySet="themes_english_pictures">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="rotation" ColumnName="rotation" />
+                <ScalarProperty Name="top" ColumnName="top" />
+                <ScalarProperty Name="left" ColumnName="left" />
+                <ScalarProperty Name="wid" ColumnName="wid" />
+                <ScalarProperty Name="tid" ColumnName="tid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="words">
+            <EntityTypeMapping TypeName="db_lgameModel.word">
+              <MappingFragment StoreEntitySet="words">
+                <ScalarProperty Name="fakeid" ColumnName="fakeid" />
+                <ScalarProperty Name="left_top_clr" ColumnName="left_top_clr" />
+                <ScalarProperty Name="top_clr" ColumnName="top_clr" />
+                <ScalarProperty Name="left_clr" ColumnName="left_clr" />
+                <ScalarProperty Name="border_clr" ColumnName="border_clr" />
+                <ScalarProperty Name="back_clr" ColumnName="back_clr" />
+                <ScalarProperty Name="pic_url" ColumnName="pic_url" />
+                <ScalarProperty Name="tid" ColumnName="tid" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="words_english">
+            <EntityTypeMapping TypeName="db_lgameModel.words_english">
+              <MappingFragment StoreEntitySet="words_english">
+                <ScalarProperty Name="fakeid" ColumnName="fakeid" />
+                <ScalarProperty Name="audio_url" ColumnName="audio_url" />
+                <ScalarProperty Name="value" ColumnName="value" />
+                <ScalarProperty Name="wid" ColumnName="wid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="profiles">
+            <EntityTypeMapping TypeName="db_lgameModel.profile">
+              <MappingFragment StoreEntitySet="profiles">
+                <ScalarProperty Name="contact_info" ColumnName="contact_info" />
+                <ScalarProperty Name="is_photo" ColumnName="is_photo" />
+                <ScalarProperty Name="time" ColumnName="time" />
+                <ScalarProperty Name="pass" ColumnName="pass" />
+                <ScalarProperty Name="pic_url" ColumnName="pic_url" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="profiles_english_weather">
+            <EntityTypeMapping TypeName="db_lgameModel.profiles_english_weather">
+              <MappingFragment StoreEntitySet="profiles_english_weather">
+                <ScalarProperty Name="fake_id" ColumnName="fake_id" />
+                <ScalarProperty Name="best_time" ColumnName="best_time" />
+                <ScalarProperty Name="lev_no" ColumnName="lev_no" />
+                <ScalarProperty Name="pid" ColumnName="pid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="profiles_english_animal1">
+            <EntityTypeMapping TypeName="db_lgameModel.profiles_english_animal1">
+              <MappingFragment StoreEntitySet="profiles_english_animal1">
+                <ScalarProperty Name="fake_id" ColumnName="fake_id" />
+                <ScalarProperty Name="best_time" ColumnName="best_time" />
+                <ScalarProperty Name="lev_no" ColumnName="lev_no" />
+                <ScalarProperty Name="pid" ColumnName="pid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="profiles_english_body">
+            <EntityTypeMapping TypeName="db_lgameModel.profiles_english_body">
+              <MappingFragment StoreEntitySet="profiles_english_body">
+                <ScalarProperty Name="fake_id" ColumnName="fake_id" />
+                <ScalarProperty Name="best_time" ColumnName="best_time" />
+                <ScalarProperty Name="lev_no" ColumnName="lev_no" />
+                <ScalarProperty Name="pid" ColumnName="pid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="profiles_english_city">
+            <EntityTypeMapping TypeName="db_lgameModel.profiles_english_city">
+              <MappingFragment StoreEntitySet="profiles_english_city">
+                <ScalarProperty Name="fake_id" ColumnName="fake_id" />
+                <ScalarProperty Name="best_time" ColumnName="best_time" />
+                <ScalarProperty Name="lev_no" ColumnName="lev_no" />
+                <ScalarProperty Name="pid" ColumnName="pid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="profiles_english_house1">
+            <EntityTypeMapping TypeName="db_lgameModel.profiles_english_house1">
+              <MappingFragment StoreEntitySet="profiles_english_house1">
+                <ScalarProperty Name="fake_id" ColumnName="fake_id" />
+                <ScalarProperty Name="best_time" ColumnName="best_time" />
+                <ScalarProperty Name="lev_no" ColumnName="lev_no" />
+                <ScalarProperty Name="pid" ColumnName="pid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="profiles_english_kitchen">
+            <EntityTypeMapping TypeName="db_lgameModel.profiles_english_kitchen">
+              <MappingFragment StoreEntitySet="profiles_english_kitchen">
+                <ScalarProperty Name="fake_id" ColumnName="fake_id" />
+                <ScalarProperty Name="best_time" ColumnName="best_time" />
+                <ScalarProperty Name="lev_no" ColumnName="lev_no" />
+                <ScalarProperty Name="pid" ColumnName="pid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="profiles_english_nature1">
+            <EntityTypeMapping TypeName="db_lgameModel.profiles_english_nature1">
+              <MappingFragment StoreEntitySet="profiles_english_nature1">
+                <ScalarProperty Name="fake_id" ColumnName="fake_id" />
+                <ScalarProperty Name="best_time" ColumnName="best_time" />
+                <ScalarProperty Name="lev_no" ColumnName="lev_no" />
+                <ScalarProperty Name="pid" ColumnName="pid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="profiles_english_nature2">
+            <EntityTypeMapping TypeName="db_lgameModel.profiles_english_nature2">
+              <MappingFragment StoreEntitySet="profiles_english_nature2">
+                <ScalarProperty Name="fake_id" ColumnName="fake_id" />
+                <ScalarProperty Name="best_time" ColumnName="best_time" />
+                <ScalarProperty Name="lev_no" ColumnName="lev_no" />
+                <ScalarProperty Name="pid" ColumnName="pid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="profiles_english_plant1">
+            <EntityTypeMapping TypeName="db_lgameModel.profiles_english_plant1">
+              <MappingFragment StoreEntitySet="profiles_english_plant1">
+                <ScalarProperty Name="fake_id" ColumnName="fake_id" />
+                <ScalarProperty Name="best_time" ColumnName="best_time" />
+                <ScalarProperty Name="lev_no" ColumnName="lev_no" />
+                <ScalarProperty Name="pid" ColumnName="pid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="profiles_english_plant2">
+            <EntityTypeMapping TypeName="db_lgameModel.profiles_english_plant2">
+              <MappingFragment StoreEntitySet="profiles_english_plant2">
+                <ScalarProperty Name="fake_id" ColumnName="fake_id" />
+                <ScalarProperty Name="best_time" ColumnName="best_time" />
+                <ScalarProperty Name="lev_no" ColumnName="lev_no" />
+                <ScalarProperty Name="pid" ColumnName="pid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="db_lgame">
+        <EntityTypeShape EntityType="db_lgameModel.theme" Width="1.5" PointX="0.75" PointY="0.75" Height="2.3648893229166665" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_lgameModel.themes_english_letters" Width="2" PointX="4.25" PointY="0.5" Height="2.3648893229166674" />
+        <EntityTypeShape EntityType="db_lgameModel.themes_english_pictures" Width="2" PointX="9.625" PointY="0.5" Height="2.364889322916667" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_lgameModel.word" Width="1.5" PointX="4.375" PointY="3.375" Height="2.9417936197916674" />
+        <AssociationConnector Association="db_lgameModel.themes_english_letters_tid_fk" >
+          <ConnectorPoint PointX="2.25" PointY="1.8074446614583337" />
+          <ConnectorPoint PointX="4.25" PointY="1.8074446614583337" />
+        </AssociationConnector>
+        <AssociationConnector Association="db_lgameModel.themes_english_pictures_tid_fk" >
+          <ConnectorPoint PointX="2.25" PointY="0.75115284615384614" />
+          <ConnectorPoint PointX="2.625" PointY="0.37615284615384592" />
+          <ConnectorPoint PointX="2.625" PointY="0.125" />
+          <ConnectorPoint PointX="9.25" PointY="0.125" />
+          <ConnectorPoint PointX="9.625" PointY="0.5" />
+        </AssociationConnector>
+        <AssociationConnector Association="db_lgameModel.words_tid_fk" >
+          <ConnectorPoint PointX="2.25" PointY="3.5333968098958333" />
+          <ConnectorPoint PointX="4.375" PointY="3.5333968098958333" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="db_lgameModel.words_english" Width="1.5" PointX="6.75" PointY="3.375" Height="1.7879850260416674" />
+        <EntityTypeShape EntityType="db_lgameModel.profile" Width="1.5" PointX="0.75" PointY="6.5" Height="2.1725878906249996" />
+        <EntityTypeShape EntityType="db_lgameModel.profiles_english_weather" Width="2" PointX="4" PointY="6.5" Height="1.7879850260416674" />
+        <EntityTypeShape EntityType="db_lgameModel.profiles_english_animal1" Width="1.5" PointX="7.75" PointY="6.75" Height="1.7879850260416674" />
+        <EntityTypeShape EntityType="db_lgameModel.profiles_english_body" Width="1.5" PointX="0.75" PointY="9.75" Height="1.7879850260416674" />
+        <EntityTypeShape EntityType="db_lgameModel.profiles_english_city" Width="1.5" PointX="2.75" PointY="9.75" Height="1.7879850260416674" />
+        <EntityTypeShape EntityType="db_lgameModel.profiles_english_house1" Width="1.5" PointX="9.75" PointY="3.75" Height="1.7879850260416674" />
+        <EntityTypeShape EntityType="db_lgameModel.profiles_english_kitchen" Width="1.5" PointX="4.75" PointY="9.75" Height="1.7879850260416674" />
+        <EntityTypeShape EntityType="db_lgameModel.profiles_english_nature1" Width="1.5" PointX="9.75" PointY="6.75" Height="1.7879850260416674" />
+        <EntityTypeShape EntityType="db_lgameModel.profiles_english_nature2" Width="1.5" PointX="6.75" PointY="9.75" Height="1.7879850260416674" />
+        <EntityTypeShape EntityType="db_lgameModel.profiles_english_plant1" Width="1.5" PointX="8.75" PointY="9.75" Height="1.7879850260416674" />
+        <EntityTypeShape EntityType="db_lgameModel.profiles_english_plant2" Width="1.5" PointX="10.75" PointY="9.75" Height="1.7879850260416674" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

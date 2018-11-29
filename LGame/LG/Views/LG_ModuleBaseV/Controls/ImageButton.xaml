@@ -1,0 +1,114 @@
+﻿<UserControl
+    x:Class="LG.Views.ImageButton"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:LG.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="300"
+    d:DesignWidth="400">
+    <UserControl.Resources>
+        <ControlTemplate x:Key="buttonTemplate" TargetType="Button" >
+            <Grid>
+                <VisualStateManager.VisualStateGroups>
+                    <VisualStateGroup x:Name="CommonStates">
+                        <VisualState x:Name="Normal" />
+                        <VisualState x:Name="PointerOver" >
+                            <Storyboard>
+                                <ObjectAnimationUsingKeyFrames   Storyboard.TargetName="imOver"
+                                                                Storyboard.TargetProperty="Visibility">
+                                    <DiscreteObjectKeyFrame KeyTime="0" Value="Visible" />
+                                </ObjectAnimationUsingKeyFrames>
+                            </Storyboard>
+                        </VisualState>
+                        <VisualState x:Name="Pressed">
+                            <Storyboard>
+                                <ObjectAnimationUsingKeyFrames   Storyboard.TargetName="imOver"
+                                                                Storyboard.TargetProperty="Visibility">
+                                    <DiscreteObjectKeyFrame KeyTime="0" Value="Visible" />
+                                </ObjectAnimationUsingKeyFrames>
+                            </Storyboard>
+                        </VisualState>
+                        <VisualState x:Name="Disabled"/>
+                    </VisualStateGroup>
+                    <VisualStateGroup x:Name="FocusedStates">
+                        <VisualState x:Name="Unfocused" />
+                        <VisualState x:Name="Focused"/>
+                        <VisualState x:Name="PointerFocused" />
+                    </VisualStateGroup>
+                </VisualStateManager.VisualStateGroups>
+                <Border Name="border"
+                        Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        CornerRadius="12">
+                    <Grid>
+                        <ContentPresenter Name="contentPresenter"
+                            ContentTemplate="{TemplateBinding ContentTemplate}"
+                            Margin="{TemplateBinding Padding}"
+                            HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                            VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                            ContentTransitions="{TemplateBinding ContentTransitions}" >
+                            <Image x:Name="imNormal" Stretch="None" Source="{Binding  Path=ImSourceNormal}" />
+                        </ContentPresenter>
+                        <Image x:Name="imOver" Stretch="None"   Visibility="Collapsed" />
+                    </Grid>
+                </Border>
+                <Image x:Name="imPressed" Stretch="None"   Visibility="Collapsed" />
+            </Grid>
+        </ControlTemplate>
+    </UserControl.Resources>
+    <Grid>
+        <MediaElement x:Name="MenuItemChangePlayer" Volume="1"  AutoPlay="False" Source="ms-appx:///Sounds/Shuh.mp3"  CurrentStateChanged="MenuItemChangePlayer_CurrentStateChanged"  />
+        <Button  x:Name="btImage" Tapped="btImage_Tapped_1"  Click="btImage_Click_1" PointerEntered="btImage_PointerEntered_1" >
+            <Button.Template>
+                <ControlTemplate  TargetType="Button">
+                    <Grid>
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="CommonStates">
+                                <VisualState x:Name="Normal" />
+                                <VisualState x:Name="PointerOver" >
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames   Storyboard.TargetName="imOver"
+                                                                Storyboard.TargetProperty="Visibility">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="Visible" />
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="Pressed">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames   Storyboard.TargetName="imPressed"
+                                                                Storyboard.TargetProperty="Visibility">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="Visible" />
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="Disabled"/>
+                            </VisualStateGroup>
+                            <VisualStateGroup x:Name="FocusedStates">
+                                <VisualState x:Name="Unfocused" />
+                                <VisualState x:Name="Focused"/>
+                                <VisualState x:Name="PointerFocused" />
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+                        <Border Name="border">
+                            <Grid>
+                                <ContentPresenter Name="contentPresenter"
+                            ContentTemplate="{TemplateBinding ContentTemplate}"
+                            Margin="{TemplateBinding Padding}"
+                            HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                            VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                            ContentTransitions="{TemplateBinding ContentTransitions}" >
+                                    <Image x:Name="imNormal" Stretch="None" Source="{Binding  Path=ImSourceNormal}" />
+                                </ContentPresenter>
+                                <Image x:Name="imOver" Stretch="None"   Visibility="Collapsed" Source="{Binding  Path=ImSourceOver}" />
+                            </Grid>
+                        </Border>
+                        <Image x:Name="imPressed" Stretch="None"   Visibility="Collapsed" Source="{Binding  Path=ImSourcePressed}" />
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+    </Grid>
+</UserControl>

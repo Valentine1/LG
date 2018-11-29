@@ -1,0 +1,168 @@
+﻿<UserControl
+    x:Class="LG.Views.GameSpaceV"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:LG.Views"
+    xmlns:i="using:WinRtBehaviors"
+    xmlns:cmds="using:LG.ViewModels.Commands"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid x:Name="mainGrid">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="3" />
+            <ColumnDefinition x:Name="col2" Width="{Binding Path= SpaceVModel.InfoBoardWidth}" />
+        </Grid.ColumnDefinitions>
+        <!--WordSoundSource="{Binding Path=SpaceVModel.TheWordToSpeak.AudioStream}"-->
+        <local:GameSoundsV x:Name="ucGameSounds"   ExplosionSoundSource="{Binding Path=ExplosionAudio}" 
+                                        BackMusicSource="{Binding Path=BackMusicAudio}"  ShootSoundSource="{Binding Path=ShootAudio}" 
+                                        ChargerEmptySoundSource="{Binding Path=ChargerEmptyAudio}"  SaluteSoundSource="{Binding Path=SaluteAudio}"  
+                                        EngineSoundSource="{Binding Path=EngineAudio}" RechargeSoundSource="{Binding Path=RechargeAudio}" 
+                                           VibrationSoundSource="{Binding Path=VibrationAudio}"  SmehSoundSource="{Binding Path=SmehAudio}"  />
+
+        <Grid Grid.Column="0" VerticalAlignment="Stretch" >
+            <local:SpaceV  x:Name="ucSpaceView"  VerticalAlignment="Top" />
+            <local:ShipControlsV  x:Name="ucShipControls" VerticalAlignment="Bottom" HorizontalAlignment="Center" Height="75" />
+        </Grid>
+        <Canvas  Grid.Column="1" >
+            <Canvas.Background>
+                <LinearGradientBrush  StartPoint="0.5,0" Opacity="0.9" EndPoint="0.5,1">
+                    <GradientStop Color="#279827" Offset="0"/>
+                    <GradientStop Color="LightGreen" Offset="1"/>
+                </LinearGradientBrush>
+            </Canvas.Background>
+        </Canvas>
+        <StackPanel x:Name="canInfoBoard" Grid.Column="2" Orientation="Vertical"     Opacity="1">
+            <StackPanel.Background>
+                <LinearGradientBrush  StartPoint="0.5,0" Opacity="1" EndPoint="0.5,1">
+                    <GradientStop Color="#131313" Offset="0"/>
+                    <GradientStop Color="#333333" Offset="1"/>
+                </LinearGradientBrush>
+            </StackPanel.Background>
+
+            <local:InfoBoardIntroV x:Name="infoBoardV" HorizontalAlignment="Center" VerticalAlignment="Bottom"  />
+            <StackPanel Orientation="Vertical" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" >
+                <Border Width="221"  HorizontalAlignment="Center" VerticalAlignment="Bottom"   >
+                    <Border  x:Name="SpaceMapView" Height="{Binding  Path=SpaceMapVModel.BlockSize.Height}"  Width="145"     Opacity="0.9" Background="#FF090919"  HorizontalAlignment="Right"   CornerRadius="3"   BorderThickness="2" >
+                        <Border.BorderBrush>
+                            <LinearGradientBrush  StartPoint="0.5,0" Opacity="0.9" EndPoint="0.5,1">
+                                <GradientStop Color="#279827" Offset="0"/>
+                                <GradientStop Color="LightGreen" Offset="1"/>
+                            </LinearGradientBrush>
+                        </Border.BorderBrush>
+                        <Canvas   HorizontalAlignment="Stretch"   VerticalAlignment="Stretch">
+                            <Border x:Name="brTheSpaceMapSun"  CornerRadius="3"   Height="10" Width="221" Canvas.Left="-75" Canvas.Top="0" Opacity="0.9"    >
+                                <Border.Background>
+                                    <LinearGradientBrush EndPoint="0,0.5"  Opacity="0.7" StartPoint="1,0.5" x:Name="theSunGradientBrush" >
+                                        <GradientStop Offset="0.00" Color="Red" />
+                                        <GradientStop Offset="0.14" Color="Orange" />
+                                        <GradientStop Offset="0.28" Color="Yellow" />
+                                        <GradientStop Offset="0.43" Color="Green" />
+                                        <GradientStop Offset="0.57" Color="Blue" />
+                                        <GradientStop Offset="0.71" Color="Indigo" />
+                                        <GradientStop Offset="0.86" Color="Violet" />
+                                        <GradientStop Offset="1.00" Color="Red" />
+                                        <GradientStop Offset="1.14" Color="Orange" />
+                                        <GradientStop Offset="1.28" Color="Yellow" />
+                                        <GradientStop Offset="1.43" Color="Green" />
+                                        <GradientStop Offset="1.57" Color="Blue" />
+                                        <GradientStop Offset="1.71" Color="Indigo" />
+                                        <GradientStop Offset="1.86" Color="Violet" />
+                                        <GradientStop Offset="2.00" Color="Red" />
+                                    </LinearGradientBrush>
+                                </Border.Background>
+                            </Border>
+                            <Path x:Name="Arrow" Height="{Binding  Path=SpaceMapVModel.BlockSize.Height}"  Width="58" Canvas.Left="-70" Canvas.Top="1"   Data="M305,668 L317,586 L321,529 L320,457 L307.333,459.333 L319.333,428 L332,399 L340,418 L351,439 L361,457 L344,452 L346,521 L345,579 L351,666 L327,657 z" 
+	                              Stretch="Fill" Opacity="0.9" StrokeEndLineCap="Round" StrokeThickness="3" StrokeLineJoin="Round" UseLayoutRounding="False" >
+                                <Path.Fill>
+                                    <LinearGradientBrush StartPoint="0.5,0"   Opacity="0.6"   EndPoint="0.5,1" x:Name="arrGradientBrush" >
+                                        <GradientStop Offset="0.00" Color="Red" />
+                                        <GradientStop Offset="0.14" Color="Orange" />
+                                        <GradientStop Offset="0.28" Color="Yellow" />
+                                        <GradientStop Offset="0.43" Color="Green" />
+                                        <GradientStop Offset="0.57" Color="Blue" />
+                                        <GradientStop Offset="0.71" Color="Indigo" />
+                                        <GradientStop Offset="0.86" Color="Violet" />
+                                        <GradientStop Offset="1.00" Color="Red" />
+                                        <GradientStop Offset="1.14" Color="Orange" />
+                                        <GradientStop Offset="1.28" Color="Yellow" />
+                                        <GradientStop Offset="1.43" Color="Green" />
+                                        <GradientStop Offset="1.57" Color="Blue" />
+                                        <GradientStop Offset="1.71" Color="Indigo" />
+                                        <GradientStop Offset="1.86" Color="Violet" />
+                                        <GradientStop Offset="2.00" Color="Red" />
+                                    </LinearGradientBrush>
+                                </Path.Fill>
+                                <Path.Stroke>
+                                    <LinearGradientBrush  EndPoint="0.5,0" Opacity="1" StartPoint="0.5,1" x:Name="arrBorderGradientBrush">
+                                        <GradientStop Offset="0.00" Color="Red" />
+                                        <GradientStop Offset="0.14" Color="Orange" />
+                                        <GradientStop Offset="0.28" Color="Yellow" />
+                                        <GradientStop Offset="0.43" Color="Green" />
+                                        <GradientStop Offset="0.57" Color="Blue" />
+                                        <GradientStop Offset="0.71" Color="Indigo" />
+                                        <GradientStop Offset="0.86" Color="Violet" />
+                                        <GradientStop Offset="1.00" Color="Red" />
+                                        <GradientStop Offset="1.14" Color="Orange" />
+                                        <GradientStop Offset="1.28" Color="Yellow" />
+                                        <GradientStop Offset="1.43" Color="Green" />
+                                        <GradientStop Offset="1.57" Color="Blue" />
+                                        <GradientStop Offset="1.71" Color="Indigo" />
+                                        <GradientStop Offset="1.86" Color="Violet" />
+                                        <GradientStop Offset="2.00" Color="Red" />
+                                    </LinearGradientBrush>
+                                </Path.Stroke>
+                            </Path>
+                            <Viewbox x:Name="ArrowOverlay" Width="58" Height="{Binding  Path=SpaceMapVModel.AdvancerVM.StartPosition.Y, Mode=OneWay}" Canvas.Left="-70" Canvas.Top="1"  Stretch="None">
+                                <Path Data="M305,668 L317,586 L321,529 L320,457 L307.333,459.333 L319.333,428 L332,399 L340,418 L351,439 L361,457 L344,452 L346,521 L345,579 L351,666 L327,657 z" 
+	                     Height="{Binding  Path=SpaceMapVModel.BlockSize.Height}"  Width="58" Canvas.Left="-70" Canvas.Top="5"  Stretch="Fill"  Stroke="#FFFF7400"     Opacity="0.9" StrokeEndLineCap="Round" StrokeThickness="3" StrokeLineJoin="Round" UseLayoutRounding="False" >
+                                    <Path.Fill>
+                                        <LinearGradientBrush  StartPoint="0,0.5" Opacity="0.9" EndPoint="1,0.5">
+                                            <GradientStop Color="White" Offset="0"/>
+                                            <GradientStop Color="#FFFF7400" Offset="0.7"/>
+                                        </LinearGradientBrush>
+                                    </Path.Fill>
+                                </Path>
+                            </Viewbox>
+                            <!--<Border Height="300" Width="65" Canvas.Left="-75" Canvas.Top="0"  Background="#88202020"  />-->
+                            <Viewbox x:Name="SpaceViewMini" Width="141" Height="79" Canvas.Left="0" Canvas.Top="{Binding  Path=SpaceMapVModel.AdvancerVM.StartPosition.Y}"  Stretch="Fill">
+                                <Viewbox.RenderTransform>
+                                    <TransformGroup>
+                                        <ScaleTransform ScaleX="1" ScaleY="1" />
+                                        <TranslateTransform  Y= "{Binding  Path=SpaceMapVModel.AdvancerVM.Y}"  />
+                                    </TransformGroup>
+                                </Viewbox.RenderTransform>
+                                <local:SpaceV  x:Name="ucSpaceViewMini"  Background="Red"   BorderBrush="Red" BorderThickness="1"/>
+                            </Viewbox>
+                           <Border x:Name="VisibleSpaceVerge" Height="21" Width="141" Canvas.Left="0" Canvas.Top="{Binding  Path=SpaceMapVModel.AdvancerVM.StartPosition.Y}"  Margin="0 -16 0 0" >
+                                <Border.RenderTransform>
+                                    <TransformGroup>
+                                        <ScaleTransform ScaleX="1" ScaleY="1" />
+                                        <TranslateTransform    Y= "{Binding  Path=SpaceMapVModel.AdvancerVM.Y}"  />
+                                    </TransformGroup>
+                                </Border.RenderTransform>
+                                <Border.Background>
+                                    <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1"  >
+                                        <GradientStop   Offset="0"  Color="#FF090919"/>
+                                        <GradientStop   Offset="0.6"  Color="#FF090919"/>
+                                        <GradientStop  Offset="1" Color="#000F0F20"/>
+                                    </LinearGradientBrush>
+                                </Border.Background>
+                            </Border>
+                            <Border x:Name="Advancer" Height="3" Width="221" Canvas.Left="-75" Canvas.Top="{Binding  Path=SpaceMapVModel.AdvancerVM.StartPosition.Y}" Opacity="0.9"   Background="#F69613" >
+                                <Border.RenderTransform>
+                                    <TransformGroup>
+                                        <ScaleTransform ScaleX="1" ScaleY="1" />
+                                        <TranslateTransform x:Name="bulletMovement"   Y= "{Binding  Path=SpaceMapVModel.AdvancerVM.Y}"  />
+                                    </TransformGroup>
+                                </Border.RenderTransform>
+                            </Border>
+                        </Canvas>
+                    </Border>
+                </Border>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</UserControl>

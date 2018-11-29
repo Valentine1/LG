@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Themes>
+  <Theme TId="6" Name="Stadt" >
+    <Letter Val="S" Left="16" Top="14" Rot="4" />
+    <Letter Val="T" Left="29" Top="15" Rot="0" />
+    <Letter Val="A" Left="40" Top="15" Rot="0" />
+    <Letter Val="D" Left="52" Top="15" Rot="-5" />
+    <Letter Val="T" Left="63" Top="14" Rot="-9" />
+    <Pic WId="100" Left="14" Top="30" Rot="7" />
+    <Pic WId="106" Left="38" Top="30" Rot="0" />
+    <Pic WId="111" Left="63" Top="25" Rot="-19" />
+  </Theme>
+</Themes>

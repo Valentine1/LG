@@ -1,0 +1,30 @@
+﻿<UserControl
+    x:Class="IndicatorSimple.IndicatorPanel"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:IndicatorSimple"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid>
+        <StackPanel Margin="0,0,0,0">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition  />
+                </Grid.RowDefinitions>
+                    <StackPanel  Canvas.Left="0" Canvas.Top="0" x:Name="stripeContainer" Background="Black" HorizontalAlignment="Center" >
+                        <StackPanel.RenderTransform>
+                            <CompositeTransform  x:Name="stripeContainerTrans" TranslateY="0" />
+                        </StackPanel.RenderTransform>
+                    </StackPanel>
+                <Canvas Background="Black" Height="4" VerticalAlignment="Top"  />
+                <Canvas Background="Black" Height="4" Margin="0,0,0,-4" VerticalAlignment="Bottom" />
+            </Grid>
+
+            <TextBlock Text="AMMO"  Foreground="#F69613"  Margin="0,5,0,0" HorizontalAlignment="Center"  FontSize="16"  FontFamily="/Fonts/digital7mono.ttf#Digital-7 Mono" >
+               
+            </TextBlock>
+        </StackPanel>
+    </Grid>
+</UserControl>

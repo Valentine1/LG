@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Hierarchy>
+  <Level No="1" Name="Peon" PicUrl="slave.png"  TopClr="#C6FF1100" BottomClr="#B6FFFFFF" />
+  <Level No="2" Name="Gondon" PicUrl="shudra.png"  TopClr="#C6FF5100"  BottomClr="#B6FFFFFF"/>
+  <Level No="3" Name="Krafter" PicUrl="krafter.png"  TopClr="#C6FFAE00"  BottomClr="#B6FFFFFF"/>
+  <Level No="4" Name="Vaishia" PicUrl="vaishia.png"  TopClr="#C6FFFF00"  BottomClr="#B6FFFFFF"/>
+  <Level No="5" Name="Kshatriy" PicUrl="kshatri.png"  TopClr="#C60CFF00"  BottomClr="#B6FFFFFF"/>
+  <Level No="6" Name="Khazar" PicUrl="khazar.png"  TopClr="#C600FFA2"  BottomClr="#B6FFFFFF"/>
+  <Level No="7" Name="Pagan" PicUrl="pahan.png"  TopClr="#C600FFE8"  BottomClr="#B6FFFFFF"/>
+  <Level No="8" Name="Shiva" PicUrl="shiva.png"  TopClr="#C600B9FF"  BottomClr="#B6FFFFFF"/>
+  <Level No="9" Name="Shinobi" PicUrl="reptilian_shinobi.png"  TopClr="#C60051FF"  BottomClr="#B6FFFFFF"/>
+  <Level No="10" Name="Metatron" PicUrl="metatron.png"  TopClr="#C62300FF"  BottomClr="#B6FFFFFF"/>
+  <Level No="11" Name="Lord" PicUrl="dominant.png"  TopClr="#C67400FF"  BottomClr="#B6FFFFFF"/>
+  <Level No="12" Name="Geon" PicUrl="neogoyer.png"  TopClr="#C6FF00E8"  BottomClr="#B6FFFFFF"/>
+  <Level No="13" Name="AllSeeing" PicUrl="eye.png"  TopClr="#C6FF00E8"  BottomClr="#B6FFFFFF"/>
+</Hierarchy>

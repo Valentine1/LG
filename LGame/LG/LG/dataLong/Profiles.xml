@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Profiles>
+  <LastUser PId="3" />
+  <Profile Id="-1" Name="Local Pofile1" PicUrl="" Type="0" Pass="" LastTh="1" Time="0" IsPhoto="0" />
+  <Profile Id="2" Name="Maxim Батькович Лащук" PicUrl="maxim.jpg" Type="0" Pass="" LastTh="6" Time="0" IsPhoto="1" />
+  <Profile Id="-3" Name="Tata" PicUrl="3.png" Type="0" Pass="" LastTh="6" Time="2572" IsPhoto="1" />
+  <Profile Id="-4" Name="Joahn" PicUrl="4.png" Type="0" Pass="" LastTh="1" Time="110" IsPhoto="1" />
+</Profiles>

@@ -1,0 +1,123 @@
+{\rtf1\ansi\ansicpg1251\deff0\nouicompat\deflang1049{\fonttbl{\f0\fnil\fcharset0 Calibri;}{\f1\fnil\fcharset0 Times New Roman;}{\f2\fnil\fcharset204 Times New Roman;}{\f3\fnil\fcharset0 Consolas;}}
+{\colortbl ;\red0\green128\blue64;\red192\green80\blue77;\red0\green64\blue0;\red255\green255\blue255;\red255\green0\blue0;}
+{\*\generator Riched20 6.2.9200}\viewkind4\uc1 
+\pard\sa200\sl240\slmult1\f0\fs26\lang9\par
+\cf1\b\f1\lang1033 1. Negative Top Margin for Space if necessary to contain ship controls buttons;\b0\par
+\b 2. Ship controls buttons - Left, Right, Fire;\cf2\b0\par
+\cf1\b 3. Profile Info in the left bottom corner on the Backgorund Module;\par
+4. Status info in the left down corner -  selected theme Name and Hierarchy level;\b0\par
+\b 5. ajust profiles combo box size to be appropriate to window dimensions\cf2\par
+\cf1 6. On successfull finish add new Avatar advent.\par
+7. If "Back" is pressed from Game before Avatar advent stop all Storyboards and hide Avatar image and restore its opacity to 1.0 on new Advent. \cf2\b0\par
+\cf1\b 8. Ajust main menu items on StartPage Module to be appropriate to windows dimensions.\cf3\par
+\cf1 10. Show error message on unsufficient screen dimensions and correnctly end or prevent Game;\cf2\b0\par
+\cf1\highlight4\b 13. Ship speed should differentiate from 0.8 to 1.5 depending on level;\cf2\b0\par
+\cf1\b 15. Sometimes new word to speak is not generated  (if previous one was not shot and disappeared? ). It waits untill another picture box with the same word is shot;\cf2\highlight0\b0\fs24\par
+\cf1\b\fs26 16. Profile Info and Status Info should have new position at the top on Hierarchy page;\cf2\b0\fs24\par
+\cf1\b\fs26 17. When Game Ended set all indicators to appropraite values and stop all moves and clear asteriods grid;\fs24\par
+\highlight4\f2\fs26\lang1049 18\f1\lang1033 . Think out what Info and how to place on the Hierarchy module;\cf2\b0\par
+\cf1\b 21. Button "Get Top" on each Pyramid Step catches players' profiles into ListBox;\par
+22. Selected profile in the ListBox is shown in Detail panel full info;\par
+23. Top profiles are also shown as image thumbnails in the Pyramid Step, they react to mouse over by expanding their size and by selecting the profile in the ListBox. If ListBox is filled currently with profiles from another step it should bring another collection which belongs to the given Level;\cf2\b0\par
+\cf1\b 24. Top Profiles info location and size fitted to all supported screen dimensions; \cf2\b0\par
+\cf1\b 25. Show Avatars names under their images on the Hierarchy module;\cf2\b0\par
+\cf1\b 26. Save and display total time spent to play the game;\par
+27. Add new theme "City".\cf2\b0\par
+\cf1\b 30. Add ability to support game themes results for different languages in the same DB;\cf2\b0\par
+\cf0\b\par
+
+\pard\sa200\sl240\slmult1\qj                                    \fs28              APPLICATION\par
+
+\pard\sa200\sl240\slmult1\cf1\fs26 1. Decipher all files used from the local storage before utilizing in the app;\par
+2.\f2\lang1049  \f1\lang1033 E\f2\lang1049 ncipher\f1\lang1033  all assets stored in the  local app storage like xml files, images and sounds;\par
+3. Unhandled error messages written to some Output.txt in app.cs\cf2\b0\par
+\cf1\highlight0\b 4.  When device orientation is changed all media sources gets to null\par
+\fs24  and \highlight4\f3\fs19 CurrentState == MediaElementState.Closed  \f1\fs26 so they have to be reset;\par
+\highlight0 5. Prevent doubled add of modules on quick consequent clicks on StartPage module menu items;\cf2\b0\par
+\cf1\b 6. Disable "Back" button on StartPage;\cf2\b0\par
+\cf1\b 7. Module width is currently set to 1920, should be ajusted to actual screen width \par
+8.  Check if data.xml file could be included to the project and copied to the local storage for use after installation;\par
+\highlight4 9.  Image for splash-screen.\cf2\b0\par
+\cf1\b 10. Web-service name should be placed in the config file (which should be copied to the local storage);\par
+
+\pard\sa200\sl240\slmult1\qc\cf0\fs28 DATA\par
+
+\pard\sa200\sl240\slmult1\cf1\fs26 1. Data.xml is included to the project\par
+2. When running first time Data.xml are copied (in encrypted form)  to LocalStorage\par
+3. There are 13 in-product licenses each embracing 6 specific themes beyond basic 20 ones. Licenses are identified by ids plus language keyword (like English).\par
+4. In product licenses are getting available for purchase along as new themes are prepared and added to some server place, they are added by 6.\par
+5. Program enquires a web-service from time to time if new themes are available and downloads some info about them if any  (changes to the xml files in the LocalStorage are made), each new theme is presented in transparent untill they are bought. \cf2\b0\par
+\cf1\b 6.After purchase resources for themes are downloaded (when in demo 3 little pictures presenting the theme) and attribute "IsLoaded" is set to true; \par
+7. When LG gets uninstalled and installed again it preserves only basic themes. However when launched it check all in product licenses and gets themes downloads for purchased licenses.\cf2\b0\par
+\cf1\b 8. Add new theme "Nature" in English;\par
+9. Add new theme "Room"  in English;\par
+\highlight0 10. If game  results for server account fail to be updated (due to internet connection lost for e.g.) they should not be updated locally as well.\cf2\b0\par
+\cf1\b 11. Replace some of the pictures for Body theme\cf2\b0\par
+\cf1\b 12. Record new audio mp3 for some of the words of Weather theme (hot, fog, cloud)\par
+12. It seems like one should rerecord sounds for themes plant1, plant2 and body ( at least).\par
+13. Add rest of the themes data to the DB (up to 10 including)\highlight4\par
+
+\pard\sa200\sl240\slmult1\qc\cf0\fs28 START PAGE\par
+
+\pard\sa200\sl240\slmult1\cf1\highlight0\fs26 1. Register network profile account on server;\par
+\highlight4 2. Edit profile account (both local and network);\par
+3. Delete profile account;\par
+\highlight0 4.  Profile info does not load in the left bottom corner when program is started;\highlight4\fs28\par
+
+\pard\sa200\sl240\slmult1\qc\cf0 GAME\par
+
+\pard\sa200\sl240\slmult1\cf1\highlight0\fs26 1. Mini map height sometimes is too long;\cf2\b0\par
+\cf1\b 2. Change algorithm how is calculating speed decrease;\par
+3. Asteroid size should be bigger (a certain fraction of the picture width);\cf2\b0\par
+\cf1\b 4. Digital speed indicator on the speedometer\cf2\b0\par
+\cf1\b 5. Distance and covered distance indicators on the board\cf2\b0\par
+\cf1\b 6. Damage functionality (asteroid collision decrease speed)\par
+7. Set default theme when starting Game without first selecting theme; \cf2\b0\par
+8. Sometimes word is spoken twice;\par
+\cf1\b 9. Decrease speed to zero on game end;\par
+\par
+
+\pard\sa200\sl240\slmult1\qc\cf0\highlight4\fs28 SELECT THEME\par
+
+\pard\sa200\sl240\slmult1\cf1\highlight0\fs26 1. Themes items on Theme Module should be sized and positioned appropraite to  window dimensions;\cf2\b0\par
+\cf1\b 2. Add all-seeing eye to the hierarchy top and all needed functionality to support that level of the hierarchy in all modules;\par
+3. Request server for network account when checking\f2\lang1049  belonging to\f1\lang1033  "AllSeeing";\par
+
+\pard\sa200\sl240\slmult1\qc\cf0\highlight4\fs28 HIERARCHY\par
+
+\pard\sa200\sl240\slmult1\cf1\fs26 1. Show number of players registered in the steps;\cf2\b0\par
+\cf1\b 2. Show details for the user profile on Hierarchy module (at the top of the page);\par
+\highlight0 3. Request server for network account when getting top 6 and checking\f2\lang1049  belonging to\f1\lang1033  "AllSeeing";\par
+\cf2\highlight4\b0\par
+
+\pard\sa200\sl240\slmult1\qc\cf0\b\fs28 BACKGROUND\par
+
+\pard\sa200\sl240\slmult1\cf1\fs26 1. Star flashing animated\cf2\b0\par
+\cf1\b 2. Background space parts moving system\par
+3. Prepare 10 Nebula pictures\par
+4.\f2\lang1049  \f1\lang1033 Negative top margin of the stars canvas binding to the row height;\par
+\cf2\b0 5. ReInitialize sizes on screen  resolution change to be appropriate;\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\cf5\highlight0\f0\fs22\lang9\par
+}
+ 

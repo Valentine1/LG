@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Themes>
+  <Theme id="1" Name="Weather">
+    <Word id="1" Value="cloud" PicUrl="cloud.png" AudioUrl="cloud.wma" BackClr="#FF347FFF" BorderClr="#FF4D8FFF" LeftClr="#FF5996C2" TopClr="#FF80AFC2" LeftTopClr="#FF80AFFF" />
+    <Word id="2" Value="dew" PicUrl="dew.png" AudioUrl="dew.wma" BackClr="#FF79D67A" BorderClr="#FF84D685" LeftClr="#FF8AB48A" TopClr="#FF9BB49C" LeftTopClr="#FF9BD69C" />
+    <Word id="3" Value="fog" PicUrl="fog.png" AudioUrl="fog.wma" BackClr="#FF9796AD" BorderClr="#FF9998AD" LeftClr="#FF9B9AA5" TopClr="#FF9F9EA5" LeftTopClr="#FF9F9EAD" />
+    <Word id="4" Value="cold" PicUrl="cold.png" AudioUrl="cold.wma" BackClr="#FFF7F9FF" BorderClr="#FFD2D2FF" LeftClr="#FFD5D5EC" TopClr="#FFDFDFEC" LeftTopClr="#FFDFDFFF" />
+    <Word id="5" Value="frost" PicUrl="frost.png" AudioUrl="frost.wma" BackClr="#FF95BFF8" BorderClr="#FFA1C6F8" LeftClr="#FFA7C9DB" TopClr="#FFBAD4DB" LeftTopClr="#FFBAD4F8" />
+    <Word id="6" Value="hot" PicUrl="hot.png" AudioUrl="hot.wma" BackClr="#FFFF6E34" BorderClr="#FFFF804D" LeftClr="#FFF48859" TopClr="#FFE7A480" LeftTopClr="#FFFFA480" />
+    <Word id="7" Value="hurricane" PicUrl="hurricane.png" AudioUrl="hurricane.wma" BackClr="#FF8C8A85" BorderClr="#FF8C8A85" LeftClr="#FF8C8A86" TopClr="#FF8C8A87" LeftTopClr="#FF8C8A87" />
+    <Word id="8" Value="ice" PicUrl="ice.png" AudioUrl="ice.wma" BackClr="#FFD7DDE2" BorderClr="#FFCECEE2" LeftClr="#FFD0D0DA" TopClr="#FFD4D4DA" LeftTopClr="#FFD4D4E2" />
+  </Theme>
+  <Theme id="2" Name="Body"></Theme>
+</Themes>

@@ -1,0 +1,21 @@
+<Project
+ DefaultTargets="Build"
+ xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    
+    <!-- Change the target framework to 4.5 if using the ".NET 4.5" configuration -->
+    <PropertyGroup Condition=" '$(Platform)' == '.NET 4.5' ">
+       <DefineConstants Condition="'$(DefineConstants)'==''">TARGETTING_FX_4_5</DefineConstants>
+       <DefineConstants Condition="'$(DefineConstants)'!='' and '$(DefineConstants)'!='TARGETTING_FX_4_5'">$(DefineConstants);TARGETTING_FX_4_5</DefineConstants>
+        <PlatformTarget Condition="'$(PlatformTarget)'!=''"/>
+        <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    </PropertyGroup>
+        
+    <!-- Import the standard C# targets -->
+    <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+    
+    <!-- Add .NET 4.5 as an available platform -->
+    <PropertyGroup>
+       <AvailablePlatforms>$(AvailablePlatforms),.NET 4.5</AvailablePlatforms>
+    </PropertyGroup>
+    
+</Project>

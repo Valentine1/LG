@@ -1,0 +1,167 @@
+﻿<UserControl
+    x:Class="LG.Views.GameFrameV"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:LG.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid x:Name="mainGrid" >
+        <MediaElement x:Name="BangPlayer" IsLooping="False" Volume="1"  AutoPlay="False"/>
+        <local:AppSounds x:Name="AppSoundsV"    BackMusicSource="{Binding Path=AppSoundsVModel.BackMusicAudio}"   />
+        <Grid x:Name="gridBackFrame" />
+        <Grid  Background="Transparent" Margin="0,0,0,0"  >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="80" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid  x:Name="gridFrame" Grid.Row="0" Grid.RowSpan="2"   HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" Opacity="1" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+            </Grid>
+            <StackPanel x:Name="spTopCommands" Grid.Row="0" Grid.RowSpan="2"    Orientation="Horizontal" VerticalAlignment="Top"  HorizontalAlignment="Left"  >
+                <Button x:Name="btBack" FontFamily="Segoe UI Symbol"  Content="&#xE112;"  Foreground="White" FontSize="14" Width="45" Height="32" Margin="50,20,20,0" Padding="0,-1,0,0" 
+                        Click="btBack_Clicked" IsHitTestVisible="True" VerticalAlignment="Top" />
+                <StackPanel  Orientation="Horizontal" Margin="0,20,0,0"  VerticalAlignment="Top"  >
+                    <StackPanel Grid.Row="1" x:Name="vbGobalInfoTop"  Visibility="Collapsed" Orientation="Horizontal" VerticalAlignment="Bottom"  >
+                        <Viewbox VerticalAlignment="Top" HorizontalAlignment="Left"   Height="{Binding GlobalInfoPanelVM.BlockSize.Height}"  Width="{Binding GlobalInfoPanelVM.BlockSize.Width}"
+                           Stretch="Uniform"  Margin="10, 0, 5, 5" >
+                            <StackPanel Orientation="Horizontal" VerticalAlignment="Top" >
+                                <Image Source="{Binding Path=SelectedProfileVM.PictureSource, Mode=OneWay}" Width="80" VerticalAlignment="Top" />
+                                <TextBlock Text="{Binding Path=SelectedProfileVM.Name, Mode=OneWay}" Foreground="White"   Width="100"  FontSize="13"  TextWrapping="Wrap" VerticalAlignment="Top"  HorizontalAlignment="Right"  Margin="5,5,0,0" />
+                            </StackPanel>
+                        </Viewbox>
+                        <Viewbox  VerticalAlignment="Top" HorizontalAlignment="Left"  Height="{Binding GlobalInfoPanelVM.BlockSize.Height}"   Margin="5, 0, 0, 0"    Stretch="Uniform">
+                            <StackPanel Orientation="Vertical"  >
+                                <StackPanel Height="4" />
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="BestTime:" FontSize="8"  FontWeight="Bold" VerticalAlignment="Center" Foreground="{Binding  Path=LevelColor}"  />
+                                    <StackPanel Orientation="Horizontal" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                                        <TextBlock Text="{Binding Path=SelectedProfileVM.BestTimeVModel.Minutes, Mode=OneWay}"  FontWeight="SemiBold" Foreground="{Binding  Path=LevelColor}" FontSize="8"  VerticalAlignment="Center" HorizontalAlignment="Right"  Margin="2,0,0,0" />
+                                        <TextBlock Text=":" Foreground="{Binding  Path=LevelColor}"   VerticalAlignment="Center"  FontWeight="SemiBold"  FontSize="8" HorizontalAlignment="Right"  />
+                                        <TextBlock Text="{Binding Path=SelectedProfileVM.BestTimeVModel.Seconds, Mode=OneWay}"  FontWeight="SemiBold"  FontSize="8"  Foreground="{Binding  Path=LevelColor}"  VerticalAlignment="Center" HorizontalAlignment="Right"   />
+                                        <TextBlock Text=":" Foreground="{Binding  Path=LevelColor}"  VerticalAlignment="Center"  FontWeight="SemiBold" FontSize="8"  HorizontalAlignment="Right"  />
+                                        <TextBlock Text="{Binding Path=SelectedProfileVM.BestTimeVModel.MilliSeconds, Mode=OneWay}"  FontWeight="SemiBold" FontSize="8" Foreground="{Binding  Path=LevelColor}"  VerticalAlignment="Center" HorizontalAlignment="Right"   />
+                                        <TextBlock Text="{Binding Path=Name, Mode=OneWay}" Foreground="{Binding  Path=LevelColor}"  FontWeight="SemiBold"  FontSize="8" Width="98"  TextTrimming="WordEllipsis"   TextWrapping="NoWrap" 
+                                                       VerticalAlignment="Center" HorizontalAlignment="Right"  Margin="4,0,0,0" />
+                                    </StackPanel>
+                                </StackPanel>
+                                <StackPanel Height="3" />
+                                <StackPanel Orientation="Horizontal" >
+                                    <TextBlock Text="Hours Played:" FontSize="8"  FontWeight="Bold" VerticalAlignment="Center"  Foreground="{Binding  Path=LevelColor}" />
+                                    <StackPanel Orientation="Horizontal"  Margin="2,0,0,0">
+                                        <TextBlock Text="{Binding SelectedProfileVM.HoursPlayed}" FontWeight="SemiBold" Foreground="{Binding  Path=LevelColor}" FontSize="8"  VerticalAlignment="Center" HorizontalAlignment="Right"  />
+                                        <TextBlock Text="hrs" Foreground="{Binding  Path=LevelColor}" FontWeight="SemiBold" FontSize="8"  Margin="1,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Right"  />
+                                        <TextBlock Text="{Binding SelectedProfileVM.MinutesPlayed}" FontWeight="SemiBold" Foreground="{Binding  Path=LevelColor}" FontSize="8"   Margin="1,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Right"   />
+                                        <TextBlock Text="min" Foreground="{Binding  Path=LevelColor}" FontWeight="SemiBold"  FontSize="8"  Margin="1,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Right"  />
+                                    </StackPanel>
+                                </StackPanel>
+                                <StackPanel Height="17" />
+                            </StackPanel>
+                        </Viewbox>
+                        <Viewbox   Height="{Binding GlobalInfoPanelVM.BlockSize.Height}"   VerticalAlignment="Top" HorizontalAlignment="Left"  Margin="5, 0, 0, 0" Stretch="Uniform">
+                            <StackPanel Orientation="Vertical" >
+                                <StackPanel Orientation="Horizontal"   >
+                                    <TextBlock Text="Theme:" FontSize="10"  FontWeight="Bold" VerticalAlignment="Center"  FontFamily="/Fonts/digital7mono.ttf#Digital-7 Mono" >
+                                        <TextBlock.Foreground>
+                                            <LinearGradientBrush  StartPoint="0,0" Opacity="1" EndPoint="0.8,1">
+                                                <GradientStop Color="#F69613" Offset="0"/>
+                                                <GradientStop Color="OrangeRed" Offset="0.8"/>
+                                            </LinearGradientBrush>
+                                        </TextBlock.Foreground>
+                                    </TextBlock>
+                                    <TextBlock Text="{Binding SelectedTopicVM.TextValue }" FontSize="12" VerticalAlignment="Center"  Margin="5,0,0,0"  FontFamily="/Fonts/digital7mono.ttf#Digital-7 Mono" >
+                                        <TextBlock.Foreground>
+                                            <LinearGradientBrush  StartPoint="0,0" Opacity="1" EndPoint="0.8,1">
+                                                <GradientStop Color="#FFFFF300" Offset="0"/>
+                                                <GradientStop Color="#F69613" Offset="0.8"/>
+                                            </LinearGradientBrush>
+                                        </TextBlock.Foreground>
+                                    </TextBlock>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal"  >
+                                    <TextBlock Text="Hierarchy:" FontSize="10"  FontWeight="Bold" VerticalAlignment="Center"  FontFamily="/Fonts/digital7mono.ttf#Digital-7 Mono" >
+                                        <TextBlock.Foreground>
+                                            <LinearGradientBrush  StartPoint="0,0" Opacity="1" EndPoint="0.8,1">
+                                                <GradientStop Color="#F69613" Offset="0"/>
+                                                <GradientStop Color="OrangeRed" Offset="0.8"/>
+                                            </LinearGradientBrush>
+                                        </TextBlock.Foreground>
+                                    </TextBlock>
+                                    <TextBlock  Text="{Binding SelectedTopicVM.LevelAvaVM.TextValue }" FontSize="12" Margin="5,0,0,0"  VerticalAlignment="Center" FontFamily="/Fonts/digital7mono.ttf#Digital-7 Mono" >
+                                        <TextBlock.Foreground>
+                                            <LinearGradientBrush  StartPoint="0,0" Opacity="1" EndPoint="0.8,1">
+                                                <GradientStop Color="#FFFFF300" Offset="0"/>
+                                                <GradientStop Color="#F69613" Offset="0.8"/>
+                                            </LinearGradientBrush>
+                                        </TextBlock.Foreground>
+                                    </TextBlock>
+                                </StackPanel>
+                                <StackPanel Height="15" />
+                            </StackPanel>
+                        </Viewbox>
+                    </StackPanel>
+                </StackPanel>
+            </StackPanel>
+            <StackPanel Grid.Row="1" x:Name="vbGobalInfoBottom"  Orientation="Horizontal" VerticalAlignment="Bottom"  >
+                <Viewbox VerticalAlignment="Top" HorizontalAlignment="Left"   Height="{Binding GlobalInfoPanelVM.BlockSize.Height}"  Width="{Binding GlobalInfoPanelVM.BlockSize.Width}"
+                      Stretch="UniformToFill"  Margin="10, 0, 5, 5" >
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Top" >
+                        <Image Source="{Binding Path=SelectedProfileVM.PictureSource, Mode=OneWay}" Width="80" VerticalAlignment="Top" />
+                        <TextBlock Text="{Binding Path=SelectedProfileVM.Name, Mode=OneWay}" Foreground="White"   Width="100"  FontSize="13"  TextWrapping="Wrap" VerticalAlignment="Top"  HorizontalAlignment="Right"  Margin="5,5,0,0" />
+                    </StackPanel>
+                </Viewbox>
+
+                <Viewbox   Height="{Binding GlobalInfoPanelVM.BlockSize.Height}"  VerticalAlignment="Top" HorizontalAlignment="Left"  Margin="50, 0, 0, 0" Stretch="Uniform">
+                    <StackPanel Orientation="Vertical">
+                        <StackPanel Orientation="Horizontal"   >
+                            <TextBlock Text="Theme:" FontSize="10"  FontWeight="Bold" VerticalAlignment="Center"  FontFamily="/Fonts/digital7mono.ttf#Digital-7 Mono" >
+                                <TextBlock.Foreground>
+                                    <LinearGradientBrush  StartPoint="0,0" Opacity="1" EndPoint="0.8,1">
+                                        <GradientStop Color="#F69613" Offset="0"/>
+                                        <GradientStop Color="OrangeRed" Offset="0.8"/>
+                                    </LinearGradientBrush>
+                                </TextBlock.Foreground>
+                            </TextBlock>
+                            <TextBlock Text="{Binding SelectedTopicVM.TextValue }" FontSize="12" VerticalAlignment="Center"  Margin="5,0,0,0"  FontFamily="/Fonts/digital7mono.ttf#Digital-7 Mono" >
+                                <TextBlock.Foreground>
+                                    <LinearGradientBrush  StartPoint="0,0" Opacity="1" EndPoint="0.8,1">
+                                        <GradientStop Color="#FFFFF300" Offset="0"/>
+                                        <GradientStop Color="#F69613" Offset="0.8"/>
+                                    </LinearGradientBrush>
+                                </TextBlock.Foreground>
+                            </TextBlock>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal"  >
+                            <TextBlock Text="Hierarchy:" FontSize="10"  FontWeight="Bold" VerticalAlignment="Center"  FontFamily="/Fonts/digital7mono.ttf#Digital-7 Mono" >
+                                <TextBlock.Foreground>
+                                    <LinearGradientBrush  StartPoint="0,0" Opacity="1" EndPoint="0.8,1">
+                                        <GradientStop Color="#F69613" Offset="0"/>
+                                        <GradientStop Color="OrangeRed" Offset="0.8"/>
+                                    </LinearGradientBrush>
+                                </TextBlock.Foreground>
+                            </TextBlock>
+                            <TextBlock  Text="{Binding SelectedTopicVM.LevelAvaVM.TextValue }" FontSize="12" Margin="5,0,0,0"  VerticalAlignment="Center" FontFamily="/Fonts/digital7mono.ttf#Digital-7 Mono" >
+                                <TextBlock.Foreground>
+                                    <LinearGradientBrush  StartPoint="0,0" Opacity="1" EndPoint="0.8,1">
+                                        <GradientStop Color="#FFFFF300" Offset="0"/>
+                                        <GradientStop Color="#F69613" Offset="0.8"/>
+                                    </LinearGradientBrush>
+                                </TextBlock.Foreground>
+                            </TextBlock>
+                        </StackPanel>
+                        <StackPanel Height="15" />
+                    </StackPanel>
+                </Viewbox>
+            </StackPanel>
+            <Button   x:Name="btFocusTaker"  Margin="-10000,0,0,0"/>
+        </Grid>
+        <Grid x:Name="gridProgress" VerticalAlignment="Stretch"  PointerPressed="gridProgress_PointerPressed" Opacity="0"  IsHitTestVisible="False" HorizontalAlignment="Stretch" Background="#190000DD" >
+            <TextBlock x:Name="tb" FontSize="18"  Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Center" Visibility="Collapsed" />
+            <ProgressBar x:Name="pb" IsIndeterminate="True" Width="300" Height="30"  Margin="0,100,0,0"  Visibility="Collapsed"  VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        </Grid>
+    </Grid>
+
+</UserControl>

@@ -1,0 +1,90 @@
+﻿<UserControl
+    x:Class="LG.Views.HierarchyV"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:LG.Views"
+    xmlns:vm="using:LG.ViewModels"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <UserControl.Resources>
+        <vm:ObjectToVisibilityConverter x:Key="ObjToVis" />
+    </UserControl.Resources>
+    <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+        <Canvas x:Name="canHierarchy" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" >
+            <Viewbox Stretch="Uniform" Canvas.Top="{Binding Path=TopProfilesPanelVM.StartPosition.Y}" Width="{Binding Path=TopProfilesPanelVM.BlockSize.Width}" Margin="20,20,0,0" SizeChanged="Viewbox_SizeChanged">
+                <StackPanel Orientation="Horizontal"  HorizontalAlignment="Right">
+                    <StackPanel Orientation="Vertical" Margin="0,0,10,0">
+                        <StackPanel Orientation="Horizontal" >
+                            <TextBlock Text="{Binding SelectedStepVM.AvatarVModel.TextValue}"  Foreground="{Binding SelectedStepVM.AvatarVModel.LegendColor}"  Margin="10,3,10,0" FontWeight="Bold"  FontSize="13.5"/>
+                            <TextBlock Text="TOP 6:"   Foreground="{Binding SelectedStepVM.AvatarVModel.LegendColor}"  Margin="10,3,0,0" FontWeight="Bold"  FontSize="13"/>
+                        </StackPanel>
+                        <Grid>
+                            <Border Width="182" Height="148" BorderThickness="2" BorderBrush="White" CornerRadius="10" Opacity="1" Background="{Binding SelectedStepVM.AvatarVModel.LegendColor}" />
+                            <ListBox  Foreground="White"  Height="148" Width="182" Opacity="0.9"  ItemsSource="{Binding Path=SelectedStepVM.TopProfilesVMs, Mode=OneWay}"  
+                                  SelectedItem="{Binding Path=SelectedStepVM.SelectedTopProfileVM, Mode=TwoWay}"
+                                  ScrollViewer.VerticalScrollBarVisibility="Visible" ScrollViewer.VerticalScrollMode="Enabled"  ScrollViewer.IsVerticalRailEnabled="True"
+                                  Style="{StaticResource ListBoxStyle1}"  FontSize="13" ItemContainerStyle="{StaticResource ListBoxItemStyle2}">
+                                <ListBox.Background>
+                                    <LinearGradientBrush  StartPoint="0.2,0" Opacity="1" EndPoint="0.8,1">
+                                        <GradientStop Color="#B60F0F0F" Offset="0"/>
+                                        <GradientStop Color="#E64B4B4B" Offset="1"/>
+                                    </LinearGradientBrush>
+                                </ListBox.Background>
+                                <ListBox.ItemTemplate  >
+                                    <DataTemplate  >
+                                        <StackPanel Orientation="Horizontal" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                                            <TextBlock Text="{Binding Path=BestTimeVModel.Minutes, Mode=OneWay}" Foreground="LightGray" FontSize="12"  VerticalAlignment="Center" HorizontalAlignment="Right"  Margin="2,0,0,0" />
+                                            <TextBlock Text=":" Foreground="LightGray"   VerticalAlignment="Center"  FontSize="12" HorizontalAlignment="Right"  />
+                                            <TextBlock Text="{Binding Path=BestTimeVModel.Seconds, Mode=OneWay}"  FontSize="12"  Foreground="LightGray"   VerticalAlignment="Center" HorizontalAlignment="Right"   />
+                                            <TextBlock Text=":" Foreground="LightGray"  VerticalAlignment="Center" FontSize="12"  HorizontalAlignment="Right"  />
+                                            <TextBlock Text="{Binding Path=BestTimeVModel.MilliSeconds, Mode=OneWay}" FontSize="12"  Foreground="LightGray"   VerticalAlignment="Center" HorizontalAlignment="Right"   />
+                                            <TextBlock Text="{Binding Path=Name, Mode=OneWay}" Foreground="White"   FontSize="12" Width="98"  TextTrimming="WordEllipsis"   TextWrapping="NoWrap" 
+                                                       VerticalAlignment="Center" HorizontalAlignment="Right"  Margin="4,0,0,0" />
+                                        </StackPanel>
+                                    </DataTemplate>
+                                </ListBox.ItemTemplate>
+                            </ListBox>
+                        </Grid>
+                    </StackPanel>
+                    <StackPanel Orientation="Vertical" >
+                        <TextBlock Text="DETAILS:"   Foreground="{Binding SelectedStepVM.AvatarVModel.LegendColor}"  Margin="10,3,0,0" FontWeight="Bold"  FontSize="13"/>
+                        <Border Width="200" Height="250" BorderThickness="2" BorderBrush="White"  CornerRadius="10" Background="{Binding SelectedStepVM.AvatarVModel.LegendColor}" >
+                            <StackPanel Orientation="Vertical" >
+                                <StackPanel Orientation="Horizontal" >
+                                    <Image Source="{Binding Path=SelectedStepVM.SelectedTopProfileVM.PictureSource, Mode=OneWay}" Width="80"  Margin="4,6,0,0"  VerticalAlignment="Top" />
+                                    <TextBlock Foreground="White" FontSize="13" Width="111" FontWeight="SemiBold" Margin="4,6,0,0" Text="{Binding SelectedStepVM.SelectedTopProfileVM.Name}" TextWrapping="Wrap" />
+                                </StackPanel>
+                                <TextBlock FontSize="13" Foreground="White" FontWeight="SemiBold" Text="Contact info:" Margin="4,4,0,0" Visibility="{Binding Path=SelectedStepVM.SelectedTopProfileVM, Converter={StaticResource ObjToVis}  }" />
+                                <TextBlock FontSize="13" Foreground="White" Text="{ Binding  Path=SelectedStepVM.SelectedTopProfileVM.ContactInfo}"  Margin="6,2,0,0" TextWrapping="Wrap" />
+                                <TextBlock FontSize="13" Foreground="White" FontWeight="SemiBold" Text="Hours Played:" Margin="4,4,0,0"  Visibility="{Binding Path=SelectedStepVM.SelectedTopProfileVM, Converter={StaticResource ObjToVis}  }" />
+                                <StackPanel Orientation="Horizontal" Margin="6,2,0,0"  Visibility="{Binding Path=SelectedStepVM.SelectedTopProfileVM, Converter={StaticResource ObjToVis}  }" >
+                                    <TextBlock Text="{Binding SelectedStepVM.SelectedTopProfileVM.HoursPlayed}" Foreground="White" FontSize="12"  VerticalAlignment="Center" HorizontalAlignment="Right"  />
+                                    <TextBlock Text="hrs" Foreground="White"   FontSize="11"  Margin="1,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Right"  />
+                                    <TextBlock Text="{Binding SelectedStepVM.SelectedTopProfileVM.MinutesPlayed}" Foreground="White"  FontSize="12"   Margin="1,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Right"   />
+                                    <TextBlock Text="min" Foreground="White"  FontSize="11"  Margin="1,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Right"  />
+                                </StackPanel>
+
+                            </StackPanel>
+                        </Border>
+                    </StackPanel>
+                    <StackPanel Orientation="Vertical" >
+                        <TextBlock Text="THEMES:" Foreground="{Binding SelectedStepVM.AvatarVModel.LegendColor}"  Margin="18,3,0,0" FontWeight="Bold"  FontSize="13.5"/>
+                        <ComboBox  x:Name="cbTopics" Width="200" Height="135"  Margin="10, 0, 0, 0"  SelectionChanged="cbTopics_SelectionChanged" VerticalAlignment="Top"
+                       HorizontalContentAlignment="Center"  Style="{StaticResource ComboBoxStyle1}" ItemContainerStyle="{StaticResource comboBoxItemStyle1}"  VerticalContentAlignment="Center" >
+                            <ComboBox.Background>
+                                <LinearGradientBrush  StartPoint="0.2,0" Opacity="1" EndPoint="0.8,1">
+                                    <GradientStop Color="#B60F0F0F" Offset="0"/>
+                                    <GradientStop Color="#E64B4B4B" Offset="1"/>
+                                </LinearGradientBrush>
+                            </ComboBox.Background>
+                            <ComboBox.RenderTransform>
+                                <ScaleTransform ScaleX="1" ScaleY="1" />
+                            </ComboBox.RenderTransform>
+                        </ComboBox>
+                    </StackPanel>
+                </StackPanel>
+            </Viewbox>
+        </Canvas>
+    </Grid>
+</UserControl>

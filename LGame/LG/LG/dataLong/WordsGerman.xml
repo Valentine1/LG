@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WordsToEnglish>
+  <Theme TId="6">
+    <W WId="100" Val="Stadt" AudioUrl="city.mp3" />
+    <W WId="101" Val="Geschäft" AudioUrl="shop.mp3" />
+    <W WId="102" Val="Bibliothek" AudioUrl="library.mp3" />
+    <W WId="103" Val="Krankenhaus" AudioUrl="hospital.mp3" />
+    <W WId="104" Val="Snackbar" AudioUrl="snackbar.mp3" />
+    <W WId="105" Val="Kino" AudioUrl="cinema.mp3" />
+    <W WId="106" Val="Denkmal" AudioUrl="monument.mp3" />
+    <W WId="107" Val="Kirche" AudioUrl="church.mp3" />
+    <W WId="108" Val="Brücke" AudioUrl="bridge.mp3" />
+    <W WId="109" Val="Tor" AudioUrl="gate.mp3" />
+    <W WId="110" Val="Weg" AudioUrl="road.mp3" />
+    <W WId="111" Val="Verkehrsampel" AudioUrl="trafficlights.mp3" />
+    <W WId="112" Val="Gehsteig" AudioUrl="pavement.mp3" />
+    <W WId="113" Val="Bank" AudioUrl="bench.mp3" />
+    <W WId="114" Val="Auto" AudioUrl="car.mp3" />
+    <W WId="115" Val="Lastwagen" AudioUrl="lorry.mp3" />
+    <W WId="116" Val="Bus" AudioUrl="bus.mp3" />
+    <W WId="117" Val="Tankstelle" AudioUrl="fillingstation.mp3" />
+    <W WId="118" Val="Gehweg" AudioUrl="zebracrossing.mp3" />
+    <W WId="119" Val="Kreuzung" AudioUrl="intersection.mp3" />
+  </Theme>
+</WordsToEnglish>

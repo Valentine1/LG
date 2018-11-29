@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <MinimumVisualStudioVersion>10.0</MinimumVisualStudioVersion>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1DBAE8A7-6BE7-4E44-9F7F-D00C9A010B62}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LG.GameApplication</RootNamespace>
+    <AssemblyName>LG.GameApplication</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Profile4</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- A reference to the entire .NET Framework is automatically included -->
+    <ProjectReference Include="..\LG.BackgroundModule\LG.BackgroundModule.csproj">
+      <Project>{3cafb202-dc14-4213-b279-437c6ba11af0}</Project>
+      <Name>LG.BackgroundModule</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LG.GameModule\LG.GameModule.csproj">
+      <Project>{47d6a138-8490-462d-bbb4-ba4ad3ccab4e}</Project>
+      <Name>LG.GameModule</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LG.ModuleBase\LG.ModuleBase.csproj">
+      <Project>{bb18ffcf-9f9c-4b43-a2a6-da44e766b0c8}</Project>
+      <Name>LG.ModuleBase</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LG.StartPageModule\LG.StartPageModule.csproj">
+      <Project>{a07d83cc-d0e7-4ea4-89f6-5476c1825ecf}</Project>
+      <Name>LG.StartPageModule</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LG.ThemesModule\LG.ThemesModule.csproj">
+      <Project>{0e84b15c-b4af-4118-ac5d-3a37804f3b83}</Project>
+      <Name>LG.ThemesModule</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppSounds.cs" />
+    <Compile Include="GameFrame.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

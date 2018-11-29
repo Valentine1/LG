@@ -1,0 +1,33 @@
+﻿<UserControl
+    x:Class="LG.Views.AvatarShow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:LG.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    
+    <Grid>
+        <Canvas>
+            <Image x:Name="imAvatar" Source="{Binding Path=PictureSource, Mode=OneWay}"  >
+                <Image.RenderTransform >
+                    <TransformGroup>
+                        <TranslateTransform x:Name="imAvatarTrans"  />
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
+        </Canvas>
+        <Grid x:Name="canSpace"  HorizontalAlignment="Left" VerticalAlignment="Top"   >
+            <TextBlock  x:Name="tbAvatar" FontSize="244" Text="{Binding Path=TextValue, Mode=OneWay}" HorizontalAlignment="Center"    VerticalAlignment="Center"  SizeChanged="tbAvatar_SizeChanged" Opacity="0" >
+                <TextBlock.Foreground>
+                    <SolidColorBrush x:Name="tbAvatarFore" Color="Orange" />
+                </TextBlock.Foreground>
+                <TextBlock.RenderTransform >
+                    <TransformGroup>
+                        <ScaleTransform    x:Name="tbAvatarScale"    />
+                    </TransformGroup>
+                </TextBlock.RenderTransform>
+            </TextBlock>
+        </Grid>
+    </Grid>
+</UserControl>

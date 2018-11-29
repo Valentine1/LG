@@ -1,0 +1,230 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D0F70125-60F1-491C-87CE-8320ACBAD861}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LG_GameApplicationV</RootNamespace>
+    <AssemblyName>LG_GameApplicationV</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{BC8A1FFA-BEE3-4634-8014-F334798102B3};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <PackageCertificateKeyFile>LG_GameApplicationV_TemporaryKey.pfx</PackageCertificateKeyFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
+    <OutputPath>bin\ARM\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
+    <ProjectReference Include="..\..\ViewModel\LG.BackgroundModuleVM\LG.BackgroundModuleVM.csproj">
+      <Project>{9a6ea737-6a4d-4808-b73b-cc9d7aa2524f}</Project>
+      <Name>LG.BackgroundModuleVM</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ViewModel\LG.GameApplicationVM\LG.GameApplicationVM.csproj">
+      <Project>{52b6ebef-8391-4fd0-a23f-a2546283cac8}</Project>
+      <Name>LG.GameApplicationVM</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ViewModel\LG.GameModuleVM\LG.GameModuleVM.csproj">
+      <Project>{d7be76f1-0829-4e26-b754-e99dff725ab1}</Project>
+      <Name>LG.GameModuleVM</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ViewModel\LG.HierarchyModuleVM\LG.HierarchyModuleVM.csproj">
+      <Project>{4272c5d1-9691-43e2-84f5-a4b9e4fc68e9}</Project>
+      <Name>LG.HierarchyModuleVM</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ViewModel\LG.ModuleBaseVM\LG.ModuleBaseVM.csproj">
+      <Project>{29fd9c2c-0cb5-468d-a743-e8d91e72431f}</Project>
+      <Name>LG.ModuleBaseVM</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ViewModel\LG.StartPageModuleVM\LG.StartPageModuleVM.csproj">
+      <Project>{60c7c468-91aa-466e-b3e6-3d373948d2cd}</Project>
+      <Name>LG.StartPageModuleVM</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ViewModel\LG.ThemesModuleVM\LG.ThemesModuleVM.csproj">
+      <Project>{a71ac117-f99e-450a-8f95-ef090a276b61}</Project>
+      <Name>LG.ThemesModuleVM</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LG_BackgroundModuleV\LG_BackgroundModuleV.csproj">
+      <Project>{9410b5cb-fba4-4106-be47-b39c22f37633}</Project>
+      <Name>LG_BackgroundModuleV</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LG_GameModuleV\LG_GameModuleV.csproj">
+      <Project>{0cc18585-f443-41ae-af22-652363e26950}</Project>
+      <Name>LG_GameModuleV</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LG_HierarchyModuleV\LG_HierarchyModuleV.csproj">
+      <Project>{70aa2be1-0ebc-4554-bda6-794aebc2eb4d}</Project>
+      <Name>LG_HierarchyModuleV</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LG_ModuleBaseV\LG_ModuleBaseV.csproj">
+      <Project>{0adee4aa-0c88-4f17-a6b0-120b6668971d}</Project>
+      <Name>LG_ModuleBaseV</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LG_StartPageModuleV\LG_StartPageModuleV.csproj">
+      <Project>{f9d30971-7b59-4f80-b0fa-95c9fbda8d98}</Project>
+      <Name>LG_StartPageModuleV</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LG_ThemesV\LG_ThemesV.csproj">
+      <Project>{c5cc1381-4f8a-4526-974b-471fa28eba32}</Project>
+      <Name>LG_ThemesV</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\AppSounds.xaml.cs">
+      <DependentUpon>AppSounds.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\GameFrameV.xaml.cs">
+      <DependentUpon>GameFrameV.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="Package.appxmanifest">
+      <SubType>Designer</SubType>
+    </AppxManifest>
+    <None Include="LG_GameApplicationV_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\engines.wav" />
+    <Content Include="Assets\Logo.png" />
+    <Content Include="Assets\Shuh.wma">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\SmallLogo.png" />
+    <Content Include="Assets\SplashScreen.png" />
+    <Content Include="Assets\StoreLogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="Common\StandardStyles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\AppSounds.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\GameFrameV.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="WinRtBehaviors, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\WinRtBehaviors.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '11.0' ">
+    <VisualStudioVersion>11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

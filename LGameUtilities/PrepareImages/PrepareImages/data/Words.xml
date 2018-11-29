@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Themes>
+  <Theme TId="1">
+    <Word Id="1" PicUrl="cloud.png" BackClr="#FF347FFF" BorderClr="#FF4D8FFF" LeftClr="#FF5996C2" TopClr="#FF80AFC2" LeftTopClr="#FF80AFFF" />
+    <Word Id="2" PicUrl="dew.png" BackClr="#FF79D67A" BorderClr="#FF84D685" LeftClr="#FF8AB48A" TopClr="#FF9BB49C" LeftTopClr="#FF9BD69C" />
+    <Word Id="3" PicUrl="fog.png" BackClr="#FF9796AD" BorderClr="#FF9998AD" LeftClr="#FF9B9AA5" TopClr="#FF9F9EA5" LeftTopClr="#FF9F9EAD" />
+    <Word Id="4" PicUrl="cold.png" BackClr="#FFF7F9FF" BorderClr="#FFD2D2FF" LeftClr="#FFD5D5EC" TopClr="#FFDFDFEC" LeftTopClr="#FFDFDFFF" />
+    <Word Id="5" PicUrl="frost.png" BackClr="#FF95BFF8" BorderClr="#FFA1C6F8" LeftClr="#FFA7C9DB" TopClr="#FFBAD4DB" LeftTopClr="#FFBAD4F8" />
+    <Word Id="6" PicUrl="hot.png" BackClr="#FFFF6E34" BorderClr="#FFFF804D" LeftClr="#FFF48859" TopClr="#FFE7A480" LeftTopClr="#FFFFA480" />
+    <Word Id="7" PicUrl="hurricane.png" BackClr="#FF8C8A85" BorderClr="#FF8C8A85" LeftClr="#FF8C8A86" TopClr="#FF8C8A87" LeftTopClr="#FF8C8A87" />
+    <Word Id="8" PicUrl="ice.png" BackClr="#FFD7DDE2" BorderClr="#FFCECEE2" LeftClr="#FFD0D0DA" TopClr="#FFD4D4DA" LeftTopClr="#FFD4D4E2" />
+    <Word Id="9" PicUrl="icicle.png" BackClr="#FFA9C6E6" BorderClr="#FFB0CAE6" LeftClr="#FFB4CBD5" TopClr="#FFBFD2D5" LeftTopClr="#FFBFD2E6" />
+    <Word Id="10" PicUrl="lightning.png" BackClr="#FF151747" BorderClr="#FF1B1D47" LeftClr="#FF1E1F35" TopClr="#FF272935" LeftTopClr="#FF272947" />
+    <Word Id="11" PicUrl="puddle.png" BackClr="#FF777F7A" BorderClr="#FF787F7A" LeftClr="#FF787D7A" TopClr="#FF7A7D7B" LeftTopClr="#FF7A7F7B" />
+    <Word Id="12" PicUrl="rain.png" BackClr="#FF406E9F" BorderClr="#FF4B749F" LeftClr="#FF517784" TopClr="#FF638084" LeftTopClr="#FF63809F" />
+    <Word Id="13" PicUrl="rainbow.png" BackClr="#FF406EAE" BorderClr="#FF4D76AE" LeftClr="#FF54798E" TopClr="#FF69868E" LeftTopClr="#FF6986AE" />
+    <Word Id="14" PicUrl="snow.png" BackClr="#FFB8CFEA" BorderClr="#FFBECFEA" LeftClr="#FFC1D1DB" TopClr="#FFCAD7DB" LeftTopClr="#FFCAD7EA" />
+  <Word Id="58" PicUrl="overcast.png" BackClr="#FF323C3C" BorderClr="#FF333C3C" LeftClr="#FF333C3B" TopClr="#FF353C3B" LeftTopClr="#FF353C3C" />
+    <Word Id="59" PicUrl="sunny.png" BackClr="#FF3296F0" BorderClr="#FF49A1F0" LeftClr="#FF54A6BC" TopClr="#FF79B7BC" LeftTopClr="#FF79B7F0" />
+    <Word Id="60" PicUrl="windy.png" BackClr="#FF0096FF" BorderClr="#FF1FA3FF" LeftClr="#FF2EA9BC" TopClr="#FF5FBDBC" LeftTopClr="#FF5FBDFF" />
+    <Word Id="61" PicUrl="hail.png" BackClr="#FFAFAFAF" BorderClr="#FFAFAFAF" LeftClr="#FFAFAFAF" TopClr="#FFAFAFAF" LeftTopClr="#FFAFAFAF" />
+    <Word Id="62" PicUrl="tornado.png" BackClr="#FF28325A" BorderClr="#FF2E375A" LeftClr="#FF31394A" TopClr="#FF3A414A" LeftTopClr="#FF3A415A" />
+    <Word Id="70" PicUrl="muddy.png" BackClr="#FF87918C" BorderClr="#FF88918C" LeftClr="#FF888F8C" TopClr="#FF8A8F8D" LeftTopClr="#FF8A918D" />
+  </Theme>
+  <Theme TId="2">
+    <Word Id="15" PicUrl="ankle.png" BackClr="#FFD8B554" BorderClr="#FFD8B964" LeftClr="#FFD3BB6C" TopClr="#FFCDC285" LeftTopClr="#FFD8C285" />
+    <Word Id="16" PicUrl="arch.png" BackClr="#FFF1CEBE" BorderClr="#FFF1D0C4" LeftClr="#FFEFD2C7" TopClr="#FFEBD9D1" LeftTopClr="#FFF1D9D1" />
+    <Word Id="63" PicUrl="head.png" BackClr="#FFD29B8C" BorderClr="#FFD2A194" LeftClr="#FFCEA598" TopClr="#FFCAAFA6" LeftTopClr="#FFD2AFA6" />
+    <Word Id="64" PicUrl="eye.png" BackClr="#FFFF1D65" BorderClr="#FFFF3978" LeftClr="#FFF34681" TopClr="#FFE5719E" LeftTopClr="#FFFF719E" />
+    <Word Id="65" PicUrl="nose.png" BackClr="#FFBE9178" BorderClr="#FFBE9680" LeftClr="#FFBB9984" TopClr="#FFB7A192" LeftTopClr="#FFBEA192" />
+    <Word Id="66" PicUrl="lips.png"  BackClr="#FFFA573D" BorderClr="#FFFA6B54" LeftClr="#FFEF745F" TopClr="#FFE29483" LeftTopClr="#FFFA9483" />
+    <Word Id="67" PicUrl="ear.png" BackClr="#FFAFAFAF" BorderClr="#FFAFAFAF" LeftClr="#FFAFAFAF" TopClr="#FFAFAFAF" LeftTopClr="#FFAFAFAF" />
+    <Word Id="73" PicUrl="finger.png" BackClr="#FFD7AA8C" BorderClr="#FFD7AF95" LeftClr="#FFD4B299" TopClr="#FFCFBAA8" LeftTopClr="#FFD7BAA8" />
+    <Word Id="74" PicUrl="stomach.png" BackClr="#FFA53C1E" BorderClr="#FFA5492E" LeftClr="#FF9E4F36" TopClr="#FF956350" LeftTopClr="#FFA56350" />
+    <Word Id="75" PicUrl="legs.png" BackClr="#FFF0CDB9" BorderClr="#FFF0D0BF" LeftClr="#FFEDD2C3" TopClr="#FFEAD9CD" LeftTopClr="#FFF0D9CD" />
+    <Word Id="76" PicUrl="calf.png" BackClr="#FFB9875F" BorderClr="#FFB98D6A" LeftClr="#FFB5906F" TopClr="#FFB09980" LeftTopClr="#FFB99980" />
+    <Word Id="81" PicUrl="breast.png" BackClr="#FFC89164" BorderClr="#FFC89770" LeftClr="#FFC39B76" TopClr="#FFBEA589" LeftTopClr="#FFC8A589" />
+    <Word Id="82" PicUrl="chin.png" BackClr="#FFC8A07D" BorderClr="#FFC8A586" LeftClr="#FFC5A78A" TopClr="#FFC1AF99" LeftTopClr="#FFC8AF99" />
+    <Word Id="77" PicUrl="heel.png" BackClr="#FFC8876E" BorderClr="#FFC88F79" LeftClr="#FFC4927E" TopClr="#FFBE9F8F" LeftTopClr="#FFC89F8F" />
+    <Word Id="78" PicUrl="toes.png" BackClr="#FFC88C6E" BorderClr="#FFC89379" LeftClr="#FFC4977E" TopClr="#FFBEA28F" LeftTopClr="#FFC8A28F" />
+    <Word Id="79" PicUrl="body.png" BackClr="#FF969695" BorderClr="#FF969695" LeftClr="#FF969695" TopClr="#FF969695" LeftTopClr="#FF969695" />
+    <Word Id="80" PicUrl="shin.png" BackClr="#FFD7A582" BorderClr="#FFD7AB8C" LeftClr="#FFD3AE91" TopClr="#FFCEB7A1" LeftTopClr="#FFD7B7A1" />
+    <Word Id="83" PicUrl="hair.png" BackClr="#FF724B19" BorderClr="#FF724F24" LeftClr="#FF6E5229" TopClr="#FF6A593A" LeftTopClr="#FF72593A" />
+    <Word Id="84" PicUrl="hand.png" BackClr="#FFACA073" BorderClr="#FFACA17A" LeftClr="#FFAAA27D" TopClr="#FFA8A488" LeftTopClr="#FFACA488" />
+    <Word Id="85" PicUrl="neck.png" BackClr="#FFF4BD82" BorderClr="#FFF4C390" LeftClr="#FFEFC796" TopClr="#FFE9D1AC" LeftTopClr="#FFF4D1AC" />
+  </Theme>
+  <Theme TId="3">
+    <Word Id="17" PicUrl="bush.png" BackClr="#FF1FAE7B" BorderClr="#FF30AE81" LeftClr="#FF398A84" TopClr="#FF548A8E" LeftTopClr="#FF54AE8E" />
+    <Word Id="18" PicUrl="tree.png" BackClr="#FF1D8040" BorderClr="#FF298048" LeftClr="#FF2F624B" TopClr="#FF426258" LeftTopClr="#FF428058" />
+    <Word Id="19" PicUrl="root.png" BackClr="#FF463200" BorderClr="#FF463408" LeftClr="#FF44350C" TopClr="#FF40391A" LeftTopClr="#FF46391A" />
+    <Word Id="20" PicUrl="branch.png" BackClr="#FF7BB3F2" BorderClr="#FF89BAF2" LeftClr="#FF90BED0" TopClr="#FFA7CAD0" LeftTopClr="#FFA7CAF2" />
+    <Word Id="21" PicUrl="leaf.png" BackClr="#FF92C250" BorderClr="#FF98C25E" LeftClr="#FF9AA464" TopClr="#FFA4A47A" LeftTopClr="#FFA4C27A" />
+    <Word Id="22" PicUrl="bud.png" BackClr="#FF43A51B" BorderClr="#FF4FA52C" LeftClr="#FF557934" TopClr="#FF67794E" LeftTopClr="#FF67A54E" />
+    <Word Id="23" PicUrl="stub.png" BackClr="#FF6F867C" BorderClr="#FF71867D" LeftClr="#FF73807D" TopClr="#FF77807F" LeftTopClr="#FF77867F" />
+    <Word Id="24" PicUrl="hollow.png" BackClr="#FF9BC36E" BorderClr="#FFA0C378" LeftClr="#FFA2AC7D" TopClr="#FFAAAC8D" LeftTopClr="#FFAAC38D" />
+    <Word Id="25" PicUrl="bark.png" BackClr="#FF8C7964" BorderClr="#FF8C7B69" LeftClr="#FF8B7C6B" TopClr="#FF888073" LeftTopClr="#FF8C8073" />
+    <Word Id="26" PicUrl="flower.png" BackClr="#FFFF46B4" BorderClr="#FFFF5DBD" LeftClr="#FFF768C1" TopClr="#FFED8BD0" LeftTopClr="#FFFF8BD0" />
+    <Word Id="27" PicUrl="apple.png" BackClr="#FF37BE1E" BorderClr="#FF47BE32" LeftClr="#FF4F873B" TopClr="#FF69875A" LeftTopClr="#FF69BE5A" />
+    <Word Id="28" PicUrl="pear.png" BackClr="#FFCD5A3C" BorderClr="#FFCD684E" LeftClr="#FFC56F56" TopClr="#FFBB8572" LeftTopClr="#FFCD8572" />
+    <Word Id="29" PicUrl="cherry.png" BackClr="#FFB91414" BorderClr="#FFB92424" LeftClr="#FFAE2E2E" TopClr="#FFA24E4E" LeftTopClr="#FFB94E4E" />
+    <Word Id="30" PicUrl="peach.png" BackClr="#FFB9370F" BorderClr="#FFB9471F" LeftClr="#FFAF4E2A" TopClr="#FFA4674B" LeftTopClr="#FFB9674B" />
+    <Word Id="31" PicUrl="strawberry.png" BackClr="#FFC3F140" BorderClr="#FFC32529" LeftClr="#FFB73034" TopClr="#FFAB5255" LeftTopClr="#FFC35255" />
+    <Word Id="32" PicUrl="raspberry.png" BackClr="#FFFFFFFF" BorderClr="#FFE1293F" LeftClr="#FFD4354A" TopClr="#FFC65D6D" LeftTopClr="#FFE15D6D" />
+    <Word Id="33" PicUrl="pineapple.png" BackClr="#FFA18714" BorderClr="#FFA18A25" LeftClr="#FF9C8B2D" TopClr="#FF969048" LeftTopClr="#FFA19048" />
+    <Word Id="34" PicUrl="grape.png" BackClr="#FFFFFFFF" BorderClr="#FFB92424" LeftClr="#FFAE2E2E" TopClr="#FFA24E4E" LeftTopClr="#FFB94E4E" />
+    <Word Id="35" PicUrl="acorn.png" BackClr="#FF64A050" BorderClr="#FF6BA018" LeftClr="#FF6F7821" TopClr="#FF7A783F" LeftTopClr="#FF7AA03F" />
+    <Word Id="36" PicUrl="nut.png" BackClr="#FFAF87140" BorderClr="#FFAF8C27" LeftClr="#FFA98E30" TopClr="#FFA2964E" LeftTopClr="#FFAF964E" />
+</Theme>
+ <Theme TId="4">
+  <Word Id="37" PicUrl="cone.png" BackClr="#FF946B4D" BorderClr="#FF947055" LeftClr="#FF91725A" TopClr="#FF8D7A67" LeftTopClr="#FF947A67" />
+    <Word Id="38" PicUrl="pine.png" BackClr="#FFB8C7B0" BorderClr="#FFB9C7B2" LeftClr="#FFBAC0B4" TopClr="#FFBDC0B8" LeftTopClr="#FFBDC7B8" />
+    <Word Id="39" PicUrl="birch.png" BackClr="#FFD7D7D7" BorderClr="#FFCDCDD7" LeftClr="#FFCECED3" TopClr="#FFD0D0D3" LeftTopClr="#FFD0D0D7" />
+    <Word Id="40" PicUrl="grass.png" BackClr="#FF50BEA0" BorderClr="#FF5DBE20" LeftClr="#FF64882B" TopClr="#FF79884D" LeftTopClr="#FF79BE4D" />
+    <Word Id="41" PicUrl="hay.png" BackClr="#FF8C8741" BorderClr="#FF8C874A" LeftClr="#FF8A874E" TopClr="#FF87885D" LeftTopClr="#FF8C885D" />
+    <Word Id="42" PicUrl="dandelion.png" BackClr="#FF2874CC" BorderClr="#FF2884DC" LeftClr="#FF348AA3" TopClr="#FF5B9DA3" LeftTopClr="#FF5B9DDC" />
+    <Word Id="43" PicUrl="sunflower.png" BackClr="#FF2866DA" BorderClr="#FF2876FA" LeftClr="#FF367FB1" TopClr="#FF649CB1" LeftTopClr="#FF649CFA" />
+    <Word Id="44" PicUrl="potato.png" BackClr="#FFC8B978" BorderClr="#FFC8BA82" LeftClr="#FFC5BB86" TopClr="#FFC2BE96" LeftTopClr="#FFC8BE96" />
+    <Word Id="45" PicUrl="cabbage.png" BackClr="#FF78913C" BorderClr="#FF7B9146" LeftClr="#FF7C7D4B" TopClr="#FF817D5B" LeftTopClr="#FF81915B" />
+    <Word Id="46" PicUrl="onion.png" BackClr="#FFDC731E" BorderClr="#FFDC8035" LeftClr="#FFD38640" TopClr="#FFC89A65" LeftTopClr="#FFDC9A65" />
+    <Word Id="47" PicUrl="garlic.png" BackClr="#FFC8C391" BorderClr="#FFC8C397" LeftClr="#FFC7C39B" TopClr="#FFC5C4A5" LeftTopClr="#FFC8C4A5" />
+    <Word Id="48" PicUrl="beet.png" BackClr="#FFC83741" BorderClr="#FFC84951" LeftClr="#FFBF5159" TopClr="#FFB56D73" LeftTopClr="#FFC86D73" />
+    <Word Id="49" PicUrl="carrot.png" BackClr="#FFDC4B19" BorderClr="#FFDC5D31" LeftClr="#FFD1653C" TopClr="#FFC58162" LeftTopClr="#FFDC8162" />
+    <Word Id="50" PicUrl="cucumber.png" BackClr="#FF1E9B0A" BorderClr="#FF2D9B1C" LeftClr="#FF346924" TopClr="#FF4C6940" LeftTopClr="#FF4C9B40" />
+    <Word Id="51" PicUrl="tomato.png" BackClr="#FFD1321E" BorderClr="#FFD14534" LeftClr="#FFC64F3E" TopClr="#FFBA6D61" LeftTopClr="#FFD16D61" />
+    <Word Id="52" PicUrl="melon.png" BackClr="#FFE6AA0A" BorderClr="#FFE6B125" LeftClr="#FFDDB532" TopClr="#FFD3C05C" LeftTopClr="#FFE6C05C" />
+    <Word Id="53" PicUrl="watermelon.png" BackClr="#FF73872D" BorderClr="#FF758738" LeftClr="#FF76733D" TopClr="#FF7A734E" LeftTopClr="#FF7A874E" />
+    <Word Id="54" PicUrl="pea.png" BackClr="#FF46AF1E" BorderClr="#FF53AF30" LeftClr="#FF598138" TopClr="#FF6D8154" LeftTopClr="#FF6DAF54" />
+    <Word Id="55" PicUrl="wheat.png" BackClr="#FFF0AD00" BorderClr="#FFF0B51E" LeftClr="#FFE6B92C" TopClr="#FFDBC65A" LeftTopClr="#FFF0C65A" />
+    <Word Id="56" PicUrl="buckwheat.png" BackClr="#FF90511E" BorderClr="#FF90582C" LeftClr="#FF8B5C32" TopClr="#FF846848" LeftTopClr="#FF906848" />
+  </Theme>
+<Theme TId="5">
+    <Word Id="81" PicUrl="water.jpg" BackClr="#FF77ADF8" BorderClr="#FF87B6F8" LeftClr="#FF8EBAD2" TopClr="#FFA7C9D2" LeftTopClr="#FFA7C9F8" />
+    <Word Id="82" PicUrl="soil.jpg" BackClr="#FF3B4A4B" BorderClr="#FF3D4A4B" LeftClr="#FF3D4A48" TopClr="#FF414A48" LeftTopClr="#FF414A4B" />
+    <Word Id="83" PicUrl="fire.jpg" BackClr="#FFC86E23" BorderClr="#FFC87937" LeftClr="#FFC07E41" TopClr="#FFB78F60" LeftTopClr="#FFC88F60" />
+    <Word Id="84" PicUrl="sea.jpg" BackClr="#FF0F46D7" BorderClr="#FF2858D7" LeftClr="#FF336097" TopClr="#FF5A7C97" LeftTopClr="#FF5A7CD7" />
+    <Word Id="85" PicUrl="lake.jpg" BackClr="#FF649628" BorderClr="#FF6A9635" LeftClr="#FF6D783C" TopClr="#FF767851" LeftTopClr="#FF769651" />
+    <Word Id="86" PicUrl="river.jpg" BackClr="#FFADBCFF" BorderClr="#FFB7C4FF" LeftClr="#FFBCC8E4" TopClr="#FFCBD5E4" LeftTopClr="#FFCBD5FF" />
+    <Word Id="87" PicUrl="brook.jpg" BackClr="#FF304B31" BorderClr="#FF334B34" LeftClr="#FF344235" TopClr="#FF3A423A" LeftTopClr="#FF3A4B3A" />
+    <Word Id="88" PicUrl="mountain.jpg" BackClr="#FF7887D7" BorderClr="#FF8391D7" LeftClr="#FF8995B7" TopClr="#FF9BA5B7" LeftTopClr="#FF9BA5D7" />
+    <Word Id="89" PicUrl="hill.jpg" BackClr="#FF3D552A" BorderClr="#FF40552F" LeftClr="#FF414931" TopClr="#FF46493A" LeftTopClr="#FF46553A" />
+    <Word Id="90" PicUrl="forest.jpg" BackClr="#FF65BA24" BorderClr="#FF6FBA36" LeftClr="#FF748F3F" TopClr="#FF848F5C" LeftTopClr="#FF84BA5C" />
+    <Word Id="91" PicUrl="meadow.jpg" BackClr="#FF59A80C" BorderClr="#FF62A81F" LeftClr="#FF677D28" TopClr="#FF767D46" LeftTopClr="#FF76A846" />
+    <Word Id="92" PicUrl="field.jpg" BackClr="#FF664824" BorderClr="#FF664B2C" LeftClr="#FF634D30" TopClr="#FF60533C" LeftTopClr="#FF66533C" />
+    <Word Id="93" PicUrl="desert.jpg" BackClr="#FF953312" BorderClr="#FF953F22" LeftClr="#FF8E452A" TopClr="#FF865743" LeftTopClr="#FF955743" />
+    <Word Id="94" PicUrl="snowdrift.jpg" BackClr="#FFD6DADD" BorderClr="#FFCECEDD" LeftClr="#FFCFCFD7" TopClr="#FFD2D2D7" LeftTopClr="#FFD2D2DD" />
+    <Word Id="95" PicUrl="moon.jpg" BackClr="#FFFFB500" BorderClr="#FFFFBE1F" LeftClr="#FFF5C22E" TopClr="#FFE9D05F" LeftTopClr="#FFFFD05F" />
+    <Word Id="96" PicUrl="earth.jpg" BackClr="#FF629DEF" BorderClr="#FF73A7EF" LeftClr="#FF7BACC6" TopClr="#FF96BBC6" LeftTopClr="#FF96BBEF" />
+    <Word Id="97" PicUrl="star.jpg" BackClr="#FF19232D" BorderClr="#FF1B242E" LeftClr="#FF1C2528" TopClr="#FF202728" LeftTopClr="#FF20272E" />
+    <Word Id="98" PicUrl="sand.jpg" BackClr="#FFB7B7A1" BorderClr="#FFB7B7A3" LeftClr="#FFB7B3A5" TopClr="#FFB7B3A9" LeftTopClr="#FFB7B7A9" />
+    <Word Id="99" PicUrl="island.jpg" BackClr="#FF667D33" BorderClr="#FF687D3C" LeftClr="#FF6A6B40" TopClr="#FF6E6B4E" LeftTopClr="#FF6E7D4E" />
+    <Word Id="120" PicUrl="beach.jpg" BackClr="#FF24A6B8" BorderClr="#FF36A8B8" LeftClr="#FF3FA999" TopClr="#FF5BAC99" LeftTopClr="#FF5BACB8" />
+  </Theme>
+  <Theme TId="6">
+    <Word Id="100" PicUrl="city.jpg" BackClr="#FF847CEA" BorderClr="#FF9089EA" LeftClr="#FF9690C3" TopClr="#FFAAA5C3" LeftTopClr="#FFAAA5EA" />
+    <Word Id="101" PicUrl="shop.jpg" BackClr="#FFC50F0D" BorderClr="#FFC52524" LeftClr="#FFB9302E" TopClr="#FFAC5352" LeftTopClr="#FFC55352" />
+    <Word Id="102" PicUrl="library.jpg" BackClr="#FF9B4600" BorderClr="#FF9B5013" LeftClr="#FF94551C" TopClr="#FF8B653A" LeftTopClr="#FF9B653A" />
+    <Word Id="103" PicUrl="hospital.jpg" BackClr="#FF99A5BA" BorderClr="#FF9DA7BA" LeftClr="#FF9FA8B0" TopClr="#FFA5ACB0" LeftTopClr="#FFA5ACBA" />
+    <Word Id="104" PicUrl="snackbar.jpg" BackClr="#FFAD6F15" BorderClr="#FFAD7628" LeftClr="#FFA67A30" TopClr="#FF9E864E" LeftTopClr="#FFAD864E" />
+    <Word Id="105" PicUrl="cinema.jpg" BackClr="#FF81392E" BorderClr="#FF814238" LeftClr="#FF7C463D" TopClr="#FF77544D" LeftTopClr="#FF81544D" />
+    <Word Id="106" PicUrl="monument.jpg" BackClr="#FF8AA4D7" BorderClr="#FF93AAD7" LeftClr="#FF98ADBF" TopClr="#FFA6B7BF" LeftTopClr="#FFA6B7D7" />
+    <Word Id="107" PicUrl="church.jpg" BackClr="#FFE6A1BB" BorderClr="#FFE6A9BD" LeftClr="#FFE3ADC0" TopClr="#FFDFBAC9" LeftTopClr="#FFE6BAC9" />
+    <Word Id="108" PicUrl="bridge.jpg" BackClr="#FF4987AC" BorderClr="#FF558BAC" LeftClr="#FF5B8D93" TopClr="#FF6E9493" LeftTopClr="#FF6E94AC" />
+    <Word Id="109" PicUrl="gate.jpg" BackClr="#FF88889F" BorderClr="#FF8A8A9F" LeftClr="#FF8C8C97" TopClr="#FF909097" LeftTopClr="#FF90909F" />
+    <Word Id="110" PicUrl="road.jpg" BackClr="#FF644B3C" BorderClr="#FF644E41" LeftClr="#FF634F43" TopClr="#FF60544B" LeftTopClr="#FF64544B" />
+    <Word Id="111" PicUrl="trafficlights.jpg" BackClr="#FF5087C8" BorderClr="#FF5F8FC8" LeftClr="#FF6692A6" TopClr="#FF7D9FA6" LeftTopClr="#FF7D9FC8" />
+    <Word Id="112" PicUrl="pavement.jpg" BackClr="#FF7D7D8C" BorderClr="#FF7E7E8C" LeftClr="#FF7F7F87" TopClr="#FF828287" LeftTopClr="#FF82828C" />
+    <Word Id="113" PicUrl="bench.jpg" BackClr="#FFDEC435" BorderClr="#FFDEC74A" LeftClr="#FFD8C854" TopClr="#FFD1CD74" LeftTopClr="#FFDECD74" />
+    <Word Id="114" PicUrl="car.jpg" BackClr="#FF4B5F9B" BorderClr="#FF55669B" LeftClr="#FF596A81" TopClr="#FF697581" LeftTopClr="#FF69759B" />
+    <Word Id="115" PicUrl="lorry.jpg" BackClr="#FF9B9691" BorderClr="#FF9B9692" LeftClr="#FF9B9692" TopClr="#FF9B9794" LeftTopClr="#FF9B9794" />
+    <Word Id="116" PicUrl="bus.jpg" BackClr="#FF415564" BorderClr="#FF455664" LeftClr="#FF47575B" TopClr="#FF4E5A5B" LeftTopClr="#FF4E5A64" />
+    <Word Id="117" PicUrl="fillingstation.jpg" BackClr="#FFF05861" BorderClr="#FFF06B72" LeftClr="#FFE7737B" TopClr="#FFDC9196" LeftTopClr="#FFF09196" />
+    <Word Id="118" PicUrl="zebracrossing.jpg" BackClr="#FF818697" BorderClr="#FF838897" LeftClr="#FF858990" TopClr="#FF898C90" LeftTopClr="#FF898C97" />
+    <Word Id="119" PicUrl="intersection.jpg" BackClr="#FF8C93A2" BorderClr="#FF8E94A2" LeftClr="#FF90959C" TopClr="#FF94989C" LeftTopClr="#FF9498A2" />
+  </Theme>
+  <Theme TId="7">
+    <Word Id="121" PicUrl="house.jpg" BackClr="#FF7DA5D7" BorderClr="#FF88ABD7" LeftClr="#FF8DAEBD" TopClr="#FF9EB7BD" LeftTopClr="#FF9EB7D7" />
+    <Word Id="122" PicUrl="door.jpg" BackClr="#FFEDC49C" BorderClr="#FFEDC9A6" LeftClr="#FFEACBAA" TopClr="#FFE5D3BA" LeftTopClr="#FFEDD3BA" />
+    <Word Id="123" PicUrl="window.jpg" BackClr="#FF67A7DA" BorderClr="#FF75ADDA" LeftClr="#FF7CB0BB" TopClr="#FF92BABB" LeftTopClr="#FF92BADA" />
+    <Word Id="124" PicUrl="room.jpg" BackClr="#FF988C7A" BorderClr="#FF988D7D" LeftClr="#FF978E7F" TopClr="#FF969085" LeftTopClr="#FF989085" />
+    <Word Id="125" PicUrl="floor.jpg" BackClr="#FF737373" BorderClr="#FF737373" LeftClr="#FF737373" TopClr="#FF737373" LeftTopClr="#FF737373" />
+    <Word Id="126" PicUrl="ceiling.jpg" BackClr="#FFBCDED2" BorderClr="#FFC0DECE" LeftClr="#FFC2D5CF" TopClr="#FFC8D5D2" LeftTopClr="#FFC8DED2" />
+    <Word Id="127" PicUrl="chandelier.jpg" BackClr="#FF233273" BorderClr="#FF2D3A73" LeftClr="#FF313D58" TopClr="#FF414A58" LeftTopClr="#FF414A73" />
+    <Word Id="128" PicUrl="carpet.jpg" BackClr="#FF8C7850" BorderClr="#FF8C7A57" LeftClr="#FF8A7B5B" TopClr="#FF877F66" LeftTopClr="#FF8C7F66" />
+    <Word Id="129" PicUrl="clock.jpg" BackClr="#FF7D735A" BorderClr="#FF7D745E" LeftClr="#FF7C7460" TopClr="#FF7A7667" LeftTopClr="#FF7D7667" />
+    <Word Id="130" PicUrl="sofa.jpg" BackClr="#FF533422" BorderClr="#FF533728" LeftClr="#FF51392B" TopClr="#FF4E3F34" LeftTopClr="#FF533F34" />
+    <Word Id="131" PicUrl="armchair.jpg" BackClr="#FF774246" BorderClr="#FF77484C" LeftClr="#FF744B4F" TopClr="#FF715558" LeftTopClr="#FF775558" />
+    <Word Id="132" PicUrl="chair.jpg" BackClr="#FF461E04" BorderClr="#FF46230C" LeftClr="#FF432510" TopClr="#FF3F2D1C" LeftTopClr="#FF462D1C" />
+    <Word Id="133" PicUrl="table.jpg" BackClr="#FF5C2F19" BorderClr="#FF5C3421" LeftClr="#FF593725" TopClr="#FF553F32" LeftTopClr="#FF5C3F32" />
+    <Word Id="134" PicUrl="flowerpot.jpg" BackClr="#FFBE643C" BorderClr="#FFBE6F4C" LeftClr="#FFB77453" TopClr="#FFAF856C" LeftTopClr="#FFBE856C" />
+    <Word Id="135" PicUrl="curtains.jpg" BackClr="#FFB5D6FF" BorderClr="#FFBED2FF" LeftClr="#FFC2D5E8" TopClr="#FFD0DFE8" LeftTopClr="#FFD0DFFF" />
+    <Word Id="136" PicUrl="TVset.jpg" BackClr="#FF3A2E3E" BorderClr="#FF3A303E" LeftClr="#FF3A303B" TopClr="#FF3B343B" LeftTopClr="#FF3B343E" />
+    <Word Id="137" PicUrl="vacuumcleaner.jpg" BackClr="#FFD41521" BorderClr="#FFD42C37" LeftClr="#FFC83841" TopClr="#FFBB5C64" LeftTopClr="#FFD45C64" />
+    <Word Id="138" PicUrl="radiator.jpg" BackClr="#FF73788C" BorderClr="#FF767A8C" LeftClr="#FF777B84" TopClr="#FF7C7F84" LeftTopClr="#FF7C7F8C" />
+    <Word Id="139" PicUrl="lamp.jpg" BackClr="#FF464646" BorderClr="#FF464646" LeftClr="#FF464646" TopClr="#FF464646" LeftTopClr="#FF464646" />
+    <Word Id="140" PicUrl="cabinet.jpg" BackClr="#FF6C391E" BorderClr="#FF6C3F27" LeftClr="#FF68422C" TopClr="#FF634C3B" LeftTopClr="#FF6C4C3B" />
+  </Theme>
+</Themes>

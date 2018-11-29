@@ -1,0 +1,233 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{99650D54-0119-495C-8B78-C0AB39B02B99}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LG.ModuleBase</RootNamespace>
+    <AssemblyName>LG.ModuleBase</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{BC8A1FFA-BEE3-4634-8014-F334798102B3};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
+    <OutputPath>bin\ARM\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
+    <ProjectReference Include="..\..\LG.Common\LG.Common.csproj">
+      <Project>{6a74ee8e-274d-4f64-9e6b-e7ad9bc19e0c}</Project>
+      <Name>LG.Common %28LG.Common\LG.Common%29</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\LG.DALFactory\LG.DALFactory.csproj">
+      <Project>{fa13ab01-1b76-41e8-a286-d1311fae3269}</Project>
+      <Name>LG.DALFactory %28LG.DALFactory\LG.DALFactory%29</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\LG.DAL\LG.DAL.csproj">
+      <Project>{6f1ca706-0b53-442f-80c8-abff59d8dd68}</Project>
+      <Name>LG.DAL %28LG.DAL\LG.DAL%29</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\LG.XmlDAL\LG.XmlDAL.csproj">
+      <Project>{45cc4f5f-a3a7-4854-838c-4b92423a22f8}</Project>
+      <Name>LG.XmlDAL %28LG.XmlDAL\LG.XmlDAL%29</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\..\..\LGameBase\LGameCommon\Models\LG.ModuleBase\AnimatedAssetInitializer.cs">
+      <Link>AnimatedAssetInitializer.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\LGameBase\LGameCommon\Models\LG.ModuleBase\AnimatedAssetM.cs">
+      <Link>AnimatedAssetM.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\LGameBase\LGameCommon\Models\LG.ModuleBase\AnimatedAssetSource.cs">
+      <Link>AnimatedAssetSource.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\LGameBase\LGameCommon\Models\LG.ModuleBase\AssetControls.cs">
+      <Link>AssetControls.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\LGameBase\LGameCommon\Models\LG.ModuleBase\AssetInitializer.cs">
+      <Link>AssetInitializer.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\LGameBase\LGameCommon\Models\LG.ModuleBase\AssetM.cs">
+      <Link>AssetM.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\LGameBase\LGameCommon\Models\LG.ModuleBase\BaseBlock.cs">
+      <Link>BaseBlock.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\LGameBase\LGameCommon\Models\LG.ModuleBase\BaseControls.cs">
+      <Link>BaseControls.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\LGameBase\LGameCommon\Models\LG.ModuleBase\GlobalGameParams.cs">
+      <Link>GlobalGameParams.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\LGameBase\LGameCommon\Models\LG.ModuleBase\Hierarchy\HierarchyParams.cs">
+      <Link>Hierarchy\HierarchyParams.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\LGameBase\LGameCommon\Models\LG.ModuleBase\Licenses\DataController.cs">
+      <Link>Licenses\DataController.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\LGameBase\LGameCommon\Models\LG.ModuleBase\Licenses\LicenseManager.cs">
+      <Link>Licenses\LicenseManager.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\LGameBase\LGameCommon\Models\LG.ModuleBase\Module.cs">
+      <Link>Module.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\LGameBase\LGameCommon\Models\LG.ModuleBase\PictureBox\PictureBoxColors.cs">
+      <Link>PictureBox\PictureBoxColors.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\LGameBase\LGameCommon\Models\LG.ModuleBase\PictureBox\PictureBoxM.cs">
+      <Link>PictureBox\PictureBoxM.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\LGameBase\LGameCommon\Models\LG.ModuleBase\SelfHomingBaseControls.cs">
+      <Link>SelfHomingBaseControls.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\LGameBase\LGameCommon\Models\LG.ModuleBase\SpaceParams.cs">
+      <Link>SpaceParams.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\LGameBase\LGameCommon\Models\LG.ModuleBase\StartPage\Profile.cs">
+      <Link>StartPage\Profile.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\LGameBase\LGameCommon\Models\LG.ModuleBase\StartPage\ProfileServer.cs">
+      <Link>StartPage\ProfileServer.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\LGameBase\LGameCommon\Models\LG.ModuleBase\Themes\Avatar.cs">
+      <Link>Themes\Avatar.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\LGameBase\LGameCommon\Models\LG.ModuleBase\Themes\AvatarInitializer.cs">
+      <Link>Themes\AvatarInitializer.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\LGameBase\LGameCommon\Models\LG.ModuleBase\Themes\DNASpiralM.cs">
+      <Link>Themes\DNASpiralM.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\LGameBase\LGameCommon\Models\LG.ModuleBase\Themes\Letter.cs">
+      <Link>Themes\Letter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\LGameBase\LGameCommon\Models\LG.ModuleBase\Themes\SpiralM.cs">
+      <Link>Themes\SpiralM.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\LGameBase\LGameCommon\Models\LG.ModuleBase\Themes\ThemesParams.cs">
+      <Link>Themes\ThemesParams.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\LGameBase\LGameCommon\Models\LG.ModuleBase\Themes\Topic.cs">
+      <Link>Themes\Topic.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\LGameBase\LGameCommon\Models\LG.ModuleBase\Time\Clock.cs">
+      <Link>Time\Clock.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\LGameBase\LGameCommon\Models\LG.ModuleBase\Time\Timer.cs">
+      <Link>Time\Timer.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\LGameBase\LGameCommon\Models\LG.ModuleBase\Time\Watch.cs">
+      <Link>Time\Watch.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\LGameBase\LGameCommon\Models\LG.ModuleBase\Unit.cs">
+      <Link>Unit.cs</Link>
+    </Compile>
+    <Compile Include="AnimatedAssetInitializer.partial.cs" />
+    <Compile Include="AnimatedAssetM.partial.cs" />
+    <Compile Include="AssetInitializer.partial.cs" />
+    <Compile Include="AssetM.partial.cs" />
+    <Compile Include="Licenses\DataController.partial.cs" />
+    <Compile Include="Licenses\LicenseManager.partial.cs" />
+    <Compile Include="Module.partial.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StartPage\Profile.partial.cs" />
+    <Compile Include="Themes\Avatar.partial.cs" />
+  </ItemGroup>
+  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '11.0' ">
+    <VisualStudioVersion>11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,354 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="db_lgameModel.Store" Alias="Self" Provider="Devart.Data.PostgreSql" ProviderManifestToken="PostgreSQL" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="db_lgameModelStoreContainer">
+          <EntitySet Name="themes" EntityType="db_lgameModel.Store.themes" store:Type="Tables" Schema="public" />
+          <EntitySet Name="themes_english_letters" EntityType="db_lgameModel.Store.themes_english_letters" store:Type="Tables" Schema="public" />
+          <EntitySet Name="themes_english_pictures" EntityType="db_lgameModel.Store.themes_english_pictures" store:Type="Tables" Schema="public" />
+          <EntitySet Name="words" EntityType="db_lgameModel.Store.words" store:Type="Tables" Schema="public" />
+          <EntitySet Name="words_english" EntityType="db_lgameModel.Store.words_english" store:Type="Tables" Schema="public" />
+          <AssociationSet Name="themes_english_letters_tid_fk" Association="db_lgameModel.Store.themes_english_letters_tid_fk">
+            <End Role="themes" EntitySet="themes" />
+            <End Role="themes_english_letters" EntitySet="themes_english_letters" />
+          </AssociationSet>
+          <AssociationSet Name="themes_english_pictures_tid_fk" Association="db_lgameModel.Store.themes_english_pictures_tid_fk">
+            <End Role="themes" EntitySet="themes" />
+            <End Role="themes_english_pictures" EntitySet="themes_english_pictures" />
+          </AssociationSet>
+          <AssociationSet Name="words_tid_fk" Association="db_lgameModel.Store.words_tid_fk">
+            <End Role="themes" EntitySet="themes" />
+            <End Role="words" EntitySet="words" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="themes">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="varchar" />
+          <Property Name="Width" Type="int" />
+          <Property Name="Height" Type="int" />
+          <Property Name="Left" Type="int" />
+          <Property Name="Top" Type="int" />
+          <Property Name="Data" Type="varchar" />
+        </EntityType>
+        <EntityType Name="themes_english_letters">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="tid" Type="int" />
+          <Property Name="letter" Type="char" />
+          <Property Name="left" Type="int" />
+          <Property Name="top" Type="int" />
+          <Property Name="rotation" Type="int" />
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="themes_english_pictures">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="tid" Type="int" />
+          <Property Name="wid" Type="int" />
+          <Property Name="left" Type="int" />
+          <Property Name="top" Type="int" />
+          <Property Name="rotation" Type="int" />
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6035: The relationship 'themes_english_pictures_wid_fk' has columns that are not part of the key of the table on the primary side of the relationship. The relationship was excluded.
+      -->
+        <EntityType Name="words">
+          <Key>
+            <PropertyRef Name="fakeid" />
+          </Key>
+          <Property Name="id" Type="int" />
+          <Property Name="tid" Type="int" />
+          <Property Name="pic_url" Type="varchar" />
+          <Property Name="back_clr" Type="char" MaxLength="6" />
+          <Property Name="border_clr" Type="char" MaxLength="6" />
+          <Property Name="left_clr" Type="char" MaxLength="6" />
+          <Property Name="top_clr" Type="char" MaxLength="6" />
+          <Property Name="left_top_clr" Type="char" MaxLength="6" />
+          <Property Name="fakeid" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="words_english">
+          <Key>
+            <PropertyRef Name="fakeid" />
+          </Key>
+          <Property Name="wid" Type="int" Nullable="false" />
+          <Property Name="value" Type="varchar" />
+          <Property Name="audio_url" Type="varchar" />
+          <Property Name="fakeid" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <Association Name="themes_english_letters_tid_fk">
+          <End Role="themes" Type="db_lgameModel.Store.themes" Multiplicity="0..1" />
+          <End Role="themes_english_letters" Type="db_lgameModel.Store.themes_english_letters" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="themes">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="themes_english_letters">
+              <PropertyRef Name="tid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="themes_english_pictures_tid_fk">
+          <End Role="themes" Type="db_lgameModel.Store.themes" Multiplicity="0..1" />
+          <End Role="themes_english_pictures" Type="db_lgameModel.Store.themes_english_pictures" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="themes">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="themes_english_pictures">
+              <PropertyRef Name="tid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="words_tid_fk">
+          <End Role="themes" Type="db_lgameModel.Store.themes" Multiplicity="0..1" />
+          <End Role="words" Type="db_lgameModel.Store.words" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="themes">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="words">
+              <PropertyRef Name="tid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="db_lgameModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="themes" EntityType="db_lgameModel.theme" />
+          <EntitySet Name="themes_english_letters" EntityType="db_lgameModel.themes_english_letters" />
+          <EntitySet Name="themes_english_pictures" EntityType="db_lgameModel.themes_english_pictures" />
+          <EntitySet Name="words" EntityType="db_lgameModel.word" />
+          <AssociationSet Name="themes_english_letters_tid_fk" Association="db_lgameModel.themes_english_letters_tid_fk">
+            <End Role="themes" EntitySet="themes" />
+            <End Role="themes_english_letters" EntitySet="themes_english_letters" />
+          </AssociationSet>
+          <AssociationSet Name="themes_english_pictures_tid_fk" Association="db_lgameModel.themes_english_pictures_tid_fk">
+            <End Role="themes" EntitySet="themes" />
+            <End Role="themes_english_pictures" EntitySet="themes_english_pictures" />
+          </AssociationSet>
+          <AssociationSet Name="words_tid_fk" Association="db_lgameModel.words_tid_fk">
+            <End Role="themes" EntitySet="themes" />
+            <End Role="words" EntitySet="words" />
+          </AssociationSet>
+          <EntitySet Name="words_english" EntityType="db_lgameModel.words_english" />
+        </EntityContainer>
+        <EntityType Name="theme">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="65535" Unicode="true" FixedLength="false" />
+          <Property Name="Width" Type="Int32" />
+          <Property Name="Height" Type="Int32" />
+          <Property Name="Left" Type="Int32" />
+          <Property Name="Top" Type="Int32" />
+          <Property Name="Data" Type="String" MaxLength="65535" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="themes_english_letters" Relationship="db_lgameModel.themes_english_letters_tid_fk" FromRole="themes" ToRole="themes_english_letters" />
+          <NavigationProperty Name="themes_english_pictures" Relationship="db_lgameModel.themes_english_pictures_tid_fk" FromRole="themes" ToRole="themes_english_pictures" />
+          <NavigationProperty Name="words" Relationship="db_lgameModel.words_tid_fk" FromRole="themes" ToRole="words" />
+        </EntityType>
+        <EntityType Name="themes_english_letters">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="tid" Type="Int32" />
+          <Property Name="letter" Type="String" MaxLength="254" Unicode="false" FixedLength="true" />
+          <Property Name="left" Type="Int32" />
+          <Property Name="top" Type="Int32" />
+          <Property Name="rotation" Type="Int32" />
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="theme" Relationship="db_lgameModel.themes_english_letters_tid_fk" FromRole="themes_english_letters" ToRole="themes" />
+        </EntityType>
+        <EntityType Name="themes_english_pictures">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="tid" Type="Int32" />
+          <Property Name="wid" Type="Int32" />
+          <Property Name="left" Type="Int32" />
+          <Property Name="top" Type="Int32" />
+          <Property Name="rotation" Type="Int32" />
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="theme" Relationship="db_lgameModel.themes_english_pictures_tid_fk" FromRole="themes_english_pictures" ToRole="themes" />
+        </EntityType>
+        <EntityType Name="word">
+          <Key>
+            <PropertyRef Name="fakeid" />
+          </Key>
+          <Property Name="id" Type="Int32" />
+          <Property Name="tid" Type="Int32" />
+          <Property Name="pic_url" Type="String" MaxLength="65535" Unicode="true" FixedLength="false" />
+          <Property Name="back_clr" Type="String" MaxLength="6" Unicode="false" FixedLength="true" />
+          <Property Name="border_clr" Type="String" MaxLength="6" Unicode="false" FixedLength="true" />
+          <Property Name="left_clr" Type="String" MaxLength="6" Unicode="false" FixedLength="true" />
+          <Property Name="top_clr" Type="String" MaxLength="6" Unicode="false" FixedLength="true" />
+          <Property Name="left_top_clr" Type="String" MaxLength="6" Unicode="false" FixedLength="true" />
+          <Property Name="fakeid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="theme" Relationship="db_lgameModel.words_tid_fk" FromRole="words" ToRole="themes" />
+        </EntityType>
+        <Association Name="themes_english_letters_tid_fk">
+          <End Role="themes" Type="db_lgameModel.theme" Multiplicity="0..1" />
+          <End Role="themes_english_letters" Type="db_lgameModel.themes_english_letters" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="themes">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="themes_english_letters">
+              <PropertyRef Name="tid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="themes_english_pictures_tid_fk">
+          <End Role="themes" Type="db_lgameModel.theme" Multiplicity="0..1" />
+          <End Role="themes_english_pictures" Type="db_lgameModel.themes_english_pictures" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="themes">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="themes_english_pictures">
+              <PropertyRef Name="tid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="words_tid_fk">
+          <End Role="themes" Type="db_lgameModel.theme" Multiplicity="0..1" />
+          <End Role="words" Type="db_lgameModel.word" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="themes">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="words">
+              <PropertyRef Name="tid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="words_english">
+          <Key>
+            <PropertyRef Name="fakeid" />
+          </Key>
+          <Property Type="Int32" Name="wid" Nullable="false" />
+          <Property Type="String" Name="value" MaxLength="65535" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="audio_url" MaxLength="65535" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="fakeid" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="db_lgameModelStoreContainer" CdmEntityContainer="Entities">
+          <EntitySetMapping Name="themes">
+            <EntityTypeMapping TypeName="db_lgameModel.theme">
+              <MappingFragment StoreEntitySet="themes">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Width" ColumnName="Width" />
+                <ScalarProperty Name="Height" ColumnName="Height" />
+                <ScalarProperty Name="Left" ColumnName="Left" />
+                <ScalarProperty Name="Top" ColumnName="Top" />
+                <ScalarProperty Name="Data" ColumnName="Data" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="themes_english_letters">
+            <EntityTypeMapping TypeName="db_lgameModel.themes_english_letters">
+              <MappingFragment StoreEntitySet="themes_english_letters">
+                <ScalarProperty Name="tid" ColumnName="tid" />
+                <ScalarProperty Name="letter" ColumnName="letter" />
+                <ScalarProperty Name="left" ColumnName="left" />
+                <ScalarProperty Name="top" ColumnName="top" />
+                <ScalarProperty Name="rotation" ColumnName="rotation" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="themes_english_pictures">
+            <EntityTypeMapping TypeName="db_lgameModel.themes_english_pictures">
+              <MappingFragment StoreEntitySet="themes_english_pictures">
+                <ScalarProperty Name="tid" ColumnName="tid" />
+                <ScalarProperty Name="wid" ColumnName="wid" />
+                <ScalarProperty Name="left" ColumnName="left" />
+                <ScalarProperty Name="top" ColumnName="top" />
+                <ScalarProperty Name="rotation" ColumnName="rotation" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="words">
+            <EntityTypeMapping TypeName="db_lgameModel.word">
+              <MappingFragment StoreEntitySet="words">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="tid" ColumnName="tid" />
+                <ScalarProperty Name="pic_url" ColumnName="pic_url" />
+                <ScalarProperty Name="back_clr" ColumnName="back_clr" />
+                <ScalarProperty Name="border_clr" ColumnName="border_clr" />
+                <ScalarProperty Name="left_clr" ColumnName="left_clr" />
+                <ScalarProperty Name="top_clr" ColumnName="top_clr" />
+                <ScalarProperty Name="left_top_clr" ColumnName="left_top_clr" />
+                <ScalarProperty Name="fakeid" ColumnName="fakeid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="words_english">
+            <EntityTypeMapping TypeName="db_lgameModel.words_english">
+              <MappingFragment StoreEntitySet="words_english">
+                <ScalarProperty Name="fakeid" ColumnName="fakeid" />
+                <ScalarProperty Name="audio_url" ColumnName="audio_url" />
+                <ScalarProperty Name="value" ColumnName="value" />
+                <ScalarProperty Name="wid" ColumnName="wid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="db_lgame">
+        <EntityTypeShape EntityType="db_lgameModel.theme" Width="1.5" PointX="2" PointY="0.625" Height="2.9417936197916674" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_lgameModel.themes_english_letters" Width="1.5" PointX="6.625" PointY="0.5" Height="2.3648893229166674" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_lgameModel.themes_english_pictures" Width="1.5" PointX="9.5" PointY="0.875" Height="2.3648893229166656" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_lgameModel.word" Width="1.5" PointX="6.875" PointY="3.25" Height="2.9417936197916665" IsExpanded="true" />
+        <AssociationConnector Association="db_lgameModel.themes_english_letters_tid_fk" ManuallyRouted="false">
+          <ConnectorPoint PointX="3.5" PointY="1.7449446614583337" />
+          <ConnectorPoint PointX="6.625" PointY="1.7449446614583337" />
+        </AssociationConnector>
+        <AssociationConnector Association="db_lgameModel.themes_english_pictures_tid_fk" ManuallyRouted="false">
+          <ConnectorPoint PointX="3.5" PointY="3.0836393229166665" />
+          <ConnectorPoint PointX="9.5" PointY="3.0836393229166665" />
+        </AssociationConnector>
+        <AssociationConnector Association="db_lgameModel.words_tid_fk" ManuallyRouted="false">
+          <ConnectorPoint PointX="3.5" PointY="3.4083968098958337" />
+          <ConnectorPoint PointX="6.875" PointY="3.4083968098958337" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="db_lgameModel.words_english" Width="1.5" PointX="9.625" PointY="4.5" Height="1.7879850260416665" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

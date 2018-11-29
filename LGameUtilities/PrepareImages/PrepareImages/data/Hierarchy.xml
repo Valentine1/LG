@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Hierarchy>
+  <Level No="1" Name="Goymer" PicUrl="slave.png"  TopClr="#E6FF1100" BottomClr="#E6FFFFFF" />
+  <Level No="2" Name="Shudra" PicUrl="shudra.png"  TopClr="#E6FF5100"  BottomClr="#E6FFFFFF"/>
+  <Level No="3" Name="Krafter" PicUrl="krafter.png"  TopClr="#E6FFAE00"  BottomClr="#E6FFFFFF"/>
+  <Level No="4" Name="Vaishia" PicUrl="vaishia.png"  TopClr="#E6FFFF00"  BottomClr="#E6FFFFFF"/>
+  <Level No="5" Name="Kshatriy" PicUrl="kshatri.png"  TopClr="#E60CFF00"  BottomClr="#E6FFFFFF"/>
+  <Level No="6" Name="Khazar" PicUrl="kshatri.png"  TopClr="#E600FFA2"  BottomClr="#E6FFFFFF"/>
+  <Level No="7" Name="Pahan" PicUrl="reptilian_shinobi.png"  TopClr="#E600FFE8"  BottomClr="#E6FFFFFF"/>
+  <Level No="8" Name="Brahman" PicUrl="reptilian_shinobi.png"  TopClr="#E600B9FF"  BottomClr="#E6FFFFFF"/>
+  <Level No="9" Name="Shinobi" PicUrl="reptilian_shinobi.png"  TopClr="#E60051FF"  BottomClr="#E6FFFFFF"/>
+  <Level No="10" Name="Dominant" PicUrl="reptilian_shinobi.png"  TopClr="#E62300FF"  BottomClr="#E6FFFFFF"/>
+  <Level No="11" Name="Metatron" PicUrl="reptilian_shinobi.png"  TopClr="#E67400FF"  BottomClr="#E6FFFFFF"/>
+  <Level No="12" Name="Neo" PicUrl="reptilian_shinobi.png"  TopClr="#E6FF00E8"  BottomClr="#E6FFFFFF"/>
+</Hierarchy>

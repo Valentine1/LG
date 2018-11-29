@@ -1,0 +1,44 @@
+﻿<UserControl 
+    x:Class="LG.Views.PictureBox"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:LG.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Canvas.Left="{Binding  Path=StartPositionOnMoveArea.X}"  Canvas.Top="{Binding  Path=StartPositionOnMoveArea.Y}" >
+    <UserControl.RenderTransform>
+        <TransformGroup>
+            <ScaleTransform ScaleX="1" ScaleY="1" />
+            <TranslateTransform x:Name="pictureBoxMovement"     />
+            <!--<TranslateTransform x:Name="pictureBoxMovement"  />-->
+        </TransformGroup>
+    </UserControl.RenderTransform>
+    <Grid>
+    <Viewbox   x:Name="vbox" Stretch="Fill"  Width="{Binding  Path=BlockSize.Width}" Height="{Binding  Path=BlockSize.Height}" >
+        <Grid x:Name="gridPBox"  >
+            <Polygon Points="0 6, 12 18, 12 144, 0 132" x:Name="boxLeft" Margin="0,0,0,6"   Fill= "{Binding  Path=BoxColorsVM.LeftColor}"     />
+            <Polygon Points="6 0, 18 12.6, 194 12.6, 182 0"  x:Name="boxTop" Margin="0,0,6,0"    Fill= "{Binding  Path=BoxColorsVM.TopColor}"  />
+            <Polygon Points="6.6 0, 18.6 12.6, 12 18.6, 0 6"  x:Name="boxLeftTop"    Fill= "{Binding  Path=BoxColorsVM.LeftTopColor}"/>
+            <Border BorderBrush="{Binding  Path=BoxColorsVM.BorderColor}"  x:Name="imBorder" BorderThickness="9" Background="{Binding  Path=BoxColorsVM.BackColor}" CornerRadius="4" Margin="12 12 0 0"
+                IsHitTestVisible="False" Width="187.5" Height="138" >
+                <!--<Image x:Name="imControl" Stretch="Uniform"  VerticalAlignment="Center"   HorizontalAlignment="Center" Source="{Binding  Path=PictureSource}"  />-->
+                    <Image x:Name="imControl" Stretch="Uniform"  VerticalAlignment="Center"   HorizontalAlignment="Center"   />
+                </Border>
+            <Polygon Points="12.4 20 , 192 20, 192 21.5, 12.4 21.5"   Fill="{Binding  Path=BoxColorsVM.BorderColor}" />
+            <Polygon Points="12.4 140 , 200 140, 200 141.5, 12.4 141.5"  Fill="{Binding  Path=BoxColorsVM.BorderColor}"  />
+            <!--<Polygon Points="0 6, 12 18, 12 144, 0 132" x:Name="boxLeft" Margin="0,0,0,6"   Fill= "Red"     />
+            <Polygon Points="6 0, 18 12.5, 194 12.5, 182 0" x:Name="boxTop" Margin="0,0,6,0"    Fill= "Green"  />
+            <Polygon Points="6.5 0, 18.5 12.5, 12 18.5, 0 6"  x:Name="boxLeftTop"    Fill= "Blue"/>
+            <Border BorderBrush="DarkBlue"  x:Name="imBorder" BorderThickness="9" Background="{Binding  Path=BoxColorsVM.BackColor}" CornerRadius="4" Margin="12 12 0 0"
+                IsHitTestVisible="False" Width="187.5" Height="138" >
+                <Image x:Name="imControl" Stretch="None"  VerticalAlignment="Center"   HorizontalAlignment="Center" Source="{Binding  Path=PictureSource}"  />
+            </Border>
+            <Polygon Points="12.4 20 , 192 20, 192 21.5, 12.4 21.5"   Fill= "Red" />
+            <Polygon Points="12.4 140 , 200 140, 200 141.5, 12.4 141.5"   Fill= "Red" />-->
+        </Grid>
+    </Viewbox>
+        <!--<MediaElement x:Name="melWord1" MediaFailed="melWord_MediaFailed" MediaOpened="melWord1_MediaOpened" MediaEnded="melWord1_MediaEnded" CurrentStateChanged="melWord1_CurrentStateChanged"/>-->
+
+    </Grid>
+</UserControl>

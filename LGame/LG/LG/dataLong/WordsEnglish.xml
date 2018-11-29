@@ -1,0 +1,223 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WordsToEnglish>
+  <Theme TId="1">
+    <W WId="1" Val="cloud" AudioUrl="cloud.mp3" />
+    <W WId="2" Val="dew" AudioUrl="dew.mp3" />
+    <W WId="3" Val="fog" AudioUrl="fog.mp3" />
+    <W WId="4" Val="cold" AudioUrl="cold.mp3" />
+    <W WId="5" Val="frost" AudioUrl="frost.mp3" />
+    <W WId="6" Val="hot" AudioUrl="hot.mp3" />
+    <W WId="7" Val="hurricane" AudioUrl="hurricane.mp3" />
+    <W WId="8" Val="ice" AudioUrl="ice.mp3" />
+    <W WId="9" Val="icicle" AudioUrl="icicle.mp3" />
+    <W WId="10" Val="lightning" AudioUrl="lightning.mp3" />
+    <W WId="11" Val="puddle" AudioUrl="puddle.mp3" />
+    <W WId="12" Val="rain" AudioUrl="rain.mp3" />
+    <W WId="13" Val="rainbow" AudioUrl="rainbow.mp3" />
+    <W WId="14" Val="snow" AudioUrl="snow.mp3" />
+    <W WId="58" Val="overcast" AudioUrl="overcast.mp3" />
+    <W WId="59" Val="sunny" AudioUrl="sunny.mp3" />
+    <W WId="60" Val="windy" AudioUrl="windy.mp3" />
+    <W WId="61" Val="hail" AudioUrl="hail.mp3" />
+    <W WId="62" Val="tornado" AudioUrl="tornado.mp3" />
+    <W WId="70" Val="muddy" AudioUrl="muddy.mp3" />
+  </Theme>
+   <Theme TId="2">
+    <W WId="15" Val="back" AudioUrl="back.mp3" />
+    <W WId="16" Val="belly" AudioUrl="belly.mp3" />
+    <W WId="63" Val="head" AudioUrl="head.mp3" />
+    <W WId="64" Val="eye" AudioUrl="eye.mp3" />
+    <W WId="65" Val="nose" AudioUrl="nose.mp3" />
+    <W WId="66" Val="lips" AudioUrl="lips.mp3" />
+    <W WId="67" Val="ear" AudioUrl="ear.mp3" />
+    <W WId="73" Val="finger" AudioUrl="finger.mp3" />
+    <W WId="74" Val="foot" AudioUrl="foot.mp3" />
+    <W WId="75" Val="legs" AudioUrl="legs.mp3" />
+    <W WId="76" Val="knee" AudioUrl="knee.mp3" />
+    <W WId="57" Val="breast" AudioUrl="breast.mp3" />
+    <W WId="68" Val="chin" AudioUrl="chin.mp3" />
+    <W WId="77" Val="teeth" AudioUrl="teeth.mp3" />
+    <W WId="78" Val="toes" AudioUrl="toes.mp3" />
+    <W WId="79" Val="body" AudioUrl="body.mp3" />
+    <W WId="80" Val="tongue" AudioUrl="tongue.mp3" />
+    <W WId="69" Val="hair" AudioUrl="hair.mp3" />
+    <W WId="71" Val="hand" AudioUrl="hand.mp3" />
+    <W WId="72" Val="neck" AudioUrl="neck.mp3" />
+  </Theme>
+  <Theme TId="3">
+    <W WId="17" Val="bush" AudioUrl="bush.mp3" />
+    <W WId="18" Val="tree" AudioUrl="tree.mp3" />
+    <W WId="19" Val="root" AudioUrl="root.mp3" />
+    <W WId="20" Val="branch" AudioUrl="branch.mp3" />
+    <W WId="21" Val="plum" AudioUrl="plum.mp3" />
+    <W WId="22" Val="bud" AudioUrl="bud.mp3" />
+    <W WId="23" Val="stub" AudioUrl="stub.mp3" />
+    <W WId="24" Val="hollow" AudioUrl="hollow.mp3" />
+    <W WId="25" Val="bark" AudioUrl="bark.mp3" />
+    <W WId="26" Val="flower" AudioUrl="flower.mp3" />
+    <W WId="27" Val="apple" AudioUrl="apple.mp3" />
+    <W WId="28" Val="pear" AudioUrl="pear.mp3" />
+    <W WId="29" Val="cherry" AudioUrl="cherry.mp3" />
+    <W WId="30" Val="peach" AudioUrl="peach.mp3" />
+    <W WId="31" Val="strawberry" AudioUrl="strawberry.mp3" />
+    <W WId="32" Val="raspberry" AudioUrl="raspberry.mp3" />
+    <W WId="33" Val="pineapple" AudioUrl="pineapple.mp3" />
+    <W WId="34" Val="grape" AudioUrl="grape.mp3" />
+    <W WId="35" Val="acorn" AudioUrl="acorn.mp3" />
+    <W WId="36" Val="nut" AudioUrl="nut.mp3" />
+  </Theme>
+  <Theme TId="4">
+    <W WId="37" Val="cone" AudioUrl="cone.mp3" />
+    <W WId="38" Val="pine" AudioUrl="pine.mp3" />
+    <W WId="39" Val="birch" AudioUrl="birch.mp3" />
+    <W WId="40" Val="grass" AudioUrl="grass.mp3" />
+    <W WId="41" Val="hay" AudioUrl="hay.mp3" />
+    <W WId="42" Val="dandelion" AudioUrl="dandelion.mp3" />
+    <W WId="43" Val="sunflower" AudioUrl="sunflower.mp3" />
+    <W WId="44" Val="potato" AudioUrl="potato.mp3" />
+    <W WId="45" Val="cabbage" AudioUrl="cabbage.mp3" />
+    <W WId="46" Val="onion" AudioUrl="onion.mp3" />
+    <W WId="47" Val="garlic" AudioUrl="garlic.mp3" />
+    <W WId="48" Val="beet" AudioUrl="beet.mp3" />
+    <W WId="49" Val="carrot" AudioUrl="carrot.mp3" />
+    <W WId="50" Val="cucumber" AudioUrl="cucumber.mp3" />
+    <W WId="51" Val="tomato" AudioUrl="tomato.mp3" />
+    <W WId="52" Val="melon" AudioUrl="melon.mp3" />
+    <W WId="53" Val="watermelon" AudioUrl="watermelon.mp3" />
+    <W WId="54" Val="pea" AudioUrl="pea.mp3" />
+    <W WId="55" Val="wheat" AudioUrl="wheat.mp3" />
+    <W WId="56" Val="buckwheat" AudioUrl="buckwheat.mp3" />
+  </Theme>
+  <Theme TId="5">
+    <W WId="81" Val="water" AudioUrl="water.mp3" />
+    <W WId="82" Val="soil" AudioUrl="soil.mp3" />
+    <W WId="83" Val="fire" AudioUrl="fire.mp3" />
+    <W WId="84" Val="sea" AudioUrl="sea.mp3" />
+    <W WId="85" Val="lake" AudioUrl="lake.mp3" />
+    <W WId="86" Val="river" AudioUrl="river.mp3" />
+    <W WId="87" Val="brook" AudioUrl="brook.mp3" />
+    <W WId="88" Val="mountain" AudioUrl="mountain.mp3" />
+    <W WId="89" Val="hill" AudioUrl="hill.mp3" />
+    <W WId="90" Val="forest" AudioUrl="forest.mp3" />
+    <W WId="91" Val="meadow" AudioUrl="meadow.mp3" />
+    <W WId="92" Val="field" AudioUrl="field.mp3" />
+    <W WId="93" Val="desert" AudioUrl="desert.mp3" />
+    <W WId="94" Val="snowdrift" AudioUrl="snowdrift.mp3" />
+    <W WId="95" Val="moon" AudioUrl="moon.mp3" />
+    <W WId="96" Val="earth" AudioUrl="earth.mp3" />
+    <W WId="97" Val="star" AudioUrl="star.mp3" />
+    <W WId="98" Val="sand" AudioUrl="sand.mp3" />
+    <W WId="99" Val="island" AudioUrl="island.mp3" />
+    <W WId="120" Val="beach" AudioUrl="beach.mp3" />
+  </Theme>
+  <Theme TId="6">
+    <W WId="100" Val="city" AudioUrl="city.mp3" />
+    <W WId="101" Val="shop" AudioUrl="shop.mp3" />
+    <W WId="102" Val="library" AudioUrl="library.mp3" />
+    <W WId="103" Val="hospital" AudioUrl="hospital.mp3" />
+    <W WId="104" Val="snackbar" AudioUrl="snackbar.mp3" />
+    <W WId="105" Val="cinema" AudioUrl="cinema.mp3" />
+    <W WId="106" Val="monument" AudioUrl="monument.mp3" />
+    <W WId="107" Val="church" AudioUrl="church.mp3" />
+    <W WId="108" Val="bridge" AudioUrl="bridge.mp3" />
+    <W WId="109" Val="gate" AudioUrl="gate.mp3" />
+    <W WId="110" Val="road" AudioUrl="road.mp3" />
+    <W WId="111" Val="traffic lights" AudioUrl="trafficlights.mp3" />
+    <W WId="112" Val="pavement" AudioUrl="pavement.mp3" />
+    <W WId="113" Val="bench" AudioUrl="bench.mp3" />
+    <W WId="114" Val="car" AudioUrl="car.mp3" />
+    <W WId="115" Val="lorry" AudioUrl="lorry.mp3" />
+    <W WId="116" Val="bus" AudioUrl="bus.mp3" />
+    <W WId="117" Val="filling station" AudioUrl="fillingstation.mp3" />
+    <W WId="118" Val="zebra crossing" AudioUrl="zebracrossing.mp3" />
+    <W WId="119" Val="intersection" AudioUrl="intersection.mp3" />
+  </Theme>
+  <Theme TId="7">
+    <W WId="121" Val="house" AudioUrl="house.mp3" />
+    <W WId="122" Val="door" AudioUrl="door.mp3" />
+    <W WId="123" Val="window" AudioUrl="window.mp3" />
+    <W WId="124" Val="room" AudioUrl="room.mp3" />
+    <W WId="125" Val="floor" AudioUrl="floor.mp3" />
+    <W WId="126" Val="ceiling" AudioUrl="ceiling.mp3" />
+    <W WId="127" Val="chandelier" AudioUrl="chandelier.mp3" />
+    <W WId="128" Val="carpet" AudioUrl="carpet.mp3" />
+    <W WId="129" Val="clock" AudioUrl="clock.mp3" />
+    <W WId="130" Val="sofa" AudioUrl="sofa.mp3" />
+    <W WId="131" Val="armchair" AudioUrl="armchair.mp3" />
+    <W WId="132" Val="chair" AudioUrl="chair.mp3" />
+    <W WId="133" Val="table" AudioUrl="table.mp3" />
+    <W WId="134" Val="flowerpot" AudioUrl="flowerpot.mp3" />
+    <W WId="135" Val="curtain" AudioUrl="curtain.mp3" />
+    <W WId="136" Val="TV set" AudioUrl="tvset.mp3" />
+    <W WId="137" Val="vacuum cleaner" AudioUrl="vacuumcleaner.mp3" />
+    <W WId="138" Val="radiator" AudioUrl="radiator.mp3" />
+    <W WId="139" Val="lamp" AudioUrl="lamp.mp3" />
+    <W WId="140" Val="cabinet" AudioUrl="cabinet.mp3" />
+  </Theme>
+  <Theme TId="8">
+    <W WId="141" Val="animal" AudioUrl="animal.mp3" />
+    <W WId="142" Val="autumn" AudioUrl="autumn.mp3" />
+    <W WId="143" Val="bird" AudioUrl="bird.mp3" />
+    <W WId="144" Val="drop" AudioUrl="drop.mp3" />
+    <W WId="145" Val="fish" AudioUrl="fish.mp3" />
+    <W WId="146" Val="flood" AudioUrl="flood.mp3" />
+    <W WId="147" Val="insect" AudioUrl="insect.mp3" />
+    <W WId="148" Val="lizard" AudioUrl="lizard.mp3" />
+    <W WId="149" Val="nestling" AudioUrl="nestling.mp3" />
+    <W WId="150" Val="petal" AudioUrl="petal.mp3" />
+    <W WId="151" Val="plant" AudioUrl="plant.mp3" />
+    <W WId="152" Val="snake" AudioUrl="snake.mp3" />
+    <W WId="153" Val="spring" AudioUrl="spring.mp3" />
+    <W WId="154" Val="stone" AudioUrl="stone.mp3" />
+    <W WId="155" Val="summer" AudioUrl="summer.mp3" />
+    <W WId="156" Val="valley" AudioUrl="valley.mp3" />
+    <W WId="157" Val="volcano" AudioUrl="volcano.mp3" />
+    <W WId="158" Val="waterfall" AudioUrl="waterfall.mp3" />
+    <W WId="159" Val="wave" AudioUrl="wave.mp3" />
+    <W WId="160" Val="winter" AudioUrl="winter.mp3" />
+  </Theme>
+  <Theme TId="9">
+    <W WId="161" Val="bear" AudioUrl="bear.mp3" />
+    <W WId="162" Val="elephant" AudioUrl="elephant.mp3" />
+    <W WId="163" Val="fox" AudioUrl="fox.mp3" />
+    <W WId="164" Val="lion" AudioUrl="lion.mp3" />
+    <W WId="165" Val="monkey" AudioUrl="monkey.mp3" />
+    <W WId="166" Val="tiger" AudioUrl="tiger.mp3" />
+    <W WId="167" Val="wolf" AudioUrl="wolf.mp3" />
+    <W WId="168" Val="bull" AudioUrl="bull.mp3" />
+    <W WId="169" Val="cow" AudioUrl="cow.mp3" />
+    <W WId="170" Val="camel" AudioUrl="camel.mp3" />
+    <W WId="171" Val="hare" AudioUrl="hare.mp3" />
+    <W WId="172" Val="rat" AudioUrl="rat.mp3" />
+    <W WId="173" Val="pig" AudioUrl="pig.mp3" />
+    <W WId="174" Val="cat" AudioUrl="cat.mp3" />
+    <W WId="175" Val="dog" AudioUrl="dog.mp3" />
+    <W WId="176" Val="calf" AudioUrl="calf.mp3" />
+    <W WId="177" Val="donkey" AudioUrl="donkey.mp3" />
+    <W WId="178" Val="foal" AudioUrl="foal.mp3" />
+    <W WId="179" Val="horse" AudioUrl="horse.mp3" />
+    <W WId="180" Val="goat" AudioUrl="goat.mp3" />
+  </Theme>
+  <Theme TId="10">
+    <W WId="181" Val="kitchen" AudioUrl="kitchen.mp3" />
+    <W WId="182" Val="tea spoon" AudioUrl="teaspoon.mp3" />
+    <W WId="183" Val="tablespoon" AudioUrl="tablespoon.mp3" />
+    <W WId="184" Val="fork" AudioUrl="fork.mp3" />
+    <W WId="185" Val="knife" AudioUrl="knife.mp3" />
+    <W WId="186" Val="glass" AudioUrl="glass.mp3" />
+    <W WId="187" Val="сup" AudioUrl="cup.mp3" />
+    <W WId="188" Val="plate" AudioUrl="plate.mp3" />
+    <W WId="189" Val="bowl" AudioUrl="bowl.mp3" />
+    <W WId="190" Val="saucepan" AudioUrl="saucepan.mp3" />
+    <W WId="191" Val="pan" AudioUrl="pan.mp3" />
+    <W WId="192" Val="ladle" AudioUrl="ladle.mp3" />
+    <W WId="193" Val="sink" AudioUrl="sink.mp3" />
+    <W WId="194" Val="stove" AudioUrl="stove.mp3" />
+    <W WId="195" Val="kettle" AudioUrl="kettle.mp3" />
+    <W WId="196" Val="jar" AudioUrl="jar.mp3" />
+    <W WId="197" Val="jug" AudioUrl="jug.mp3" />
+    <W WId="198" Val="fridge" AudioUrl="fridge.mp3" />
+    <W WId="199" Val="dishwasher" AudioUrl="dishwasher.mp3" />
+    <W WId="200" Val="tap" AudioUrl="tap.mp3" />
+  </Theme>
+</WordsToEnglish>

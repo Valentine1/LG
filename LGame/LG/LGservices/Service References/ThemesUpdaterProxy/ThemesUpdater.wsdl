@@ -1,0 +1,619 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="GetWebThemeUpdaterUrl">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetWebThemeUpdaterUrlResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetWebThemeUpdaterUrlResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LogErrorToServe">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="s" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LogErrorToServeResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetFileStorageBaseUrl">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetFileStorageBaseUrlResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetFileStorageBaseUrlResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetNewThemes">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="lang" type="tns:Language" />
+            <s:element minOccurs="1" maxOccurs="1" name="themeId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="take" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="Language">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:unsignedInt" />
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetNewThemesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetNewThemesResult" type="tns:ArrayOfTheme" />
+            <s:element minOccurs="0" maxOccurs="1" name="errMessage" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfTheme">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Theme" nillable="true" type="tns:Theme" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Theme">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Item">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="NameInLetters" type="tns:ArrayOfSymbol" />
+              <s:element minOccurs="0" maxOccurs="1" name="Words" type="tns:ArrayOfWord" />
+              <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="NativeName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="LicenseInfo" type="tns:License" />
+              <s:element minOccurs="0" maxOccurs="1" name="HLevel" type="tns:Level" />
+              <s:element minOccurs="0" maxOccurs="1" name="PathData" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="IsPreviewMode" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="IsPreviewsLoaded" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="IsResourcesLoaded" type="s:boolean" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="Item">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Value" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Width" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="Height" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="Left" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="Top" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="Rotation" type="s:double" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Word">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Item">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="PictureUrl" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="AudioUrl" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="BackColor" type="tns:Color" />
+              <s:element minOccurs="0" maxOccurs="1" name="BorderColor" type="tns:Color" />
+              <s:element minOccurs="0" maxOccurs="1" name="LeftColor" type="tns:Color" />
+              <s:element minOccurs="0" maxOccurs="1" name="TopColor" type="tns:Color" />
+              <s:element minOccurs="0" maxOccurs="1" name="LeftTopColor" type="tns:Color" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="Color">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="A" type="s:unsignedByte" />
+          <s:element minOccurs="1" maxOccurs="1" name="B" type="s:unsignedByte" />
+          <s:element minOccurs="1" maxOccurs="1" name="G" type="s:unsignedByte" />
+          <s:element minOccurs="1" maxOccurs="1" name="R" type="s:unsignedByte" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Symbol">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Item" />
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ArrayOfSymbol">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Symbol" nillable="true" type="tns:Symbol" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfWord">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Word" nillable="true" type="tns:Word" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="License">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ID" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsActive" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Level">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Number" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PictureUrl" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TopColor" type="tns:Color" />
+          <s:element minOccurs="0" maxOccurs="1" name="BottomColor" type="tns:Color" />
+          <s:element minOccurs="1" maxOccurs="1" name="BestTimeResult" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetFullThemesData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="lang" type="tns:Language" />
+            <s:element minOccurs="0" maxOccurs="1" name="ids" type="tns:ArrayOfInt" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfInt">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="int" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetFullThemesDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetFullThemesDataResult" type="tns:ArrayOfTheme" />
+            <s:element minOccurs="0" maxOccurs="1" name="errMessage" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddProfile">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pdal" type="tns:ProfileDAL" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ProfileDAL">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ContactInfo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PictureUrl" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Picture" type="s:base64Binary" />
+          <s:element minOccurs="1" maxOccurs="1" name="Type" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="LastThemeID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="TimePlayed" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="BestTime" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="HasPhoto" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="Themes" type="tns:ArrayOfTheme" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="AddProfileResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AddProfileResult" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="errMessage" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateProfile">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pdal" type="tns:ProfileDAL" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateProfileResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="errMessage" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteProfile">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="pid" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="lang" type="tns:Language" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteProfileResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="errMessage" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckIfBecomesOrRemainsAllSeeing">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="lang" type="tns:Language" />
+            <s:element minOccurs="1" maxOccurs="1" name="profId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="thName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="bTime" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckIfBecomesOrRemainsAllSeeingResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CheckIfBecomesOrRemainsAllSeeingResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="errMessage" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateProfileLevel">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="prof" type="tns:ProfileDAL" />
+            <s:element minOccurs="0" maxOccurs="1" name="th" type="tns:Theme" />
+            <s:element minOccurs="0" maxOccurs="1" name="lang" type="tns:Language" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateProfileLevelResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateProfileLevelResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="errMessage" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetProfiles">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="lang" type="tns:Language" />
+            <s:element minOccurs="0" maxOccurs="1" name="thName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="levNo" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="skip" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="take" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetProfilesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetProfilesResult" type="tns:LevelProfiles" />
+            <s:element minOccurs="0" maxOccurs="1" name="errMessage" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="LevelProfiles">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Profiles" type="tns:ArrayOfProfileDAL" />
+          <s:element minOccurs="1" maxOccurs="1" name="TotalLevelPlayers" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfProfileDAL">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ProfileDAL" nillable="true" type="tns:ProfileDAL" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetWebThemeUpdaterUrlSoapIn">
+    <wsdl:part name="parameters" element="tns:GetWebThemeUpdaterUrl" />
+  </wsdl:message>
+  <wsdl:message name="GetWebThemeUpdaterUrlSoapOut">
+    <wsdl:part name="parameters" element="tns:GetWebThemeUpdaterUrlResponse" />
+  </wsdl:message>
+  <wsdl:message name="LogErrorToServeSoapIn">
+    <wsdl:part name="parameters" element="tns:LogErrorToServe" />
+  </wsdl:message>
+  <wsdl:message name="LogErrorToServeSoapOut">
+    <wsdl:part name="parameters" element="tns:LogErrorToServeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetFileStorageBaseUrlSoapIn">
+    <wsdl:part name="parameters" element="tns:GetFileStorageBaseUrl" />
+  </wsdl:message>
+  <wsdl:message name="GetFileStorageBaseUrlSoapOut">
+    <wsdl:part name="parameters" element="tns:GetFileStorageBaseUrlResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetNewThemesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetNewThemes" />
+  </wsdl:message>
+  <wsdl:message name="GetNewThemesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetNewThemesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetFullThemesDataSoapIn">
+    <wsdl:part name="parameters" element="tns:GetFullThemesData" />
+  </wsdl:message>
+  <wsdl:message name="GetFullThemesDataSoapOut">
+    <wsdl:part name="parameters" element="tns:GetFullThemesDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddProfileSoapIn">
+    <wsdl:part name="parameters" element="tns:AddProfile" />
+  </wsdl:message>
+  <wsdl:message name="AddProfileSoapOut">
+    <wsdl:part name="parameters" element="tns:AddProfileResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateProfileSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateProfile" />
+  </wsdl:message>
+  <wsdl:message name="UpdateProfileSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateProfileResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteProfileSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteProfile" />
+  </wsdl:message>
+  <wsdl:message name="DeleteProfileSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteProfileResponse" />
+  </wsdl:message>
+  <wsdl:message name="CheckIfBecomesOrRemainsAllSeeingSoapIn">
+    <wsdl:part name="parameters" element="tns:CheckIfBecomesOrRemainsAllSeeing" />
+  </wsdl:message>
+  <wsdl:message name="CheckIfBecomesOrRemainsAllSeeingSoapOut">
+    <wsdl:part name="parameters" element="tns:CheckIfBecomesOrRemainsAllSeeingResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateProfileLevelSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateProfileLevel" />
+  </wsdl:message>
+  <wsdl:message name="UpdateProfileLevelSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateProfileLevelResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetProfilesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetProfiles" />
+  </wsdl:message>
+  <wsdl:message name="GetProfilesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetProfilesResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ThemesUpdaterSoap">
+    <wsdl:operation name="GetWebThemeUpdaterUrl">
+      <wsdl:input message="tns:GetWebThemeUpdaterUrlSoapIn" />
+      <wsdl:output message="tns:GetWebThemeUpdaterUrlSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LogErrorToServe">
+      <wsdl:input message="tns:LogErrorToServeSoapIn" />
+      <wsdl:output message="tns:LogErrorToServeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFileStorageBaseUrl">
+      <wsdl:input message="tns:GetFileStorageBaseUrlSoapIn" />
+      <wsdl:output message="tns:GetFileStorageBaseUrlSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNewThemes">
+      <wsdl:input message="tns:GetNewThemesSoapIn" />
+      <wsdl:output message="tns:GetNewThemesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFullThemesData">
+      <wsdl:input message="tns:GetFullThemesDataSoapIn" />
+      <wsdl:output message="tns:GetFullThemesDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddProfile">
+      <wsdl:input message="tns:AddProfileSoapIn" />
+      <wsdl:output message="tns:AddProfileSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateProfile">
+      <wsdl:input message="tns:UpdateProfileSoapIn" />
+      <wsdl:output message="tns:UpdateProfileSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteProfile">
+      <wsdl:input message="tns:DeleteProfileSoapIn" />
+      <wsdl:output message="tns:DeleteProfileSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckIfBecomesOrRemainsAllSeeing">
+      <wsdl:input message="tns:CheckIfBecomesOrRemainsAllSeeingSoapIn" />
+      <wsdl:output message="tns:CheckIfBecomesOrRemainsAllSeeingSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateProfileLevel">
+      <wsdl:input message="tns:UpdateProfileLevelSoapIn" />
+      <wsdl:output message="tns:UpdateProfileLevelSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProfiles">
+      <wsdl:input message="tns:GetProfilesSoapIn" />
+      <wsdl:output message="tns:GetProfilesSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ThemesUpdaterSoap" type="tns:ThemesUpdaterSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetWebThemeUpdaterUrl">
+      <soap:operation soapAction="http://tempuri.org/GetWebThemeUpdaterUrl" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LogErrorToServe">
+      <soap:operation soapAction="http://tempuri.org/LogErrorToServe" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFileStorageBaseUrl">
+      <soap:operation soapAction="http://tempuri.org/GetFileStorageBaseUrl" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNewThemes">
+      <soap:operation soapAction="http://tempuri.org/GetNewThemes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFullThemesData">
+      <soap:operation soapAction="http://tempuri.org/GetFullThemesData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddProfile">
+      <soap:operation soapAction="http://tempuri.org/AddProfile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateProfile">
+      <soap:operation soapAction="http://tempuri.org/UpdateProfile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteProfile">
+      <soap:operation soapAction="http://tempuri.org/DeleteProfile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckIfBecomesOrRemainsAllSeeing">
+      <soap:operation soapAction="http://tempuri.org/CheckIfBecomesOrRemainsAllSeeing" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateProfileLevel">
+      <soap:operation soapAction="http://tempuri.org/UpdateProfileLevel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProfiles">
+      <soap:operation soapAction="http://tempuri.org/GetProfiles" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ThemesUpdaterSoap12" type="tns:ThemesUpdaterSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetWebThemeUpdaterUrl">
+      <soap12:operation soapAction="http://tempuri.org/GetWebThemeUpdaterUrl" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LogErrorToServe">
+      <soap12:operation soapAction="http://tempuri.org/LogErrorToServe" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFileStorageBaseUrl">
+      <soap12:operation soapAction="http://tempuri.org/GetFileStorageBaseUrl" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNewThemes">
+      <soap12:operation soapAction="http://tempuri.org/GetNewThemes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFullThemesData">
+      <soap12:operation soapAction="http://tempuri.org/GetFullThemesData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddProfile">
+      <soap12:operation soapAction="http://tempuri.org/AddProfile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateProfile">
+      <soap12:operation soapAction="http://tempuri.org/UpdateProfile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteProfile">
+      <soap12:operation soapAction="http://tempuri.org/DeleteProfile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckIfBecomesOrRemainsAllSeeing">
+      <soap12:operation soapAction="http://tempuri.org/CheckIfBecomesOrRemainsAllSeeing" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateProfileLevel">
+      <soap12:operation soapAction="http://tempuri.org/UpdateProfileLevel" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProfiles">
+      <soap12:operation soapAction="http://tempuri.org/GetProfiles" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ThemesUpdater">
+    <wsdl:port name="ThemesUpdaterSoap" binding="tns:ThemesUpdaterSoap">
+      <soap:address location="http://localhost/LGserver/ThemesUpdater.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ThemesUpdaterSoap12" binding="tns:ThemesUpdaterSoap12">
+      <soap12:address location="http://localhost/LGserver/ThemesUpdater.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

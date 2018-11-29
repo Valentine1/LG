@@ -1,0 +1,24 @@
+﻿<UserControl 
+    x:Class="LG.Views.AssetV"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:LG.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Canvas.Left="{Binding  Path=StartPositionOnMoveArea.X}"  Canvas.Top="{Binding  Path=StartPositionOnMoveArea.Y}" >
+    <UserControl.RenderTransform>
+        <TransformGroup>
+            <ScaleTransform ScaleX="1" ScaleY="1" />
+            <TranslateTransform   />
+            <ScaleTransform x:Name="ammoScale" ScaleX="{Binding Path=ScaleX}" ScaleY="{Binding Path=ScaleY}"  CenterX="{Binding Path=CenterScaleX}" 
+                                               CenterY="{Binding Path=CenterScaleY}"  />
+        </TransformGroup>
+    </UserControl.RenderTransform>
+    <Viewbox  x:Name="vbox" Stretch="Fill"  Width="{Binding  Path=BlockSize.Width}" Height="{Binding  Path=BlockSize.Height}" >
+        <Grid x:Name="gridPBox" >
+            <Image x:Name="imControl" Stretch="None"    VerticalAlignment="Center"   HorizontalAlignment="Center" Source="{Binding  Path=PictureSource}"  />
+        </Grid>
+    </Viewbox>
+</UserControl>
+
